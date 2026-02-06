@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/business-loan/page": "/business-loan",
+  "/contact/page": "/contact",
+  "/credit-cards/page": "/credit-cards",
+  "/education-loan/page": "/education-loan",
+  "/health-insurance/page": "/health-insurance",
+  "/home-loan/page": "/home-loan",
+  "/life-insurance/page": "/life-insurance",
+  "/loan-against-insurance/page": "/loan-against-insurance",
+  "/loan-against-mutual-funds/page": "/loan-against-mutual-funds",
+  "/loan-against-property/page": "/loan-against-property",
+  "/loan-process/page": "/loan-process",
+  "/page": "/",
+  "/personal-loan/page": "/personal-loan",
+  "/quick-loan-app-form/page": "/quick-loan-app-form",
+  "/service-page/page": "/service-page"
+}

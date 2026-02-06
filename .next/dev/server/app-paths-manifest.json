@@ -1,15 +1,6 @@
 {
   "/about/page": "app/about/page.js",
-  "/business-loan/page": "app/business-loan/page.js",
   "/contact/page": "app/contact/page.js",
-  "/credit-cards/page": "app/credit-cards/page.js",
-  "/education-loan/page": "app/education-loan/page.js",
-  "/health-insurance/page": "app/health-insurance/page.js",
-  "/home-loan/page": "app/home-loan/page.js",
-  "/life-insurance/page": "app/life-insurance/page.js",
-  "/loan-against-insurance/page": "app/loan-against-insurance/page.js",
-  "/loan-against-mutual-funds/page": "app/loan-against-mutual-funds/page.js",
-  "/loan-against-property/page": "app/loan-against-property/page.js",
-  "/page": "app/page.js",
-  "/personal-loan/page": "app/personal-loan/page.js"
+  "/loan-process/page": "app/loan-process/page.js",
+  "/page": "app/page.js"
 }
