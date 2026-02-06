@@ -1,0 +1,11 @@
+#root {
+   margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  padding-left: clamp(20px, 8vw, 150px);
+  padding-right: clamp(20px, 8vw, 150px);
+  max-width: 1440px; /* optional */
+  margin: 0 auto;
+}

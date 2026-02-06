@@ -1,0 +1,114 @@
+/* [project]/src/styles/personal-loan.css [app-client] (css) */
+.loan-hero {
+  background-position: bottom;
+  background-size: cover;
+  align-items: center;
+  height: 450px;
+  display: flex;
+  position: relative;
+}
+
+.loan-overlay {
+  background: #000000bf;
+  position: absolute;
+  inset: 0;
+}
+
+.loan-container {
+  z-index: 2;
+  color: #fff;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  position: relative;
+}
+
+.loan-left h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.loan-left ul {
+  margin-bottom: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.loan-left li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.loan-right {
+  color: #fff;
+  background: none;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 20px #0000004d;
+}
+
+.loan-right h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.loan-right p {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.loan-right input {
+  color: #fff;
+  background: #ffffff1a;
+  border: 1px solid #ffffffb3;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.loan-right input::placeholder {
+  color: #ffffffb3;
+}
+
+.loan-btn {
+  color: #fff;
+  cursor: pointer;
+  background: #e53935;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 22px;
+  font-weight: 600;
+  transition: background .3s;
+}
+
+.loan-btn:hover {
+  background: #c62828;
+}
+
+.loan-full {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .loan-hero {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .loan-container {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-left h1 {
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=src_styles_personal-loan_5111e711.css.map*/

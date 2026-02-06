@@ -1,0 +1,103 @@
+/* [project]/src/styles/topbar.css [app-client] (css) */
+.topbar {
+  color: #fff;
+  background-color: #cc5908;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding-left: clamp(20px, 8vw, 150px);
+  padding-right: clamp(20px, 8vw, 150px);
+  font-size: 14px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 1px #fff;
+}
+
+.left-side {
+  flex-shrink: 1;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.contact-item {
+  white-space: nowrap;
+  flex-shrink: 1;
+  align-items: center;
+  gap: 6px;
+  display: flex;
+}
+
+.contact-text.phone {
+  white-space: nowrap;
+  flex-shrink: 1;
+  line-height: 1.1;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.right-side {
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.social-item {
+  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.social-icons {
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  flex-shrink: 0;
+  padding: 2px;
+  font-size: 20px;
+  transition: background .3s, transform .2s;
+}
+
+.social-icons:hover {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background: #fff3;
+  transform: scale(1.1);
+}
+
+.social-item:not(:last-child):after {
+  content: "";
+  background-color: #fff;
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .left-side {
+    gap: 12px;
+  }
+
+  .contact-item {
+    gap: 4px;
+  }
+
+  .social-item:not(:last-child):after {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=src_styles_topbar_css_bad6b30c._.single.css.map*/

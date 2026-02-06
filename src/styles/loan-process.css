@@ -1,0 +1,420 @@
+
+/* Navbar for Loan Process page */
+.navbar {
+  position: absolute;  /* sit on top of hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;         /* above hero */
+  background: transparent; /* fully transparent by default */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark background after scroll */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85); /* solid black with some transparency */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+
+
+.loan-process-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.loan-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+/* Background Image */
+.loan-bg {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* behind overlay & content */
+}
+
+/* Dark Overlay */
+.loan-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8); /* same dark transparent black */
+  z-index: 2;
+}
+
+/* Centered Text */
+.loan-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  padding: 40px 20px;
+
+
+}
+
+/* Big heading */
+.loan-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Breadcrumb text (~35% size) */
+.loan-content p {
+  font-size: 16px;
+  opacity: 0.85;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Background & general layout */
+.loan-process-page {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 3rem;
+}
+
+.loan-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.loan-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loan-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+.loan-content h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.loan-content p {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Info boxes container */
+.info-boxes-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 1rem;
+  flex-wrap: wrap;
+}
+
+/* Single Info Box */
+.info-box {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  outline-offset: 4px;
+  user-select: none;
+}
+
+.info-box:focus,
+.info-box:hover {
+  box-shadow:
+    0 5px 15px 0 rgba(212, 175, 55, 0.6),
+    5px 5px 10px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-6px);
+  background-color: #222;
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  color: #d4af37;
+ margin: 0 auto 1rem auto; /* top 0, bottom 1rem, left/right auto */
+  display: block;           /* make it block so auto margin works */
+  user-select: none;
+}
+
+.info-box h3 {
+  margin-bottom: 0.5rem;
+  color: #d4af37;
+}
+
+.info-box p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* EMI Calculator Container */
+.emi-calculator-container {
+  max-width: 900px;
+  background-color: #111;
+  margin: 0 auto 3rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  color: #eee;
+}
+
+/* EMI Form */
+.emi-form {
+  flex: 1 1 300px;
+}
+
+.emi-form h2 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.emi-desc {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #ccc;
+}
+
+.emi-form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+}
+
+.input-prefix {
+  display: inline-block;
+  width: 28px;
+  font-weight: 700;
+  color: #d4af37;
+  user-select: none;
+  text-align: center;
+}
+
+.input-suffix {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.85rem;
+  color: #d4af37;
+  user-select: none;
+}
+
+.emi-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid #333;
+  background-color: #222;
+  color: #fff;
+  margin-left: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.emi-input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow:
+    0 0 8px 2px rgba(212, 175, 55, 0.8),
+    0 0 15px 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Submit Button */
+.emi-submit-btn {
+ background-color: #0a4200;
+  color: #d4af37;
+  border: none;
+  padding: 0 1.8rem;       /* horizontal padding only */
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 46px;             /* fixed height */
+  display: flex;            /* for vertical centering */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.emi-submit-btn:hover,
+.emi-submit-btn:focus {
+  background-color: #d4af37;
+  color: #000;
+  box-shadow:
+    0 0 12px 3px rgba(212, 175, 55, 0.9),
+    0 0 20px 5px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+/* Result Box */
+.emi-result-box {
+  flex: 1 1 300px;
+  background-color: #222;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  box-shadow:
+    0 0 10px 0 rgba(255, 255, 255, 0.2);
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.emi-result-box:hover,
+.emi-result-box:focus-within {
+  box-shadow:
+    0 5px 15px 0 rgba(212, 175, 55, 0.7),
+    5px 5px 10px 0 rgba(255, 255, 255, 0.4);
+}
+
+.emi-result-box h3 {
+  color: #d4af37;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.result-label {
+  font-weight: 600;
+  color: #ccc;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.result-value {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.result-emi {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #d4af37;
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .info-boxes-container,
+  .emi-calculator-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .emi-form, .emi-result-box {
+    flex: 1 1 100%;
+  }
+
+  .emi-result-box {
+    margin-top: 2rem;
+  }
+}
+
+.circular-progress {
+    position: absolute;
+  top: -80px; /* 100px up from original 20px */
+  right: 10px;
+  filter: drop-shadow(0 0 6px #d4af37);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Calculator Icon with golden glow */
+.calculator-icon {
+  position: absolute;
+  bottom: 150px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  stroke: #ffffff;
+  filter: drop-shadow(0 0 4px #ffffff);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Submit + Apply button wrapper */
+.emi-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+/* Apply Now Button */
+.emi-apply-btn {
+   background-color: #0a4200;
+  color: #d4af37;
+  border: none;
+  padding: 0 1.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 46px;             /* same fixed height */
+  display: flex;            /* vertical centering */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.emi-apply-btn:hover,
+.emi-apply-btn:focus {
+  background-color: #d4af37;
+  color: #000;
+  box-shadow:
+    0 0 12px 3px rgba(212, 175, 55, 0.9),
+    0 0 20px 5px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.emi-btn-group {
+  display: flex;
+  justify-content: center; /* centers both buttons horizontally */
+  align-items: center;     /* ensures both buttons align vertically */
+  gap: 1rem;
+  margin-top: 1.2rem;
+}

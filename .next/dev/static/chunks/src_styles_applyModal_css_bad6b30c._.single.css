@@ -1,0 +1,96 @@
+/* [project]/src/styles/applyModal.css [app-client] (css) */
+.modal-backdrop {
+  z-index: 9999;
+  background: #0009;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 14px;
+  width: 360px;
+  animation: .25s scaleIn;
+  box-shadow: 0 20px 40px #00000040;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-header {
+  background: #ffc107;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  display: flex;
+}
+
+.modal-header h3 {
+  letter-spacing: .4px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body input, .modal-body select, .modal-body textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 11px;
+  font-size: 14px;
+}
+
+.modal-body textarea {
+  resize: none;
+  min-height: 130px;
+}
+
+.send-btn {
+  color: #fff;
+  cursor: pointer;
+  background: #01621d;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background .3s, transform .2s;
+}
+
+.send-btn:hover {
+  background: #014d16;
+  transform: translateY(-1px);
+}
+
+.error {
+  color: red;
+  margin-bottom: 6px;
+  font-size: 12px;
+  display: block;
+}
+
+/*# sourceMappingURL=src_styles_applyModal_css_bad6b30c._.single.css.map*/

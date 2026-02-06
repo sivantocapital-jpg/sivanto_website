@@ -1,0 +1,453 @@
+/* Navbar inside hero, fixed at top of hero */
+.loan-hero .navbar {
+  position: absolute; /* take out of flex centering */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3; /* above overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+}
+
+/* Links */
+.loan-hero .navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0px;
+  padding: 6px 10px; /* optional: match main navbar padding */
+}
+
+.loan-hero .navbar a:hover {
+  color: gold;
+}
+
+/* Ensure dropdown menus still appear above overlay */
+
+.loan-hero .navbar .dropdown {
+  position: relative;
+}
+.loan-hero .navbar .dropdown-menu {
+ position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000; /* black background */
+  width: 280px; /* adjust as needed */
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 4; /* above overlay */
+  border-top: 4px solid #01621d; /* green top accent */
+}
+
+.loan-hero .navbar .dropdown-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: white; /* default text */
+}/* Arrow rotation on hover */
+.loan-hero .navbar .dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+/* Show menu on hover */
+.loan-hero .navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Show menu on hover */
+.loan-hero .navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* Dropdown items */
+.loan-hero .navbar .dropdown-menu li a {
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #fff; /* default white text */
+  border-left: 3px solid transparent;
+  display: block;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.loan-hero .navbar .dropdown-menu li a:hover {
+  background-color: rgba(1, 98, 29, 0.08); /* subtle green background */
+  color: #01621d; /* dark green text */
+  border-left: 3px solid #01621d;
+  padding-left: 17px;
+}
+
+/* Active / selected item */
+.loan-hero .navbar .dropdown-menu li a.active {
+  background-color: rgba(1, 98, 29, 0.15);
+  color: #00ff00; /* bright green */
+  border-left: 3px solid #01621d;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================= HERO SECTION ================= */
+.loan-hero {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay */
+.loan-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+    z-index: 1; /* behind navbar */
+}
+
+/* Container */
+.loan-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  color: white;
+}
+
+/* ================= LEFT CONTENT ================= */
+.loan-left h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.loan-left ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.loan-left li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* ================= RIGHT FORM (FULLY TRANSPARENT) ================= */
+.loan-right {
+  background: none; /* completely transparent */
+  color: white;
+  padding: 0; /* optional: remove extra padding */
+  border-radius: 0; /* remove border radius */
+  box-shadow: none; /* remove shadow */
+}
+
+.loan-right h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.loan-right p {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.loan-right input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1); /* slight transparent input */
+  color: white;
+  font-size: 14px;
+}
+
+.loan-right input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ================= BUTTONS ================= */
+.loan-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loan-btn:hover {
+  background: #c62828;
+}
+
+.loan-full {
+  width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .loan-hero {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .loan-container {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-left h1 {
+    font-size: 30px;
+  }
+}
+
+/* ================= SERVICE COMMON SECTION ================= */
+.service-common {
+  background: #000;
+  color: #fff;
+  padding: 70px 0;
+}
+
+.service-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.7fr 0.6fr;
+  gap: 40px;
+}
+
+/* ================= LEFT ================= */
+.service-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.service-tagline {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.service-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+/* ================= TABS ================= */
+.service-tabs {
+  display: flex;
+   margin-top: 35px;  
+  margin-bottom: 25px;
+    gap: 12px; 
+}
+
+.tab-btn {
+    flex: 1;
+  background: black;
+  color: white;
+  border: 1px solid #333;
+  padding: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;   /* ✅ ADD THIS */
+}
+
+.tab-btn:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid gold;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+}
+
+.tab-btn.active {
+ border: 2px solid gold;
+  color: #fff;
+  background: #000;
+   color: #ffe08a; /* soft gold-white */
+
+  box-shadow:
+    inset 0 0 12px rgba(255,215,0,0.5),
+    0 0 10px rgba(255,215,0,0.6);
+
+  border-radius: 10px;
+}
+
+
+.tab-content {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 12px;  /* ✅ SOFT CURVE */
+}
+
+/* ================= TAB CONTENT ================= */
+.tab-content h4 {
+  margin-bottom: 15px;
+}
+
+.tab-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.tab-content li {
+  margin-bottom: 8px;
+}
+
+/* ================= APPLY SECTION ================= */
+.apply-steps {
+  margin-top: 40px;
+}
+
+.apply-steps ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.apply-steps li {
+  margin-bottom: 8px;
+}
+
+.cta-text {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* ================= RIGHT SIDEBAR ================= */
+.service-right {
+  border: 1px solid #333;
+  padding: 20px;
+border-radius: 14px;
+  align-self: flex-start;
+
+  /* ✅ LOW PERMANENT SHINE */
+  box-shadow: 
+    5px 5px 8px rgba(255,255,255,0.25);
+
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+
+  background: rgba(255,255,255,0.02);
+backdrop-filter: blur(4px);
+}
+
+.service-right:hover {
+  border: 1px solid gold;
+
+  box-shadow:
+    5px 5px 18px rgba(255,255,255,0.9),   /* pure white */
+    0 0 12px rgba(255,215,0,0.8);        /* gold glow */
+}
+
+.service-right h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.service-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-right li {
+  padding: 10px;
+  border: 1px solid #222;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+   border-radius: 8px;  
+}
+
+.service-right li:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.service-right li.active {
+  background: white;
+  color: black;
+
+  font-weight: 600;
+  border: 1px solid gold;
+
+  box-shadow:
+    0 0 10px rgba(255,215,0,0.8),   /* gold glow */
+    3px 3px 8px rgba(255,255,255,0.6);
+
+  border-radius: 8px;
+}
+
+.service-right li a {
+  display: block;          /* ✅ full clickable area */
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+
+.service-left > h4 {
+  margin-top: 28px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .service-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= ELIGIBILITY TABLE FIX (AUTO WIDTH) ================= */
+.eligibility-table {
+  width: 100%;
+  border-collapse: collapse; /* no double borders */
+  margin: 20px 0;
+  table-layout: auto; /* first column fits text */
+  background: #000; /* match section background */
+  color: #fff; /* text white for visibility */
+}
+
+.eligibility-table th,
+.eligibility-table td {
+  border: 1px solid #fff; /* WHITE border for visibility */
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Make first column fit content */
+.eligibility-table th:first-child,
+.eligibility-table td:first-child {
+  width: 1%; /* shrink to fit text */
+  white-space: nowrap; /* prevent wrapping of column header */
+}
+
+.eligibility-table th {
+  font-weight: 600;
+}
+
+.eligibility-table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.05); /* subtle row shading */
+}

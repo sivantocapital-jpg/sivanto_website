@@ -1,0 +1,94 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* MODAL BOX */
+.modal-box {
+  width: 360px;                /* ⬅ reduced width */
+  background: white;
+  border-radius: 14px;         /* ⬅ more rounded */
+  animation: scaleIn 0.25s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+
+/* HEADER */
+.modal-header {
+  background: #ffc107;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;             /* ⬅ bigger */
+  font-weight: 800;            /* ⬅ bold */
+  letter-spacing: 0.4px;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* BODY */
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* MESSAGE BOX */
+.modal-body textarea {
+  min-height: 130px;           /* ⬅ taller message box */
+  resize: none;
+}
+
+/* SEND BUTTON */
+.send-btn {
+  width: 100%;                 /* ⬅ full width */
+  background: #01621d;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.send-btn:hover {
+  background: #014d16;
+  transform: translateY(-1px);
+}
+
+/* ERRORS */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 6px;
+  display: block;
+}

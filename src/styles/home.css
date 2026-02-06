@@ -1,0 +1,393 @@
+/* ================= SLIDER ================= */
+.slider-container {
+  width: 100%;
+  height: 700px;
+  background-image: url("/assets/home.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.slider-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+.slider-content h3 {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  width: 70%;
+  max-width: 900px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+  .slider-content h3 {
+    width: 90%;
+    font-size: 20px;
+  }
+}
+
+/* ================= ARROWS ================= */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #e63946;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+.arrow:hover {
+  color: #fff;
+  box-shadow: 0 0 15px #fff;
+}
+
+.left-arrow { left: 20px; }
+.right-arrow { right: 20px; }
+
+/* ================= SERVICES GRID ================= */
+
+.services-section {
+  background-color: #000;
+  padding: 50px 0;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* ================= SERVICE BOX ================= */
+.service-box {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0,0,0,0.85);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow:
+    5px 5px 15px rgba(255,255,255,0.25),
+    0 0 40px rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  border: 1px solid #fff;
+  box-shadow:
+    5px 5px 20px rgba(255,255,255,0.6),
+    0 0 50px rgba(255,255,255,0.15);
+  transform: translateY(-5px);
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.service-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.img-wrapper:hover .service-img {
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+/* ================= RATE PILL ================= */
+.rate-pill {
+  position: absolute;
+  bottom: -12px;
+  left: 20%;
+  transform: translateX(-50%);
+  background: #e63946;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+  white-space: nowrap;
+}
+
+/* ================= CONTENT ================= */
+.service-title {
+  margin-top: 28px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.service-desc {
+  font-size: 18px;
+  color: #ddd;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* ================= BUTTONS ================= */
+.service-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.service-buttons button,
+.pill-btn {
+  height: 42px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  max-width: 40%;
+  min-width: 80px;
+  transition: all 0.3s ease;
+  background: #e63946;
+  color: white;
+  border: none;
+   text-decoration: none;  
+  box-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+.service-buttons button:hover,
+.pill-btn:hover {
+  background: #ff4d5a;
+  box-shadow: 0 0 12px #fff;
+}
+
+.apply-btn {
+  background: #01621d;
+}
+
+.apply-btn:hover {
+  background: #014a16;
+}
+
+.learn-btn {
+  background: #f6f3f3;
+  border: 2px solid #01621d;
+  color: #01621d;
+  
+}
+
+.learn-btn:hover {
+  background: #01621d;
+  color: white;
+}
+
+/* ================= WHY SIVANTO ================= */
+.why-sivanto-section {
+  background: #111;
+  padding: 70px 40px;
+}
+
+.why-heading {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.why-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.why-box {
+  background: rgba(0,0,0,0.85);
+  padding: 25px 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow:
+    5px 5px 15px rgba(255,255,255,0.25),
+    0 0 40px rgba(255,255,255,0.08);
+  color: #fff;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.why-box:hover {
+  border: 1px solid #fff;
+  box-shadow:
+    5px 5px 20px rgba(255,255,255,0.6),
+    0 0 50px rgba(255,255,255,0.15);
+  transform: translateY(-6px);
+}
+
+.why-box img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.why-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #e63946;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.why-box p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+  text-align: justify;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-content h3 {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .service-desc {
+    font-size: 16px;
+  }
+
+  .services-grid {
+    padding: 0 15px;
+  }
+
+  .service-buttons {
+    padding: 0 5px;
+  }
+
+  .service-buttons button {
+    max-width: 46%;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .service-buttons {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .service-buttons button {
+    max-width: 42%;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pill-btn {
+    width: 100%;
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .services-grid > .service-box:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+
+/* ================= BOTTOM TEXT SECTION ================= */
+.bottom-text-section {
+  background-color: #000;  /* solid black background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.bottom-text-section .bottom-text {
+  color: #fff;             /* white text */
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7); /* optional glow */
+}
+
+.bottom-lines {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.line {
+  height: 3px;
+  width: 80px;
+  border-radius: 2px;
+}
+
+.black-line {
+  background-color: #fff;  /* white line for contrast */
+}
+
+.red-line {
+  background-color: #e63946; /* your accent red */
+}
+
+

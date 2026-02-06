@@ -1,0 +1,311 @@
+.about-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Background Image */
+.about-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* behind navbar */
+}
+
+/* Black transparent overlay */
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .8); /* 80% black */
+  z-index: 2;
+}
+
+/* Centered Text */
+.about-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+   z-index: 3; 
+}
+
+/* Big heading */
+.about-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Breadcrumb text (~35% size) */
+.about-content p {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+
+/* WHO WE ARE SECTION */
+.who-we-are-section {
+  padding: 80px 0;
+  background: #000;
+}
+
+/* Centered 70% container */
+.who-we-are-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* LEFT TEXT */
+.who-text {
+  flex: 1;
+}
+
+.who-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+ color: #fff;
+  margin-bottom: 20px;
+}
+
+.who-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #fff;
+  text-align: justify;
+}
+
+/* RIGHT IMAGE */
+.who-image {
+  flex: 1;
+}
+
+.who-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .who-we-are-container {
+    width: 85%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .who-we-are-container {
+    width: 90%;
+  }
+
+  .who-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* WHAT WE BELIEVE IN SECTION */
+.what-we-believe-section {
+  background: #000; /* light blue */
+  padding: 80px 0;
+}
+
+/* 80% centered container */
+.what-we-believe-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* IMAGE (LEFT) */
+.believe-image {
+  flex: 1;
+}
+
+.believe-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* TEXT (RIGHT) */
+.believe-text {
+  flex: 1;
+}
+
+.believe-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.believe-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #fff;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .what-we-believe-container {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .believe-text h2 {
+    font-size: 28px;
+  }
+}
+
+/* MISSION & VISION SECTION */
+.mission-vision-section {
+  padding: 80px 0;
+  background: #000;
+}
+
+/* FIRST ROW: Mission & Vision side by side */
+.mission-vision-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 30px; /* space between mission & vision */
+}
+
+/* COMMON BOX STYLES */
+.mission-box,
+.vision-box,
+.core-values-box {
+  background: #000; /* light green */
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+ box-sizing: border-box;
+  background: #000; /* black background */
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    5px 5px 15px rgba(255, 255, 255, 0.35),
+    0 0 40px rgba(255, 255, 255, 0.08);
+
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+
+}
+
+
+/* Hover glow */
+.mission-box:hover,
+.vision-box:hover,
+.core-values-box:hover {
+  border-color: #ffffff;
+
+  box-shadow:
+    5px 5px 20px rgba(255, 255, 255, 0.6),
+    0 0 50px rgba(255, 255, 255, 0.15);
+}
+
+/* Mission & Vision boxes */
+.mission-box,
+.vision-box {
+  flex: 1;
+}
+
+/* HEADINGS */
+.mission-box h3,
+.vision-box h3,
+.core-values-box h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* PARAGRAPH TEXT */
+.mission-box p,
+.vision-box p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #fff;
+  text-align: justify;
+}
+
+/* SECOND ROW: Core Values */
+.core-values-container {
+  width: 50%;
+  margin: 40px auto 0 auto; /* centered under first row */
+}
+
+.core-values-box ul {
+  padding-left: 18px;
+}
+
+.core-values-box li {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .mission-vision-container,
+  .core-values-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-container {
+    flex-direction: column;
+  }
+
+  .mission-box,
+  .vision-box,
+  .core-values-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* Navbar base */
+.navbar {
+  position: absolute; /* sit on top of hero image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* above the hero */
+  background: transparent; /* fully transparent */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* When user scrolls */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85); /* dark background when scrolled */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
