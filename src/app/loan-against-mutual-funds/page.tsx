@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import "../../styles/loan-common.css";
+import CommonSmallForm from "../components/CommonSmallForm";
+
 
 const LoanAgainstMutualFunds = () => {
   return (
@@ -25,19 +27,16 @@ const LoanAgainstMutualFunds = () => {
               <li>✅ No prepayment charges</li>
               <li>✅ T&amp;C Apply</li>
             </ul>
-            <button className="loan-btn">Get Started</button>
+            <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+    Get Started
+  </button>
+</Link>
+            
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for a Loan Against Mutual Funds?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+           <CommonSmallForm formType="loan-against-mutual-funds" />
         </div>
       </section>
 
@@ -124,9 +123,7 @@ const LoanAgainstMutualFunds = () => {
               <li><Link href="/personal-loan">Personal Loan</Link></li>
               <li><Link href="/business-loan">Business Loan</Link></li>
               <li><Link href="/education-loan">Education Loan</Link></li>
-              <li><Link href="/vehicle-loan">Vehicle Loan</Link></li>
               <li><Link href="/home-loan">Home Loan</Link></li>
-              <li><Link href="/gold-loan">Gold Loan</Link></li>
               <li><Link href="/loan-against-property">Loan Against Property</Link></li>
               <li><Link href="/loan-against-insurance">Loan Against Insurance Policies</Link></li>
               <li className="active"><Link href="/loan-against-mutual-funds">Loan Against Mutual Funds & Shares</Link></li>

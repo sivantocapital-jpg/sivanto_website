@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaChevronDown, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaTimes, FaBars } from "react-icons/fa";
 import "../../styles/navbar.css";
 import "../../styles/applyModal.css";
 
@@ -34,9 +34,10 @@ const serviceRoutes: Record<string, string> = {
   "Credit Cards": "/credit-cards"
 };
 
-// Update component to accept isScrolled as prop
 export default function Navbar({ isScrolled = false }: { isScrolled?: boolean }) {
   const [open, setOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -46,14 +47,29 @@ export default function Navbar({ isScrolled = false }: { isScrolled?: boolean })
   });
   const [errors, setErrors] = useState<any>({});
 
-  // ESC key close for modal
-  const escHandler = (e: KeyboardEvent) => {
-    if (e.key === "Escape") setOpen(false);
-  };
-
-  if (typeof window !== "undefined") {
+  // Handle escape key for modal
+  useEffect(() => {
+    if (!open) return;
+    const escHandler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
     window.addEventListener("keydown", escHandler);
-  }
+    return () => {
+      window.removeEventListener("keydown", escHandler);
+    };
+  }, [open]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileMenuOpen]);
 
   const validate = () => {
     const err: any = {};
@@ -65,11 +81,54 @@ export default function Navbar({ isScrolled = false }: { isScrolled?: boolean })
     return Object.keys(err).length === 0;
   };
 
-  const submitHandler = () => {
+  const submitHandler = async () => {
     if (!validate()) return;
-    alert("Form submitted successfully ✅");
-    setOpen(false);
-    setForm({ name: "", email: "", phone: "", loanType: "", message: "" });
+
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "form1",
+          ...form
+        })
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Form submitted successfully ✅");
+        setOpen(false);
+        setForm({ name: "", email: "", phone: "", loanType: "", message: "" });
+      } else {
+        alert("Failed to send email. Try again later.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Try again later.");
+    }
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const toggleMobileDropdown = () => {
+    setMobileDropdownOpen(!mobileDropdownOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setMobileDropdownOpen(false);
+  };
+
+  const handleMobileLinkClick = () => {
+    closeMobileMenu();
+  };
+
+  const handleMobileApplyClick = () => {
+    closeMobileMenu();
+    setOpen(true);
   };
 
   return (
@@ -80,6 +139,7 @@ export default function Navbar({ isScrolled = false }: { isScrolled?: boolean })
             <img src="/assets/logo.png" alt="Logo" />
           </div>
 
+          {/* Desktop Menu */}
           <ul className="menu">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
@@ -112,8 +172,72 @@ export default function Navbar({ isScrolled = false }: { isScrolled?: boolean })
               </button>
             </li>
           </ul>
+
+          {/* Hamburger Menu Button */}
+          <button 
+            className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`mobile-menu-overlay ${mobileMenuOpen ? 'active' : ''}`}
+        onClick={closeMobileMenu}
+      ></div>
+
+      {/* Mobile Menu Sidebar */}
+      <div className={`mobile-menu-container ${mobileMenuOpen ? 'active' : ''}`}>
+        <button className="mobile-menu-close" onClick={closeMobileMenu}>
+          <FaTimes size={24} />
+        </button>
+        
+        <ul className="mobile-menu">
+          <li>
+            <Link href="/" onClick={handleMobileLinkClick}>Home</Link>
+          </li>
+          <li>
+            <Link href="/about" onClick={handleMobileLinkClick}>About</Link>
+          </li>
+
+          {/* Mobile Dropdown */}
+          <li className="mobile-dropdown">
+            <div 
+              className={`mobile-dropdown-trigger ${mobileDropdownOpen ? 'active' : ''}`}
+              onClick={toggleMobileDropdown}
+            >
+              <span>Services</span>
+              <FaChevronDown />
+            </div>
+            <ul className={`mobile-dropdown-menu ${mobileDropdownOpen ? 'active' : ''}`}>
+              {services.map(s => (
+                <li key={s}>
+                  <Link href={serviceRoutes[s]} onClick={handleMobileLinkClick}>
+                    {s}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+
+          <li>
+            <Link href="/loan-process" onClick={handleMobileLinkClick}>Loan Process</Link>
+          </li>
+          <li>
+            <Link href="/contact" onClick={handleMobileLinkClick}>Contact</Link>
+          </li>
+        </ul>
+
+        <button className="mobile-apply-btn" onClick={handleMobileApplyClick}>
+          Apply Now
+        </button>
+      </div>
 
       {/* Quick Loan Modal */}
       {open && (

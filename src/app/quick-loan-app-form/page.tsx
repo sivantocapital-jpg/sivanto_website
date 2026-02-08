@@ -1,19 +1,33 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
 import "../../styles/quick-loan.css";
-export default function Home() {
-  const [formData, setFormData] = useState({
-  name: "",
-  phone: "",
-  email: "",
-  service: "",
-  address: "",
-  queryDate: (() => {
-    const today = new Date();
-    return `${String(today.getDate()).padStart(2,'0')} / ${String(today.getMonth()+1).padStart(2,'0')} / ${today.getFullYear()}`;
-  })(),
-});
 
+
+export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    address: "",
+    queryDate: (() => {
+      const today = new Date();
+      return `${String(today.getDate()).padStart(2, "0")} / ${String(
+        today.getMonth() + 1
+      ).padStart(2, "0")} / ${today.getFullYear()}`;
+    })(),
+  });
 
   const services = [
     "Personal Loan",
@@ -37,17 +51,41 @@ export default function Home() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 🔥 Here is the submitted data
-    console.log("Submitted Data:", formData);
+    // Show alert immediately
+    alert("Thank You, we will get back to you soon!!");
 
-    // Later you can:
-    // - send to API
-    // - store in database
-    // - send email
+    // Store form data locally for sending
+    const dataToSend = { ...formData, formType: "quick-loan" };
+
+    // Clear inputs immediately
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      service: "",
+      address: "",
+      queryDate: dataToSend.queryDate, // keep today's date
+    });
+
+    // Send email in the background
+    fetch("/api/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dataToSend),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (!result.success) {
+          console.error("Email sending failed:", result.error);
+        }
+      })
+      .catch((err) => console.error("Error sending email:", err));
   };
 
   return (
     <div className="page">
+      {/* Navbar */}
+      <Navbar isScrolled={isScrolled} />
       <div className="form-container">
         <h1 className="title">QUICK LOAN APPLICATION FORM</h1>
 

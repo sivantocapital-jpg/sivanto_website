@@ -21,7 +21,7 @@
 }
 
 .loan-hero .navbar a:hover {
-  color: gold;
+  color: #01621d;
 }
 
 /* Ensure dropdown menus still appear above overlay */
@@ -113,6 +113,7 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.85);
     z-index: 1; /* behind navbar */
+    pointer-events: none;
 }
 
 /* Container */
@@ -121,6 +122,7 @@
   z-index: 2;
   max-width: 1200px;
   margin: auto;
+   margin-top: 130px; 
   padding: 0 20px;
   width: 100%;
   display: grid;
@@ -201,7 +203,42 @@
 }
 
 /* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .service-left {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
 @media (max-width: 900px) {
+
+   .service-wrapper {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything */
+  }
+
+  .service-left {
+    width: 60%; /* Same as loan-left for consistency */
+    max-width: 600px;
+    text-align: left;
+    margin-left: 0; /* Reset the 10% margin since we have width: 60% */
+    margin-right: 0;
+  }
+
+   /* Center text in service-left */
+  .service-title {
+    text-align: center;
+  }
+  
+  .service-tagline {
+    text-align: center;
+  }
+  
+  .service-desc {
+    text-align: left; /* Keep description left-aligned */
+  }
   .loan-hero {
     height: auto;
     padding: 40px 0;
@@ -209,10 +246,69 @@
 
   .loan-container {
     grid-template-columns: 1fr;
+    display: flex; /* Change from grid to flex */
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center everything horizontally */
+    text-align: center; /* Center text content */
+    margin-top: 100px; /* Adjust if needed */
+  }
+  .loan-left {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    text-align: left; /* Keep text left-aligned inside container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content block */
+  }
+
+   .loan-left {
+    width: 60%; /* Same as loan-right for consistency */
+    max-width: 600px;
+    margin-bottom: 40px;
+    text-align: left; /* Keep text left-aligned */
   }
 
   .loan-left h1 {
     font-size: 30px;
+    text-align: center; /* Only center the heading */
+    margin-left: 0; /* Reset any margin */
+  }
+
+  .loan-left ul {
+    padding-left: 20px; /* Consistent bullet point alignment */
+    margin: 0; /* Remove default margins */
+  }
+
+  .loan-left li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: left; /* Ensure left alignment */
+    list-style-position: outside; /* Bullets outside the text flow */
+  }
+
+  .loan-right {
+    width: 75%; /* Take 60% of screen width */
+    max-width: 600px; /* Optional: maximum width limit */
+    margin: 0 auto; /* Center horizontally */
+    text-align: left; /* Keep form text left-aligned */
+  }
+
+  
+}
+
+/* Optional: For very small screens, adjust the 60% width */
+@media (max-width: 600px) {
+  .loan-right {
+    width: 80%; /* Increase width on very small screens */
+    max-width: 400px; /* Adjust max width */
+  }
+}
+
+@media (max-width: 400px) {
+  .loan-right {
+    width: 90%; /* Nearly full width on tiny screens */
+    max-width: 350px;
   }
 }
 
@@ -344,6 +440,7 @@
 border-radius: 14px;
   align-self: flex-start;
 
+  
   /* ✅ LOW PERMANENT SHINE */
   box-shadow: 
     5px 5px 8px rgba(255,255,255,0.25);
@@ -416,7 +513,37 @@ backdrop-filter: blur(4px);
 @media (max-width: 900px) {
   .service-wrapper {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything */
   }
+
+  .service-left {
+    width: 60%; /* Same as loan-left for consistency */
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .service-right {
+    width: 60%; /* Reduce to same width as other elements */
+    max-width: 600px;
+    margin: 40px auto 0; /* Center and add top margin */
+    order: 2; /* Ensure it comes after content */
+  }
+  
+  /* Center text in service-left */
+  .service-title {
+    text-align: center;
+  }
+  
+  .service-tagline {
+    text-align: center;
+  }
+  
+  .service-desc {
+    text-align: left; /* Keep description left-aligned */
+  }
+
 }
 
 /* ================= ELIGIBILITY TABLE FIX (AUTO WIDTH) ================= */

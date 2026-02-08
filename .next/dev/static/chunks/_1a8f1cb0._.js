@@ -454,7 +454,7 @@ function EducationLoan() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$noop$2d$head$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("title", {
-                        children: "Education Loan in India | Study Abroad & Domestic Loans – PaisaPulse"
+                        children: "Education Loan in India | Study Abroad & Domestic Loans – Sivanto Capital"
                     }, void 0, false, {
                         fileName: "[project]/src/app/education-loan/page.tsx",
                         lineNumber: 15,
@@ -462,7 +462,7 @@ function EducationLoan() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
                         name: "description",
-                        content: "Apply for Education Loans up to ₹1 Crore in India and ₹2 Crore for overseas studies. Low interest rates starting from 9.25% p.a., quick approval, and flexible repayment with PaisaPulse."
+                        content: "Apply for Education Loans up to ₹1 Crore in India and ₹2 Crore for overseas studies. Low interest rates starting from 9.25% p.a., quick approval, and flexible repayment with Sivanto Capital."
                     }, void 0, false, {
                         fileName: "[project]/src/app/education-loan/page.tsx",
                         lineNumber: 19,
@@ -470,7 +470,7 @@ function EducationLoan() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
                         name: "keywords",
-                        content: "Education Loan India, Study Abroad Education Loan, Student Loan, Overseas Education Loan, Education Loan Interest Rates, PaisaPulse"
+                        content: "Education Loan India, Study Abroad Education Loan, Student Loan, Overseas Education Loan, Education Loan Interest Rates, Sivanto Capital"
                     }, void 0, false, {
                         fileName: "[project]/src/app/education-loan/page.tsx",
                         lineNumber: 24,
@@ -496,11 +496,11 @@ function EducationLoan() {
                                 "areaServed": "IN",
                                 "provider": {
                                     "@type": "Organization",
-                                    "name": "PaisaPulse",
-                                    "url": "https://www.yourdomain.com",
+                                    "name": "Sivanto Capital",
+                                    "url": "https://www.sivantocapital.in",
                                     "logo": "https://www.yourdomain.com/assets/logo.png"
                                 },
-                                "url": "https://www.yourdomain.com/education-loan"
+                                "url": "https://www.sivantocapital.in/education-loan"
                             })
                         }
                     }, void 0, false, {
@@ -595,12 +595,19 @@ function EducationLoan() {
                                         lineNumber: 70,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "loan-btn",
-                                        children: "Invest in Your Future – Apply Now"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "/quick-loan-app-form",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "loan-btn",
+                                            children: "Invest in Your Future – Apply Now"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/education-loan/page.tsx",
+                                            lineNumber: 83,
+                                            columnNumber: 3
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this)
                                 ]
@@ -616,14 +623,14 @@ function EducationLoan() {
                                         children: "Looking for an Education Loan?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 92,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Let us help you get the funding you need."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 93,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -631,7 +638,7 @@ function EducationLoan() {
                                         placeholder: "Name as Per Pancard"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                        lineNumber: 90,
+                                        lineNumber: 94,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -639,7 +646,7 @@ function EducationLoan() {
                                         placeholder: "Your Mobile Number"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 95,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -647,13 +654,13 @@ function EducationLoan() {
                                         children: "Apply"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 96,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/education-loan/page.tsx",
-                                lineNumber: 87,
+                                lineNumber: 91,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -681,23 +688,23 @@ function EducationLoan() {
                                     children: "Education Loan"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 106,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                     className: "service-tagline",
-                                    children: "– Invest in Your Future with PaisaPulse"
+                                    children: "– Invest in Your Future with Sivanto Capital"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 107,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "service-desc",
-                                    children: "Dreaming of higher education but worried about rising costs? Whether you plan to study in India or abroad, PaisaPulse Education Loans help you finance your education with ease. Get funding up to ₹2 Crore at attractive interest rates with quick sanction and flexible repayment options."
+                                    children: "Dreaming of higher education but worried about rising costs? Whether you plan to study in India or abroad, Sivanto Capital Education Loans help you finance your education with ease. Get funding up to ₹2 Crore at attractive interest rates with quick sanction and flexible repayment options."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -706,10 +713,10 @@ function EducationLoan() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             className: `tab-btn ${activeTab === "why" ? "active" : ""}`,
                                             onClick: ()=>setActiveTab("why"),
-                                            children: "Why PaisaPulse"
+                                            children: "Why Sivanto Capital"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                            lineNumber: 117,
+                                            lineNumber: 121,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -718,7 +725,7 @@ function EducationLoan() {
                                             children: "Eligibility"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                            lineNumber: 126,
+                                            lineNumber: 130,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -727,13 +734,13 @@ function EducationLoan() {
                                             children: "Documents Required"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 139,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 120,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -742,10 +749,10 @@ function EducationLoan() {
                                         activeTab === "why" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                    children: "Why Choose PaisaPulse Education Loan?"
+                                                    children: "Why Choose Sivanto Capital Education Loan?"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                                    lineNumber: 149,
+                                                    lineNumber: 153,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -754,41 +761,41 @@ function EducationLoan() {
                                                             children: "Interest Rates starting from 9.25% p.a."
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 151,
+                                                            lineNumber: 155,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Loan up to ₹1 Crore (India) & ₹2 Crore (Abroad)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 152,
+                                                            lineNumber: 156,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Quick approval & fast disbursal"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 155,
+                                                            lineNumber: 159,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Flexible repayment options"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 156,
+                                                            lineNumber: 160,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Covers tuition, living & travel expenses"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 157,
+                                                            lineNumber: 161,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                                    lineNumber: 150,
+                                                    lineNumber: 154,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -799,7 +806,7 @@ function EducationLoan() {
                                                     children: "Eligibility Criteria"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                                    lineNumber: 164,
+                                                    lineNumber: 168,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -812,25 +819,25 @@ function EducationLoan() {
                                                                         children: "Particulars"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                                                        lineNumber: 168,
+                                                                        lineNumber: 172,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                                         children: "Eligibility"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/education-loan/page.tsx",
-                                                                        lineNumber: 169,
+                                                                        lineNumber: 173,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/education-loan/page.tsx",
-                                                                lineNumber: 167,
+                                                                lineNumber: 171,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 166,
+                                                            lineNumber: 170,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -841,33 +848,11 @@ function EducationLoan() {
                                                                             children: "Nationality"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                                            lineNumber: 174,
-                                                                            columnNumber: 25
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Indian Citizen"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/src/app/education-loan/page.tsx",
-                                                                            lineNumber: 175,
-                                                                            columnNumber: 25
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/src/app/education-loan/page.tsx",
-                                                                    lineNumber: 173,
-                                                                    columnNumber: 23
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Age"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 178,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "16 – 35 years"
+                                                                            children: "Indian Citizen"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 179,
@@ -882,14 +867,14 @@ function EducationLoan() {
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Course"
+                                                                            children: "Age"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 182,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Graduate / Postgraduate / Professional"
+                                                                            children: "16 – 35 years"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 183,
@@ -904,14 +889,14 @@ function EducationLoan() {
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Institute"
+                                                                            children: "Course"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 186,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Recognized institutions in India & abroad"
+                                                                            children: "Graduate / Postgraduate / Professional"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 187,
@@ -926,14 +911,14 @@ function EducationLoan() {
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Co-Borrower"
+                                                                            children: "Institute"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 190,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                            children: "Parent / Guardian"
+                                                                            children: "Recognized institutions in India & abroad"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                                                             lineNumber: 191,
@@ -944,17 +929,39 @@ function EducationLoan() {
                                                                     fileName: "[project]/src/app/education-loan/page.tsx",
                                                                     lineNumber: 189,
                                                                     columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                                            children: "Co-Borrower"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/app/education-loan/page.tsx",
+                                                                            lineNumber: 194,
+                                                                            columnNumber: 25
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                                            children: "Parent / Guardian"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/app/education-loan/page.tsx",
+                                                                            lineNumber: 195,
+                                                                            columnNumber: 25
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/app/education-loan/page.tsx",
+                                                                    lineNumber: 193,
+                                                                    columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 172,
+                                                            lineNumber: 176,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                                    lineNumber: 165,
+                                                    lineNumber: 169,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -965,7 +972,7 @@ function EducationLoan() {
                                                     children: "Documents Required"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                                    lineNumber: 200,
+                                                    lineNumber: 204,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -974,41 +981,41 @@ function EducationLoan() {
                                                             children: "Identity & Address Proof"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 202,
+                                                            lineNumber: 206,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Academic Records"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 203,
+                                                            lineNumber: 207,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Admission Letter"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 204,
+                                                            lineNumber: 208,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Income Proof of Co-Borrower"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 205,
+                                                            lineNumber: 209,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Bank Statements"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/education-loan/page.tsx",
-                                                            lineNumber: 206,
+                                                            lineNumber: 210,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                                    lineNumber: 201,
+                                                    lineNumber: 205,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -1016,15 +1023,15 @@ function EducationLoan() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 150,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "cta-text",
-                                    children: "👉 Apply Now for a PaisaPulse Education Loan and take the first step towards your dream career."
+                                    children: "👉 Apply Now for a Sivanto Capital Education Loan and take the first step towards your dream career."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 212,
+                                    lineNumber: 216,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1032,13 +1039,13 @@ function EducationLoan() {
                                     children: "Disclaimer: Loan approval, interest rates, and eligibility are subject to lender policies. T&C apply."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 217,
+                                    lineNumber: 221,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/education-loan/page.tsx",
-                            lineNumber: 101,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1048,7 +1055,7 @@ function EducationLoan() {
                                     children: "OTHER SERVICES"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1057,63 +1064,6 @@ function EducationLoan() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/personal-loan",
                                                 children: "Personal Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/education-loan/page.tsx",
-                                                lineNumber: 227,
-                                                columnNumber: 9
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/education-loan/page.tsx",
-                                            lineNumber: 227,
-                                            columnNumber: 5
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/business-loan",
-                                                children: "Business Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/education-loan/page.tsx",
-                                                lineNumber: 228,
-                                                columnNumber: 9
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/education-loan/page.tsx",
-                                            lineNumber: 228,
-                                            columnNumber: 5
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            className: "active",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/education-loan",
-                                                children: "Education Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/education-loan/page.tsx",
-                                                lineNumber: 229,
-                                                columnNumber: 28
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/education-loan/page.tsx",
-                                            lineNumber: 229,
-                                            columnNumber: 5
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/home-loan",
-                                                children: "Home Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/education-loan/page.tsx",
-                                                lineNumber: 230,
-                                                columnNumber: 9
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/education-loan/page.tsx",
-                                            lineNumber: 230,
-                                            columnNumber: 5
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-property",
-                                                children: "Loan Against Property"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/education-loan/page.tsx",
                                                 lineNumber: 231,
@@ -1126,8 +1076,8 @@ function EducationLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-insurance",
-                                                children: "Loan Against Insurance Policies"
+                                                href: "/business-loan",
+                                                children: "Business Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/education-loan/page.tsx",
                                                 lineNumber: 232,
@@ -1139,13 +1089,14 @@ function EducationLoan() {
                                             columnNumber: 5
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            className: "active",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-mutual-funds",
-                                                children: "Loan Against Mutual Funds & Shares"
+                                                href: "/education-loan",
+                                                children: "Education Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/education-loan/page.tsx",
                                                 lineNumber: 233,
-                                                columnNumber: 9
+                                                columnNumber: 28
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/education-loan/page.tsx",
@@ -1154,8 +1105,8 @@ function EducationLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/health-insurance",
-                                                children: "Health Insurance"
+                                                href: "/home-loan",
+                                                children: "Home Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/education-loan/page.tsx",
                                                 lineNumber: 234,
@@ -1168,8 +1119,8 @@ function EducationLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/life-insurance",
-                                                children: "Life Insurance"
+                                                href: "/loan-against-property",
+                                                children: "Loan Against Property"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/education-loan/page.tsx",
                                                 lineNumber: 235,
@@ -1182,8 +1133,8 @@ function EducationLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/credit-cards",
-                                                children: "Credit Cards"
+                                                href: "/loan-against-insurance",
+                                                children: "Loan Against Insurance Policies"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/education-loan/page.tsx",
                                                 lineNumber: 236,
@@ -1193,28 +1144,84 @@ function EducationLoan() {
                                             fileName: "[project]/src/app/education-loan/page.tsx",
                                             lineNumber: 236,
                                             columnNumber: 5
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/loan-against-mutual-funds",
+                                                children: "Loan Against Mutual Funds & Shares"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/education-loan/page.tsx",
+                                                lineNumber: 237,
+                                                columnNumber: 9
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/education-loan/page.tsx",
+                                            lineNumber: 237,
+                                            columnNumber: 5
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/health-insurance",
+                                                children: "Health Insurance"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/education-loan/page.tsx",
+                                                lineNumber: 238,
+                                                columnNumber: 9
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/education-loan/page.tsx",
+                                            lineNumber: 238,
+                                            columnNumber: 5
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/life-insurance",
+                                                children: "Life Insurance"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/education-loan/page.tsx",
+                                                lineNumber: 239,
+                                                columnNumber: 9
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/education-loan/page.tsx",
+                                            lineNumber: 239,
+                                            columnNumber: 5
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/credit-cards",
+                                                children: "Credit Cards"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/education-loan/page.tsx",
+                                                lineNumber: 240,
+                                                columnNumber: 9
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/education-loan/page.tsx",
+                                            lineNumber: 240,
+                                            columnNumber: 5
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/education-loan/page.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 230,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/education-loan/page.tsx",
-                            lineNumber: 224,
+                            lineNumber: 228,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/education-loan/page.tsx",
-                    lineNumber: 99,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/education-loan/page.tsx",
-                lineNumber: 98,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]

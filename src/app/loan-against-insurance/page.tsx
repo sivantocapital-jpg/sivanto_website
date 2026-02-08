@@ -2,6 +2,7 @@
 import Link from "next/link";
 import "../../styles/loan-common.css";
 import Navbar from "../components/Navbar";
+import CommonSmallForm from "../components/CommonSmallForm";
 
 const LoanAgainstInsurance = () => {
   return (
@@ -30,15 +31,7 @@ const LoanAgainstInsurance = () => {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for a Loan Against Insurance Policies?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+           <CommonSmallForm formType="loan-against-insurance" />
         </div>
       </section>
 
@@ -103,7 +96,7 @@ const LoanAgainstInsurance = () => {
             </p>
 
             <p className="cta-text">
-              👉 Start your application with PaisaPulse today and get quick approval on loans against your insurance policy — with ease, transparency, and security.
+              👉 Start your application with Sivanto Capital today and get quick approval on loans against your insurance policy — with ease, transparency, and security.
             </p>
 
             <p className="disclaimer">
@@ -118,9 +111,7 @@ const LoanAgainstInsurance = () => {
               <li><Link href="/personal-loan">Personal Loan</Link></li>
               <li><Link href="/business-loan">Business Loan</Link></li>
               <li><Link href="/education-loan">Education Loan</Link></li>
-              <li><Link href="/vehicle-loan">Vehicle Loan</Link></li>
               <li><Link href="/home-loan">Home Loan</Link></li>
-              <li><Link href="/gold-loan">Gold Loan</Link></li>
               <li><Link href="/loan-against-property">Loan Against Property</Link></li>
               <li className="active"><Link href="/loan-against-insurance">Loan Against Insurance Policies</Link></li>
               <li><Link href="/loan-against-mutual-funds">Loan Against Mutual Funds & Shares</Link></li>

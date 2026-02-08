@@ -33,7 +33,9 @@ export default function PersonalLoanPage() {
               <li>✅ Minimum salary eligibility – ₹20,000 onwards</li>
               <li>✅ T&C Apply</li>
             </ul>
-            <button className="loan-btn">Apply Now and Get Started</button>
+           <Link href="/quick-loan-app-form">
+  <button className="loan-btn">Apply Now and Get Started</button>
+</Link>
           </div>
 
           <div className="loan-right">

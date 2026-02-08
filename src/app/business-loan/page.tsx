@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import { useState } from "react";
 import Head from "next/head";  // ✅ Import Head
 import "../../styles/loan-common.css";
+import CommonSmallForm from "../components/CommonSmallForm";
+
 
 export default function BusinessLoan() {
   const [activeTab, setActiveTab] = useState("why");
@@ -71,19 +73,15 @@ export default function BusinessLoan() {
               <li>✅ Flexible tenure up to 36 months</li>
               <li>✅ T&C Apply</li>
             </ul>
-            <button className="loan-btn">
-              Boost Your Business – Apply Now
-            </button>
+            <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+    Boost Your Business – Apply Now
+  </button>
+</Link>
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for a Business Loan?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+           <CommonSmallForm formType="business-loan" />
         </div>
       </section>
 

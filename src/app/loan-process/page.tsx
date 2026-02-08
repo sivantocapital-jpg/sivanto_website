@@ -5,27 +5,26 @@ import "../../styles/loan-process.css";
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar"; // Import your Navbar
 
-
 // Make page static for SEO
 export const dynamic = "force-static";
 
 export default function LoanProcess() {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-const [isScrolled, setIsScrolled] = useState(false);
-    
-    // Scroll listener for navbar
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 100);
-      };
-      
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+  // Scroll listener for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
 
-  const [loanAmount, setLoanAmount] = useState(50000);
-  const [interestRate, setInterestRate] = useState(7);
-  const [loanTenure, setLoanTenure] = useState(24);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Inputs can be number or empty string
+  const [loanAmount, setLoanAmount] = useState<number | "">("50000");
+  const [interestRate, setInterestRate] = useState<number | "">(7);
+  const [loanTenure, setLoanTenure] = useState<number | "">(24);
 
   const [emiResult, setEmiResult] = useState({
     totalInterestPayable: "3727.12",
@@ -41,9 +40,14 @@ const [isScrolled, setIsScrolled] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const emi = calculateEMI(loanAmount, interestRate, loanTenure);
-    const totalPayment = emi * loanTenure;
-    const totalInterest = totalPayment - loanAmount;
+    // Convert empty strings to 0 for calculation
+    const P = Number(loanAmount) || 0;
+    const R = Number(interestRate) || 0;
+    const N = Number(loanTenure) || 1;
+
+    const emi = calculateEMI(P, R, N);
+    const totalPayment = emi * N;
+    const totalInterest = totalPayment - P;
     setEmiResult({
       emiAmount: emi.toFixed(2),
       totalPayments: totalPayment.toFixed(2),
@@ -64,28 +68,32 @@ const [isScrolled, setIsScrolled] = useState(false);
           name="keywords"
           content="loan process, EMI calculator, personal loan, business loan, home loan, how to apply for loan, Sivanto Capital Services"
         />
-        <link rel="canonical" href="https://www.yourdomain.com/loan-process" />
+        <link rel="canonical" href="https://www.sivantocapital.in/loan-process" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FinancialService",
-              "name": "Sivanto Capital Services",
-              "url": "https://www.yourdomain.com",
-              "logo": "https://www.yourdomain.com/assets/logo.png",
-              "description": "Provides personal, business, home loans and insurance solutions with transparency and professionalism.",
+              name: "Sivanto Capital Services",
+              url: "https://www.sivantocapital.in",
+              logo: "https://www.sivantocapital.in/assets/logo.png",
+              description:
+                "Provides personal, business, home loans and insurance solutions with transparency and professionalism.",
             }),
           }}
         />
       </Head>
 
-      {/* Original Page Content */}
+      {/* Page Content */}
       <div className="loan-process-page">
         <div className="loan-hero">
-                    {/* Navbar with scroll effect */}
-            <Navbar isScrolled={isScrolled} />
-          <img src="/assets/deal.jpeg" alt="Loan Process" className="loan-bg" />
+           <div className="hero-navbar">
+          {/* Navbar with scroll effect */}
+          <Navbar isScrolled={isScrolled} />
+          </div>
+          <img src="/assets/deal.jpeg" alt="Sivanto Capital Services Loan Process - Eligibility, Document Submission, Approval"
+ className="loan-bg" />
           <div className="loan-overlay"></div>
 
           <div className="loan-content">
@@ -121,6 +129,7 @@ const [isScrolled, setIsScrolled] = useState(false);
               Get an approximate figure for the total monthly instalment payments along with a complete break-up of a loan.
             </p>
 
+            {/* Loan Amount */}
             <label htmlFor="loanAmount">
               <span className="input-prefix">₹</span>
               <input
@@ -128,13 +137,17 @@ const [isScrolled, setIsScrolled] = useState(false);
                 type="number"
                 min="0"
                 value={loanAmount}
-                onChange={(e) => setLoanAmount(Number(e.target.value))}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setLoanAmount(value === "" ? "" : Number(value));
+                }}
                 placeholder="Loan Amount"
                 className="emi-input"
               />
               <span className="input-suffix">Amount</span>
             </label>
 
+            {/* Interest Rate */}
             <label htmlFor="interestRate">
               <span className="input-prefix">%</span>
               <input
@@ -143,13 +156,17 @@ const [isScrolled, setIsScrolled] = useState(false);
                 min="0"
                 step="0.01"
                 value={interestRate}
-                onChange={(e) => setInterestRate(Number(e.target.value))}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setInterestRate(value === "" ? "" : Number(value));
+                }}
                 placeholder="Interest Rate"
                 className="emi-input"
               />
               <span className="input-suffix">/ Annum</span>
             </label>
 
+            {/* Loan Tenure */}
             <label htmlFor="loanTenure">
               <span className="input-prefix clock-icon" aria-label="Clock icon">
                 <svg
@@ -171,7 +188,10 @@ const [isScrolled, setIsScrolled] = useState(false);
                 type="number"
                 min="1"
                 value={loanTenure}
-                onChange={(e) => setLoanTenure(Number(e.target.value))}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setLoanTenure(value === "" ? "" : Number(value));
+                }}
                 placeholder="Loan Tenure (Months)"
                 className="emi-input"
               />
@@ -189,6 +209,7 @@ const [isScrolled, setIsScrolled] = useState(false);
             </div>
           </form>
 
+          {/* EMI Result Box */}
           <div className="emi-result-box">
             <h3>Your EMI Amount</h3>
 

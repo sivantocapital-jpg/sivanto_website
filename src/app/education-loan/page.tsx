@@ -4,6 +4,8 @@ import Head from "next/head";
 import { useState } from "react";
 import "../../styles/loan-common.css";
 import Navbar from "../components/Navbar";
+import CommonSmallForm from "../components/CommonSmallForm";
+ 
 
 export default function EducationLoan() {
   const [activeTab, setActiveTab] = useState("why");
@@ -13,17 +15,17 @@ export default function EducationLoan() {
       {/* ================= SEO HEAD ================= */}
       <Head>
         <title>
-          Education Loan in India | Study Abroad & Domestic Loans – PaisaPulse
+          Education Loan in India | Study Abroad & Domestic Loans – Sivanto Capital
         </title>
 
         <meta
           name="description"
-          content="Apply for Education Loans up to ₹1 Crore in India and ₹2 Crore for overseas studies. Low interest rates starting from 9.25% p.a., quick approval, and flexible repayment with PaisaPulse."
+          content="Apply for Education Loans up to ₹1 Crore in India and ₹2 Crore for overseas studies. Low interest rates starting from 9.25% p.a., quick approval, and flexible repayment with Sivanto Capital."
         />
 
         <meta
           name="keywords"
-          content="Education Loan India, Study Abroad Education Loan, Student Loan, Overseas Education Loan, Education Loan Interest Rates, PaisaPulse"
+          content="Education Loan India, Study Abroad Education Loan, Student Loan, Overseas Education Loan, Education Loan Interest Rates, Sivanto Capital"
         />
 
         <link
@@ -45,11 +47,11 @@ export default function EducationLoan() {
               "areaServed": "IN",
               "provider": {
                 "@type": "Organization",
-                "name": "PaisaPulse",
-                "url": "https://www.yourdomain.com",
+                "name": "Sivanto Capital",
+                "url": "https://www.sivantocapital.in",
                 "logo": "https://www.yourdomain.com/assets/logo.png"
               },
-              "url": "https://www.yourdomain.com/education-loan"
+              "url": "https://www.sivantocapital.in/education-loan"
             })
           }}
         />
@@ -78,19 +80,18 @@ export default function EducationLoan() {
               <li>✅ Covers tuition, hostel, travel, books & more</li>
               <li>✅ T&C Apply</li>
             </ul>
-            <button className="loan-btn">
-              Invest in Your Future – Apply Now
-            </button>
+
+            <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+    Invest in Your Future – Apply Now
+  </button>
+</Link>
+            
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for an Education Loan?</h2>
-            <p>Let us help you get the funding you need.</p>
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+      
+ <CommonSmallForm formType="education-loan" />
         </div>
       </section>
 
@@ -101,12 +102,12 @@ export default function EducationLoan() {
           <div className="service-left">
             <h1 className="service-title">Education Loan</h1>
             <h3 className="service-tagline">
-              – Invest in Your Future with PaisaPulse
+              – Invest in Your Future with Sivanto Capital
             </h3>
 
             <p className="service-desc">
               Dreaming of higher education but worried about rising costs? Whether
-              you plan to study in India or abroad, PaisaPulse Education Loans
+              you plan to study in India or abroad, Sivanto Capital Education Loans
               help you finance your education with ease. Get funding up to ₹2
               Crore at attractive interest rates with quick sanction and flexible
               repayment options.
@@ -120,7 +121,7 @@ export default function EducationLoan() {
                 }`}
                 onClick={() => setActiveTab("why")}
               >
-                Why PaisaPulse
+                Why Sivanto Capital
               </button>
 
               <button
@@ -146,7 +147,7 @@ export default function EducationLoan() {
             <div className="tab-content">
               {activeTab === "why" && (
                 <>
-                  <h4>Why Choose PaisaPulse Education Loan?</h4>
+                  <h4>Why Choose Sivanto Capital Education Loan?</h4>
                   <ul>
                     <li>Interest Rates starting from 9.25% p.a.</li>
                     <li>
@@ -210,7 +211,7 @@ export default function EducationLoan() {
             </div>
 
             <p className="cta-text">
-              👉 Apply Now for a PaisaPulse Education Loan and take the first step
+              👉 Apply Now for a Sivanto Capital Education Loan and take the first step
               towards your dream career.
             </p>
 

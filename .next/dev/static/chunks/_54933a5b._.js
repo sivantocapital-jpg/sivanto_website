@@ -47,6 +47,8 @@ const serviceRoutes = {
 function Navbar({ isScrolled = false }) {
     _s();
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [mobileDropdownOpen, setMobileDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         name: "",
         email: "",
@@ -55,13 +57,42 @@ function Navbar({ isScrolled = false }) {
         message: ""
     });
     const [errors, setErrors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
-    // ESC key close for modal
-    const escHandler = (e)=>{
-        if (e.key === "Escape") setOpen(false);
-    };
-    if ("TURBOPACK compile-time truthy", 1) {
-        window.addEventListener("keydown", escHandler);
-    }
+    // Handle escape key for modal
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Navbar.useEffect": ()=>{
+            if (!open) return;
+            const escHandler = {
+                "Navbar.useEffect.escHandler": (e)=>{
+                    if (e.key === "Escape") setOpen(false);
+                }
+            }["Navbar.useEffect.escHandler"];
+            window.addEventListener("keydown", escHandler);
+            return ({
+                "Navbar.useEffect": ()=>{
+                    window.removeEventListener("keydown", escHandler);
+                }
+            })["Navbar.useEffect"];
+        }
+    }["Navbar.useEffect"], [
+        open
+    ]);
+    // Prevent body scroll when mobile menu is open
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Navbar.useEffect": ()=>{
+            if (mobileMenuOpen) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "auto";
+            }
+            return ({
+                "Navbar.useEffect": ()=>{
+                    document.body.style.overflow = "auto";
+                }
+            })["Navbar.useEffect"];
+        }
+    }["Navbar.useEffect"], [
+        mobileMenuOpen
+    ]);
     const validate = ()=>{
         const err = {};
         if (!form.name.trim()) err.name = "Name is required";
@@ -71,17 +102,54 @@ function Navbar({ isScrolled = false }) {
         setErrors(err);
         return Object.keys(err).length === 0;
     };
-    const submitHandler = ()=>{
+    const submitHandler = async ()=>{
         if (!validate()) return;
-        alert("Form submitted successfully ✅");
-        setOpen(false);
-        setForm({
-            name: "",
-            email: "",
-            phone: "",
-            loanType: "",
-            message: ""
-        });
+        try {
+            const res = await fetch("/api/sendEmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    formType: "form1",
+                    ...form
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                alert("Form submitted successfully ✅");
+                setOpen(false);
+                setForm({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    loanType: "",
+                    message: ""
+                });
+            } else {
+                alert("Failed to send email. Try again later.");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Something went wrong. Try again later.");
+        }
+    };
+    const toggleMobileMenu = ()=>{
+        setMobileMenuOpen(!mobileMenuOpen);
+    };
+    const toggleMobileDropdown = ()=>{
+        setMobileDropdownOpen(!mobileDropdownOpen);
+    };
+    const closeMobileMenu = ()=>{
+        setMobileMenuOpen(false);
+        setMobileDropdownOpen(false);
+    };
+    const handleMobileLinkClick = ()=>{
+        closeMobileMenu();
+    };
+    const handleMobileApplyClick = ()=>{
+        closeMobileMenu();
+        setOpen(true);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -97,12 +165,12 @@ function Navbar({ isScrolled = false }) {
                                 alt: "Logo"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                lineNumber: 80,
+                                lineNumber: 139,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 79,
+                            lineNumber: 138,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -114,12 +182,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Home"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 144,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 144,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -128,12 +196,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "About"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 145,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -146,18 +214,18 @@ function Navbar({ isScrolled = false }) {
                                                     "Services ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronDown"], {}, void 0, false, {
                                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                                        lineNumber: 91,
+                                                        lineNumber: 151,
                                                         columnNumber: 28
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                                lineNumber: 90,
+                                                lineNumber: 150,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 149,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -168,23 +236,23 @@ function Navbar({ isScrolled = false }) {
                                                         children: s
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                                        lineNumber: 97,
+                                                        lineNumber: 157,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, s, false, {
                                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 156,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 154,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 148,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -193,12 +261,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Loan Process"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 164,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -207,12 +275,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Contact"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 167,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 167,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -222,29 +290,218 @@ function Navbar({ isScrolled = false }) {
                                         children: "Apply Now"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 170,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 169,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 83,
+                            lineNumber: 143,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: `hamburger ${mobileMenuOpen ? 'active' : ''}`,
+                            onClick: toggleMobileMenu,
+                            "aria-label": "Toggle menu",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                    lineNumber: 182,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                    lineNumber: 183,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                    lineNumber: 184,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/components/Navbar.tsx",
+                            lineNumber: 177,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Navbar.tsx",
-                    lineNumber: 78,
+                    lineNumber: 137,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar.tsx",
-                lineNumber: 77,
+                lineNumber: 136,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `mobile-menu-overlay ${mobileMenuOpen ? 'active' : ''}`,
+                onClick: closeMobileMenu
+            }, void 0, false, {
+                fileName: "[project]/src/app/components/Navbar.tsx",
+                lineNumber: 190,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `mobile-menu-container ${mobileMenuOpen ? 'active' : ''}`,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "mobile-menu-close",
+                        onClick: closeMobileMenu,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaTimes"], {
+                            size: 24
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/Navbar.tsx",
+                            lineNumber: 198,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/Navbar.tsx",
+                        lineNumber: 197,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: "mobile-menu",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/",
+                                    onClick: handleMobileLinkClick,
+                                    children: "Home"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                    lineNumber: 203,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                lineNumber: 202,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/about",
+                                    onClick: handleMobileLinkClick,
+                                    children: "About"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                    lineNumber: 206,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                lineNumber: 205,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                className: "mobile-dropdown",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: `mobile-dropdown-trigger ${mobileDropdownOpen ? 'active' : ''}`,
+                                        onClick: toggleMobileDropdown,
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: "Services"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                                lineNumber: 215,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronDown"], {}, void 0, false, {
+                                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                                lineNumber: 216,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/components/Navbar.tsx",
+                                        lineNumber: 211,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                        className: `mobile-dropdown-menu ${mobileDropdownOpen ? 'active' : ''}`,
+                                        children: services.map((s)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: serviceRoutes[s],
+                                                    onClick: handleMobileLinkClick,
+                                                    children: s
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                                    lineNumber: 221,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, s, false, {
+                                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                                lineNumber: 220,
+                                                columnNumber: 17
+                                            }, this))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/components/Navbar.tsx",
+                                        lineNumber: 218,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                lineNumber: 210,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/loan-process",
+                                    onClick: handleMobileLinkClick,
+                                    children: "Loan Process"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                    lineNumber: 230,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                lineNumber: 229,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/contact",
+                                    onClick: handleMobileLinkClick,
+                                    children: "Contact"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navbar.tsx",
+                                    lineNumber: 233,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Navbar.tsx",
+                                lineNumber: 232,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/components/Navbar.tsx",
+                        lineNumber: 201,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        className: "mobile-apply-btn",
+                        onClick: handleMobileApplyClick,
+                        children: "Apply Now"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/Navbar.tsx",
+                        lineNumber: 237,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/components/Navbar.tsx",
+                lineNumber: 196,
                 columnNumber: 7
             }, this),
             open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -261,7 +518,7 @@ function Navbar({ isScrolled = false }) {
                                     children: "QUICK LOAN APPLICATION FORM"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 247,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaTimes"], {
@@ -269,13 +526,13 @@ function Navbar({ isScrolled = false }) {
                                     onClick: ()=>setOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 248,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 122,
+                            lineNumber: 246,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -290,7 +547,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 252,
                                     columnNumber: 15
                                 }, this),
                                 errors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -298,7 +555,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 257,
                                     columnNumber: 31
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -310,7 +567,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 259,
                                     columnNumber: 15
                                 }, this),
                                 errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -318,7 +575,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.email
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 264,
                                     columnNumber: 32
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -330,7 +587,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 266,
                                     columnNumber: 15
                                 }, this),
                                 errors.phone && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -338,7 +595,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.phone
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 271,
                                     columnNumber: 32
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -353,20 +610,20 @@ function Navbar({ isScrolled = false }) {
                                             children: "-- Select Loan Type --"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 277,
                                             columnNumber: 17
                                         }, this),
                                         services.map((s)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                 children: s
                                             }, s, false, {
                                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                                lineNumber: 155,
+                                                lineNumber: 279,
                                                 columnNumber: 19
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 273,
                                     columnNumber: 15
                                 }, this),
                                 errors.loanType && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -374,7 +631,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.loanType
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 282,
                                     columnNumber: 35
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -386,7 +643,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 284,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -395,30 +652,30 @@ function Navbar({ isScrolled = false }) {
                                     children: "Send Message"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 290,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 127,
+                            lineNumber: 251,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Navbar.tsx",
-                    lineNumber: 121,
+                    lineNumber: 245,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar.tsx",
-                lineNumber: 120,
+                lineNumber: 244,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true);
 }
-_s(Navbar, "7ijO7mwbMtwhRH/7DJxK5Oh19VA=");
+_s(Navbar, "53pcw/16sx/FVwU5eI6R0z0OGYA=");
 _c = Navbar;
 var _c;
 __turbopack_context__.k.register(_c, "Navbar");
@@ -466,7 +723,8 @@ function LoanProcess() {
             })["LoanProcess.useEffect"];
         }
     }["LoanProcess.useEffect"], []);
-    const [loanAmount, setLoanAmount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(50000);
+    // Inputs can be number or empty string
+    const [loanAmount, setLoanAmount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("50000");
     const [interestRate, setInterestRate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(7);
     const [loanTenure, setLoanTenure] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(24);
     const [emiResult, setEmiResult] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
@@ -481,9 +739,13 @@ function LoanProcess() {
     };
     const handleSubmit = (e)=>{
         e.preventDefault();
-        const emi = calculateEMI(loanAmount, interestRate, loanTenure);
-        const totalPayment = emi * loanTenure;
-        const totalInterest = totalPayment - loanAmount;
+        // Convert empty strings to 0 for calculation
+        const P = Number(loanAmount) || 0;
+        const R = Number(interestRate) || 0;
+        const N = Number(loanTenure) || 1;
+        const emi = calculateEMI(P, R, N);
+        const totalPayment = emi * N;
+        const totalInterest = totalPayment - P;
         setEmiResult({
             emiAmount: emi.toFixed(2),
             totalPayments: totalPayment.toFixed(2),
@@ -498,7 +760,7 @@ function LoanProcess() {
                         children: "Loan Process - Sivanto Capital Services"
                     }, void 0, false, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 58,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
@@ -506,7 +768,7 @@ function LoanProcess() {
                         content: "Understand the complete loan process with Sivanto Capital Services, from eligibility check to document submission, approval, and EMI calculation. Apply for personal, business, or home loans easily."
                     }, void 0, false, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 59,
+                        lineNumber: 63,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
@@ -514,15 +776,15 @@ function LoanProcess() {
                         content: "loan process, EMI calculator, personal loan, business loan, home loan, how to apply for loan, Sivanto Capital Services"
                     }, void 0, false, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 63,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
                         rel: "canonical",
-                        href: "https://www.yourdomain.com/loan-process"
+                        href: "https://www.sivantocapital.in/loan-process"
                     }, void 0, false, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 67,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
@@ -531,21 +793,21 @@ function LoanProcess() {
                             __html: JSON.stringify({
                                 "@context": "https://schema.org",
                                 "@type": "FinancialService",
-                                "name": "Sivanto Capital Services",
-                                "url": "https://www.yourdomain.com",
-                                "logo": "https://www.yourdomain.com/assets/logo.png",
-                                "description": "Provides personal, business, home loans and insurance solutions with transparency and professionalism."
+                                name: "Sivanto Capital Services",
+                                url: "https://www.sivantocapital.in",
+                                logo: "https://www.sivantocapital.in/assets/logo.png",
+                                description: "Provides personal, business, home loans and insurance solutions with transparency and professionalism."
                             })
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 68,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/loan-process/page.tsx",
-                lineNumber: 57,
+                lineNumber: 61,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -554,27 +816,34 @@ function LoanProcess() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "loan-hero",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                isScrolled: isScrolled
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "hero-navbar",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    isScrolled: isScrolled
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/loan-process/page.tsx",
+                                    lineNumber: 93,
+                                    columnNumber: 11
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 87,
-                                columnNumber: 13
+                                lineNumber: 91,
+                                columnNumber: 12
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "/assets/deal.jpeg",
-                                alt: "Loan Process",
+                                alt: "Sivanto Capital Services Loan Process - Eligibility, Document Submission, Approval",
                                 className: "loan-bg"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 88,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "loan-overlay"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 89,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -584,26 +853,26 @@ function LoanProcess() {
                                         children: "Loan Process"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 100,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Home  >>  Loan Process"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 101,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 91,
+                                lineNumber: 99,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 85,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -618,27 +887,27 @@ function LoanProcess() {
                                         children: "✔️"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 108,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         children: "Check Eligibility"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 109,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Your eligibility is checked whether you are allowed to get the loan."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 110,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 99,
+                                lineNumber: 107,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -650,27 +919,27 @@ function LoanProcess() {
                                         children: "📄"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         children: "Submit Documents"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 114,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "After eligibility check, needed documents are to be submitted."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 115,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 104,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -682,33 +951,33 @@ function LoanProcess() {
                                         children: "✅"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 118,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         children: "Approval In Principle"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 119,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "After submission of documents, your principle amount is approved."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 120,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 109,
+                                lineNumber: 117,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 98,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -722,7 +991,7 @@ function LoanProcess() {
                                         children: "EMI CALCULATOR"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 119,
+                                        lineNumber: 127,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -730,7 +999,7 @@ function LoanProcess() {
                                         children: "Get an approximate figure for the total monthly instalment payments along with a complete break-up of a loan."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 128,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -741,7 +1010,7 @@ function LoanProcess() {
                                                 children: "₹"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 134,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -749,12 +1018,15 @@ function LoanProcess() {
                                                 type: "number",
                                                 min: "0",
                                                 value: loanAmount,
-                                                onChange: (e)=>setLoanAmount(Number(e.target.value)),
+                                                onChange: (e)=>{
+                                                    const value = e.target.value;
+                                                    setLoanAmount(value === "" ? "" : Number(value));
+                                                },
                                                 placeholder: "Loan Amount",
                                                 className: "emi-input"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 126,
+                                                lineNumber: 135,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -762,13 +1034,13 @@ function LoanProcess() {
                                                 children: "Amount"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 135,
+                                                lineNumber: 147,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 133,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -779,7 +1051,7 @@ function LoanProcess() {
                                                 children: "%"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 152,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -788,12 +1060,15 @@ function LoanProcess() {
                                                 min: "0",
                                                 step: "0.01",
                                                 value: interestRate,
-                                                onChange: (e)=>setInterestRate(Number(e.target.value)),
+                                                onChange: (e)=>{
+                                                    const value = e.target.value;
+                                                    setInterestRate(value === "" ? "" : Number(value));
+                                                },
                                                 placeholder: "Interest Rate",
                                                 className: "emi-input"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 140,
+                                                lineNumber: 153,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -801,13 +1076,13 @@ function LoanProcess() {
                                                 children: "/ Annum"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 166,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 151,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -832,25 +1107,25 @@ function LoanProcess() {
                                                             r: "10"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-process/page.tsx",
-                                                            lineNumber: 165,
+                                                            lineNumber: 182,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
                                                             points: "12 6 12 12 16 14"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-process/page.tsx",
-                                                            lineNumber: 166,
+                                                            lineNumber: 183,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/loan-process/page.tsx",
-                                                    lineNumber: 155,
+                                                    lineNumber: 172,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 154,
+                                                lineNumber: 171,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -858,12 +1133,15 @@ function LoanProcess() {
                                                 type: "number",
                                                 min: "1",
                                                 value: loanTenure,
-                                                onChange: (e)=>setLoanTenure(Number(e.target.value)),
+                                                onChange: (e)=>{
+                                                    const value = e.target.value;
+                                                    setLoanTenure(value === "" ? "" : Number(value));
+                                                },
                                                 placeholder: "Loan Tenure (Months)",
                                                 className: "emi-input"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 186,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -871,13 +1149,13 @@ function LoanProcess() {
                                                 children: "/ Months"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 178,
+                                                lineNumber: 198,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 153,
+                                        lineNumber: 170,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -889,7 +1167,7 @@ function LoanProcess() {
                                                 children: "Submit"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 182,
+                                                lineNumber: 202,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -898,19 +1176,19 @@ function LoanProcess() {
                                                 children: "Apply Now"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                                lineNumber: 186,
+                                                lineNumber: 206,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 201,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 118,
+                                lineNumber: 126,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -920,7 +1198,7 @@ function LoanProcess() {
                                         children: "Your EMI Amount"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 214,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -928,7 +1206,7 @@ function LoanProcess() {
                                         children: "Total Interest Payable"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 195,
+                                        lineNumber: 216,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -936,7 +1214,7 @@ function LoanProcess() {
                                         children: emiResult.totalInterestPayable
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 196,
+                                        lineNumber: 217,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -944,7 +1222,7 @@ function LoanProcess() {
                                         children: "Total of Payments"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 198,
+                                        lineNumber: 219,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -952,7 +1230,7 @@ function LoanProcess() {
                                         children: emiResult.totalPayments
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 199,
+                                        lineNumber: 220,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -960,7 +1238,7 @@ function LoanProcess() {
                                         children: "EMI Amount"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 201,
+                                        lineNumber: 222,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -968,36 +1246,36 @@ function LoanProcess() {
                                         children: emiResult.emiAmount
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 223,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CalculatorIcon, {}, void 0, false, {
                                         fileName: "[project]/src/app/loan-process/page.tsx",
-                                        lineNumber: 204,
+                                        lineNumber: 225,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/loan-process/page.tsx",
-                                lineNumber: 192,
+                                lineNumber: 213,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/loan-process/page.tsx",
-                        lineNumber: 117,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/loan-process/page.tsx",
-                lineNumber: 84,
+                lineNumber: 89,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s(LoanProcess, "VQXG0/FrepgaDi3VTeUOc+J+tLM=");
+_s(LoanProcess, "tB1jkzYdTISPfT2QSRbOA4ThcK8=");
 _c = LoanProcess;
 // Small glowing calculator icon
 const CalculatorIcon = ()=>{
@@ -1022,7 +1300,7 @@ const CalculatorIcon = ()=>{
                 ry: "2"
             }, void 0, false, {
                 fileName: "[project]/src/app/loan-process/page.tsx",
-                lineNumber: 227,
+                lineNumber: 248,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1032,7 +1310,7 @@ const CalculatorIcon = ()=>{
                 y2: "8"
             }, void 0, false, {
                 fileName: "[project]/src/app/loan-process/page.tsx",
-                lineNumber: 228,
+                lineNumber: 249,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1042,7 +1320,7 @@ const CalculatorIcon = ()=>{
                 y2: "16"
             }, void 0, false, {
                 fileName: "[project]/src/app/loan-process/page.tsx",
-                lineNumber: 229,
+                lineNumber: 250,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1052,7 +1330,7 @@ const CalculatorIcon = ()=>{
                 y2: "16"
             }, void 0, false, {
                 fileName: "[project]/src/app/loan-process/page.tsx",
-                lineNumber: 230,
+                lineNumber: 251,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1062,13 +1340,13 @@ const CalculatorIcon = ()=>{
                 y2: "16"
             }, void 0, false, {
                 fileName: "[project]/src/app/loan-process/page.tsx",
-                lineNumber: 231,
+                lineNumber: 252,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/loan-process/page.tsx",
-        lineNumber: 215,
+        lineNumber: 236,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

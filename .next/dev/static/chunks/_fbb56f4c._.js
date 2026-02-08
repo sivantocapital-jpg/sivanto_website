@@ -449,7 +449,7 @@ const CreditCards = ()=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$noop$2d$head$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("title", {
-                        children: "PaisaPulse Credit Cards – Compare & Apply Online"
+                        children: "Sivanto Capital Credit Cards – Compare & Apply Online"
                     }, void 0, false, {
                         fileName: "[project]/src/app/credit-cards/page.tsx",
                         lineNumber: 12,
@@ -457,7 +457,7 @@ const CreditCards = ()=>{
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
                         name: "description",
-                        content: "Compare 50+ credit cards from top banks, check eligibility instantly, and apply online with PaisaPulse. Get cashback, rewards, travel perks, and instant approval."
+                        content: "Compare 50+ credit cards from top banks, check eligibility instantly, and apply online with Sivanto Capital. Get cashback, rewards, travel perks, and instant approval."
                     }, void 0, false, {
                         fileName: "[project]/src/app/credit-cards/page.tsx",
                         lineNumber: 13,
@@ -465,7 +465,7 @@ const CreditCards = ()=>{
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
                         name: "keywords",
-                        content: "Credit Cards, Pre-approved Credit Card, PaisaPulse, Rewards, Cashback, Travel Perks, Online Application"
+                        content: "Credit Cards, Pre-approved Credit Card, Sivanto Capital, Rewards, Cashback, Travel Perks, Online Application"
                     }, void 0, false, {
                         fileName: "[project]/src/app/credit-cards/page.tsx",
                         lineNumber: 17,
@@ -486,10 +486,10 @@ const CreditCards = ()=>{
                                 "@context": "https://schema.org",
                                 "@type": "FinancialProduct",
                                 "name": "Credit Cards",
-                                "description": "Compare and apply online for credit cards from leading banks with PaisaPulse. Check eligibility instantly and get rewards, cashback, and travel perks.",
+                                "description": "Compare and apply online for credit cards from leading banks with Sivanto Capital. Check eligibility instantly and get rewards, cashback, and travel perks.",
                                 "provider": {
                                     "@type": "Organization",
-                                    "name": "PaisaPulse",
+                                    "name": "Sivanto Capital",
                                     "url": "https://www.yourdomain.com",
                                     "logo": "https://www.yourdomain.com/assets/logo.png"
                                 },
@@ -562,13 +562,20 @@ const CreditCards = ()=>{
                                         lineNumber: 57,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "loan-btn",
-                                        children: "Find the Right Card in One Click"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "/quick-loan-app-form",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "loan-btn",
+                                            children: "Find the Right Card in One Click"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/credit-cards/page.tsx",
+                                            lineNumber: 63,
+                                            columnNumber: 3
+                                        }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/credit-cards/page.tsx",
-                                        lineNumber: 61,
-                                        columnNumber: 13
+                                        lineNumber: 62,
+                                        columnNumber: 2
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
@@ -583,14 +590,14 @@ const CreditCards = ()=>{
                                         children: "Looking for Credit Cards?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/credit-cards/page.tsx",
-                                        lineNumber: 68,
+                                        lineNumber: 73,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Let us help you find the most suitable offers."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/credit-cards/page.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 74,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -598,7 +605,7 @@ const CreditCards = ()=>{
                                         placeholder: "Name as Per Pancard"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/credit-cards/page.tsx",
-                                        lineNumber: 70,
+                                        lineNumber: 75,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -606,7 +613,7 @@ const CreditCards = ()=>{
                                         placeholder: "Your Mobile Number"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/credit-cards/page.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 76,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -614,13 +621,13 @@ const CreditCards = ()=>{
                                         children: "Apply"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/credit-cards/page.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 77,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/credit-cards/page.tsx",
-                                lineNumber: 67,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
@@ -648,21 +655,21 @@ const CreditCards = ()=>{
                                     children: "Check Pre-Approved Credit Cards in Just One Click"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 87,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: "Looking for the best credit card to match your lifestyle and spending habits? At PaisaPulse, we make it simple to compare, choose, and apply for credit cards from 50+ leading banks — all in one place. Whether you want cashback, rewards, travel perks, or easy EMIs, we help you find the perfect card instantly."
+                                    children: "Looking for the best credit card to match your lifestyle and spending habits? At Sivanto Capital, we make it simple to compare, choose, and apply for credit cards from 50+ leading banks — all in one place. Whether you want cashback, rewards, travel perks, or easy EMIs, we help you find the perfect card instantly."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 88,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                    children: "Why Choose Credit Cards from PaisaPulse?"
+                                    children: "Why Choose Credit Cards from Sivanto Capital?"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 92,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -671,48 +678,48 @@ const CreditCards = ()=>{
                                             children: "Compare 50+ Cards – From top banks like HDFC, SBI, ICICI, Axis, Citi, Standard Chartered, American Express & more"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 94,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Check Eligibility Instantly – Know your chances of approval in just seconds"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 95,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Smart Comparisons – Compare benefits, rewards, fees, and cashback offers easily"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 91,
+                                            lineNumber: 96,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Instant Approval – Apply online and get quick approval with minimal hassle"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 97,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Personalized Matches – Get card recommendations based on your profile & spending habits"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 98,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 93,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                     children: "Benefits of Having a Credit Card"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -721,62 +728,62 @@ const CreditCards = ()=>{
                                             children: "Welcome Offers – Exciting vouchers, cashback, or bonus reward points on joining"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 98,
+                                            lineNumber: 103,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Reward Points & Cashback – Earn points on every purchase and redeem them easily"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 104,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Fuel Surcharge Waiver – Save more when you fuel up at partnered petrol pumps"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 105,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Easy EMI Conversions – Convert high-ticket purchases into affordable EMIs"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 101,
+                                            lineNumber: 106,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Add-on Cards – Get supplementary cards for family members"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 102,
+                                            lineNumber: 107,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Concierge Services – 24x7 assistance for travel, dining, and entertainment bookings"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 103,
+                                            lineNumber: 108,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Insurance Cover – Complimentary travel, health, and accidental insurance with select cards"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 104,
+                                            lineNumber: 109,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 102,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                     children: "How to Choose the Best Credit Card for You"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -785,62 +792,62 @@ const CreditCards = ()=>{
                                             children: "Are you new to credit or already have a card?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 109,
+                                            lineNumber: 114,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Do you prefer cashback, rewards, or air miles?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 115,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "What type of purchases do you spend most on – shopping, fuel, travel, dining, or utilities?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 111,
+                                            lineNumber: 116,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Do you prefer certain airlines, brands, or online platforms?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 112,
+                                            lineNumber: 117,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Are you okay with paying an annual fee if the card gives maximum benefits?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 113,
+                                            lineNumber: 118,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Are you a heavy spender who can reach spending milestones for bonus rewards or annual fee waivers?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 114,
+                                            lineNumber: 119,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Do you need lifestyle perks like airport lounge access, dining discounts, or fuel benefits?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 115,
+                                            lineNumber: 120,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 113,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                     children: "Apply Online & Get Instant Credit Card Approval"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -849,41 +856,41 @@ const CreditCards = ()=>{
                                             children: "Check Eligibility – Answer a few quick questions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 120,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Compare Cards – Shortlist based on benefits, fees & approval chances"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 121,
+                                            lineNumber: 126,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Apply Online – Complete a simple digital form"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 127,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Get Instant Approval – Receive your pre-approved or eligible cards instantly"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 123,
+                                            lineNumber: 128,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 124,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: "👉 Start your credit card journey today with PaisaPulse and unlock rewards, cashback, and financial flexibility."
+                                    children: "👉 Start your credit card journey today with Sivanto Capital and unlock rewards, cashback, and financial flexibility."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 131,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -891,13 +898,13 @@ const CreditCards = ()=>{
                                     children: "Disclaimer: Credit card eligibility, benefits, and offers depend on the bank’s policies. Terms & Conditions apply."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 130,
+                                    lineNumber: 135,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                            lineNumber: 81,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -907,7 +914,7 @@ const CreditCards = ()=>{
                                     children: "OTHER SERVICES"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 142,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -916,76 +923,6 @@ const CreditCards = ()=>{
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/personal-loan",
                                                 children: "Personal Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/credit-cards/page.tsx",
-                                                lineNumber: 139,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 139,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/business-loan",
-                                                children: "Business Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/credit-cards/page.tsx",
-                                                lineNumber: 140,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 140,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/education-loan",
-                                                children: "Education Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/credit-cards/page.tsx",
-                                                lineNumber: 141,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 141,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/vehicle-loan",
-                                                children: "Vehicle Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/credit-cards/page.tsx",
-                                                lineNumber: 142,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 142,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/home-loan",
-                                                children: "Home Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/credit-cards/page.tsx",
-                                                lineNumber: 143,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 143,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/gold-loan",
-                                                children: "Gold Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/credit-cards/page.tsx",
                                                 lineNumber: 144,
@@ -998,8 +935,8 @@ const CreditCards = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-property",
-                                                children: "Loan Against Property"
+                                                href: "/business-loan",
+                                                children: "Business Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/credit-cards/page.tsx",
                                                 lineNumber: 145,
@@ -1012,8 +949,8 @@ const CreditCards = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-insurance",
-                                                children: "Loan Against Insurance Policies"
+                                                href: "/education-loan",
+                                                children: "Education Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/credit-cards/page.tsx",
                                                 lineNumber: 146,
@@ -1026,8 +963,8 @@ const CreditCards = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-mutual-funds",
-                                                children: "Loan Against Mutual Funds & Shares"
+                                                href: "/home-loan",
+                                                children: "Home Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/credit-cards/page.tsx",
                                                 lineNumber: 147,
@@ -1040,8 +977,8 @@ const CreditCards = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/health-insurance",
-                                                children: "Health Insurance"
+                                                href: "/loan-against-property",
+                                                children: "Loan Against Property"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/credit-cards/page.tsx",
                                                 lineNumber: 148,
@@ -1054,8 +991,8 @@ const CreditCards = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/life-insurance",
-                                                children: "Life Insurance"
+                                                href: "/loan-against-insurance",
+                                                children: "Loan Against Insurance Policies"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/credit-cards/page.tsx",
                                                 lineNumber: 149,
@@ -1067,41 +1004,83 @@ const CreditCards = ()=>{
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/loan-against-mutual-funds",
+                                                children: "Loan Against Mutual Funds & Shares"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/credit-cards/page.tsx",
+                                                lineNumber: 150,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/credit-cards/page.tsx",
+                                            lineNumber: 150,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/health-insurance",
+                                                children: "Health Insurance"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/credit-cards/page.tsx",
+                                                lineNumber: 151,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/credit-cards/page.tsx",
+                                            lineNumber: 151,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/life-insurance",
+                                                children: "Life Insurance"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/credit-cards/page.tsx",
+                                                lineNumber: 152,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/credit-cards/page.tsx",
+                                            lineNumber: 152,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "active",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/credit-cards",
                                                 children: "Credit Cards"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/credit-cards/page.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 153,
                                                 columnNumber: 38
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 153,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 143,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/credit-cards/page.tsx",
-                            lineNumber: 136,
+                            lineNumber: 141,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/credit-cards/page.tsx",
-                    lineNumber: 79,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/app/credit-cards/page.tsx",
-                lineNumber: 78,
+                lineNumber: 83,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

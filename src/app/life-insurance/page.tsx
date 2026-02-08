@@ -2,6 +2,7 @@
 import Link from "next/link";
 import "../../styles/loan-common.css";
 import Navbar from "../components/Navbar";
+import CommonSmallForm from "../components/CommonSmallForm";
 
 const LifeInsurance = () => {
   return (
@@ -23,21 +24,17 @@ const LifeInsurance = () => {
               <li>✅ Financial security & long-term protection</li>
               <li>✅ T&amp;C Apply</li>
             </ul>
-            <button className="loan-btn">
-              Secure Your Family's Future - Choose Your Plan
-            </button>
+
+            <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+   Secure Your Family's Future - Choose Your Plan
+  </button>
+</Link>
+           
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for a Life Insurance?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+           <CommonSmallForm formType="life-insurance" />
         </div>
       </section>
 
@@ -46,14 +43,14 @@ const LifeInsurance = () => {
         <div className="service-wrapper">
           <div className="service-left">
             <h1 className="service-title">Life Insurance Plans</h1>
-            <h3 className="service-tagline">– Secure Your Family’s Future with PaisaPulse</h3>
+            <h3 className="service-tagline">– Secure Your Family’s Future with Sivanto Capital</h3>
 
             <p>
               Life is unpredictable, and financial security for your loved ones is crucial. A Life Insurance Policy ensures that your family is protected against unforeseen circumstances such as death, disability, or critical illness, by offering financial stability through lump sum payouts, monthly income, or maturity benefits.
             </p>
 
             <p>
-              At PaisaPulse, we bring you a wide range of life insurance plans – from Term Insurance, ULIPs, and Child Plans to Pension Plans – designed to suit every stage of life.
+              At Sivanto Capital, we bring you a wide range of life insurance plans – from Term Insurance, ULIPs, and Child Plans to Pension Plans – designed to suit every stage of life.
             </p>
 
             <h4>Key Features & Benefits of Life Insurance</h4>
@@ -85,7 +82,7 @@ const LifeInsurance = () => {
               <li>Additional Riders – Add-on benefits like critical illness, accidental death, or disability cover.</li>
             </ul>
 
-            <h4>Why Choose PaisaPulse for Life Insurance?</h4>
+            <h4>Why Choose Sivanto Capital for Life Insurance?</h4>
             <ul>
               <li>Wide range of customized life insurance plans</li>
               <li>Affordable premiums with maximum benefits</li>
@@ -95,7 +92,7 @@ const LifeInsurance = () => {
             </ul>
 
             <p>
-              👉 Apply Online for PaisaPulse Life Insurance Plans today and protect your loved ones against life’s uncertainties.
+              👉 Apply Online for Sivanto Capital Life Insurance Plans today and protect your loved ones against life’s uncertainties.
             </p>
 
             <p className="disclaimer">
@@ -110,9 +107,7 @@ const LifeInsurance = () => {
               <li><Link href="/personal-loan">Personal Loan</Link></li>
               <li><Link href="/business-loan">Business Loan</Link></li>
               <li><Link href="/education-loan">Education Loan</Link></li>
-              <li><Link href="/vehicle-loan">Vehicle Loan</Link></li>
               <li><Link href="/home-loan">Home Loan</Link></li>
-              <li><Link href="/gold-loan">Gold Loan</Link></li>
               <li><Link href="/loan-against-property">Loan Against Property</Link></li>
               <li><Link href="/loan-against-insurance">Loan Against Insurance Policies</Link></li>
               <li><Link href="/loan-against-mutual-funds">Loan Against Mutual Funds & Shares</Link></li>

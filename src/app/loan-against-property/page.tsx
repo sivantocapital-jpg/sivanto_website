@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import "../../styles/loan-common.css";
 import Navbar from "../components/Navbar";
+import CommonSmallForm from "../components/CommonSmallForm";
 
 const LoanAgainstProperty = () => {
   const [activeTab, setActiveTab] = useState("why");
@@ -28,21 +29,16 @@ const LoanAgainstProperty = () => {
               <li>✅ Overdraft facility available</li>
               <li>✅ T&amp;C Apply</li>
             </ul>
-            <button className="loan-btn">
-              Leverage Your Property Value Today
-            </button>
+            <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+    Leverage Your Property Value Today
+  </button>
+</Link>
+          
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for a Loan Against Property?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+           <CommonSmallForm formType="loan-against-property" />
         </div>
       </section>
 

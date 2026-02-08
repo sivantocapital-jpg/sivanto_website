@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 
 import { useState } from "react";
 import "../../styles/loan-common.css";
+import CommonSmallForm from "../components/CommonSmallForm";
+
 
 const HomeLoan = () => {
   const [activeTab, setActiveTab] = useState("why");
@@ -29,21 +31,17 @@ const HomeLoan = () => {
               <li>✅ Lowest processing fees in the market</li>
               <li>✅ T&amp;C Apply</li>
             </ul>
-            <button className="loan-btn">
-              Own Your Dream Home - Apply Now
-            </button>
+
+             <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+    Own Your Dream Home – Apply Now
+  </button>
+</Link>
+            
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for a Home Loan?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+           <CommonSmallForm formType="home-loan" />
         </div>
       </section>
 

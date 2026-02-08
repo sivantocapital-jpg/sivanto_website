@@ -3,6 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import "../../styles/loan-common.css";
 import Navbar from "../components/Navbar";
+import CommonSmallForm from "../components/CommonSmallForm";
+ 
 
 const HealthInsurance = () => {
   const [activeTab, setActiveTab] = useState("why");
@@ -27,19 +29,17 @@ const HealthInsurance = () => {
               <li>✅ Income tax benefits under section 80D</li>
               <li>✅ T&amp;C Apply</li>
             </ul>
-            <button className="loan-btn">Get Started</button>
+            
+            <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+    Get Started
+  </button>
+</Link>
+            
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for a Health Insurance?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+           <CommonSmallForm formType="health-insurance" />
         </div>
       </section>
 
@@ -50,11 +50,11 @@ const HealthInsurance = () => {
           <div className="service-left">
             <h1 className="service-title">Health Insurance Plans</h1>
             <h3 className="service-tagline">
-              – Secure Your Health & Future with PaisaPulse
+              – Secure Your Health & Future with Sivanto Capital
             </h3>
 
             <p className="service-desc">
-              Health is unpredictable, and medical expenses can arise at any time. With PaisaPulse Health Insurance Plans, you and your family can stay financially protected against unexpected medical emergencies. Whether it’s hospitalisation, surgeries, daycare treatments, or medical check-ups, our policies cover a wide range of expenses while ensuring peace of mind. Enjoy benefits like cashless treatment, income tax deductions, and reimbursement of medical costs with a plan tailored to your healthcare needs.
+              Health is unpredictable, and medical expenses can arise at any time. With Sivanto Capital Health Insurance Plans, you and your family can stay financially protected against unexpected medical emergencies. Whether it’s hospitalisation, surgeries, daycare treatments, or medical check-ups, our policies cover a wide range of expenses while ensuring peace of mind. Enjoy benefits like cashless treatment, income tax deductions, and reimbursement of medical costs with a plan tailored to your healthcare needs.
             </p>
 
             {/* ================= TABS ================= */}
@@ -83,7 +83,7 @@ const HealthInsurance = () => {
             <div className="tab-content">
               {activeTab === "why" && (
                 <>
-                  <h4>Why Choose PaisaPulse Health Insurance?</h4>
+                  <h4>Why Choose Sivanto Capital Health Insurance?</h4>
                   <ul>
                     <li>Wide range of customized health plans for individuals & families</li>
                     <li>Cashless claim settlement at leading network hospitals across India</li>
@@ -166,7 +166,7 @@ const HealthInsurance = () => {
               </ul>
 
               <p className="cta-text">
-                👉 Apply Online for PaisaPulse Health Insurance Plans today and safeguard your health, wealth, and peace of mind.
+                👉 Apply Online for Sivanto Capital Health Insurance Plans today and safeguard your health, wealth, and peace of mind.
               </p>
 
               <p className="disclaimer">
@@ -182,9 +182,7 @@ const HealthInsurance = () => {
               <li><Link href="/personal-loan">Personal Loan</Link></li>
               <li><Link href="/business-loan">Business Loan</Link></li>
               <li><Link href="/education-loan">Education Loan</Link></li>
-              <li><Link href="/vehicle-loan">Vehicle Loan</Link></li>
               <li><Link href="/home-loan">Home Loan</Link></li>
-              <li><Link href="/gold-loan">Gold Loan</Link></li>
               <li><Link href="/loan-against-property">Loan Against Property</Link></li>
               <li><Link href="/loan-against-insurance">Loan Against Insurance Policies</Link></li>
               <li><Link href="/loan-against-mutual-funds">Loan Against Mutual Funds & Shares</Link></li>

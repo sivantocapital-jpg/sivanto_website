@@ -3,20 +3,21 @@ import Link from "next/link";
 import Head from "next/head";
 import "../../styles/loan-common.css";
 import Navbar from "../components/Navbar";
+import CommonSmallForm from "../components/CommonSmallForm";
 
 const CreditCards = () => {
   return (
     <>
       {/* ================= SEO HEAD ================= */}
       <Head>
-        <title>PaisaPulse Credit Cards – Compare & Apply Online</title>
+        <title>Sivanto Capital Credit Cards – Compare & Apply Online</title>
         <meta
           name="description"
-          content="Compare 50+ credit cards from top banks, check eligibility instantly, and apply online with PaisaPulse. Get cashback, rewards, travel perks, and instant approval."
+          content="Compare 50+ credit cards from top banks, check eligibility instantly, and apply online with Sivanto Capital. Get cashback, rewards, travel perks, and instant approval."
         />
         <meta
           name="keywords"
-          content="Credit Cards, Pre-approved Credit Card, PaisaPulse, Rewards, Cashback, Travel Perks, Online Application"
+          content="Credit Cards, Pre-approved Credit Card, Sivanto Capital, Rewards, Cashback, Travel Perks, Online Application"
         />
         <link rel="canonical" href="https://www.yourdomain.com/credit-cards" />
 
@@ -28,10 +29,10 @@ const CreditCards = () => {
               "@context": "https://schema.org",
               "@type": "FinancialProduct",
               "name": "Credit Cards",
-              "description": "Compare and apply online for credit cards from leading banks with PaisaPulse. Check eligibility instantly and get rewards, cashback, and travel perks.",
+              "description": "Compare and apply online for credit cards from leading banks with Sivanto Capital. Check eligibility instantly and get rewards, cashback, and travel perks.",
               "provider": {
                 "@type": "Organization",
-                "name": "PaisaPulse",
+                "name": "Sivanto Capital",
                 "url": "https://www.yourdomain.com",
                 "logo": "https://www.yourdomain.com/assets/logo.png"
               },
@@ -58,19 +59,19 @@ const CreditCards = () => {
               <li>✅ Check pre-approved credit cards instantly</li>
               <li>✅ Quick online application with instant eligibility check</li>
             </ul>
-            <button className="loan-btn">
-              Find the Right Card in One Click
-            </button>
+
+ <Link href="/quick-loan-app-form">
+  <button className="loan-btn">
+    Find the Right Card in One Click
+  </button>
+</Link>
+            
+      
           </div>
 
           {/* RIGHT FORM */}
-          <div className="loan-right">
-            <h2>Looking for Credit Cards?</h2>
-            <p>Let us help you find the most suitable offers.</p>
-            <input type="text" placeholder="Name as Per Pancard" />
-            <input type="tel" placeholder="Your Mobile Number" />
-            <button className="loan-btn loan-full">Apply</button>
-          </div>
+        <CommonSmallForm formType="credit-cards" />
+
         </div>
       </section>
 
@@ -81,10 +82,10 @@ const CreditCards = () => {
           <div className="service-left">
             <h1 className="service-title">Check Pre-Approved Credit Cards in Just One Click</h1>
             <p>
-              Looking for the best credit card to match your lifestyle and spending habits? At PaisaPulse, we make it simple to compare, choose, and apply for credit cards from 50+ leading banks — all in one place. Whether you want cashback, rewards, travel perks, or easy EMIs, we help you find the perfect card instantly.
+              Looking for the best credit card to match your lifestyle and spending habits? At Sivanto Capital, we make it simple to compare, choose, and apply for credit cards from 50+ leading banks — all in one place. Whether you want cashback, rewards, travel perks, or easy EMIs, we help you find the perfect card instantly.
             </p>
 
-            <h4>Why Choose Credit Cards from PaisaPulse?</h4>
+            <h4>Why Choose Credit Cards from Sivanto Capital?</h4>
             <ul>
               <li>Compare 50+ Cards – From top banks like HDFC, SBI, ICICI, Axis, Citi, Standard Chartered, American Express & more</li>
               <li>Check Eligibility Instantly – Know your chances of approval in just seconds</li>
@@ -124,7 +125,7 @@ const CreditCards = () => {
             </ul>
 
             <p>
-              👉 Start your credit card journey today with PaisaPulse and unlock rewards, cashback, and financial flexibility.
+              👉 Start your credit card journey today with Sivanto Capital and unlock rewards, cashback, and financial flexibility.
             </p>
 
             <p className="disclaimer">
@@ -139,9 +140,7 @@ const CreditCards = () => {
               <li><Link href="/personal-loan">Personal Loan</Link></li>
               <li><Link href="/business-loan">Business Loan</Link></li>
               <li><Link href="/education-loan">Education Loan</Link></li>
-              <li><Link href="/vehicle-loan">Vehicle Loan</Link></li>
               <li><Link href="/home-loan">Home Loan</Link></li>
-              <li><Link href="/gold-loan">Gold Loan</Link></li>
               <li><Link href="/loan-against-property">Loan Against Property</Link></li>
               <li><Link href="/loan-against-insurance">Loan Against Insurance Policies</Link></li>
               <li><Link href="/loan-against-mutual-funds">Loan Against Mutual Funds & Shares</Link></li>

@@ -5,7 +5,7 @@
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1270px;
   margin: auto;
   display: grid;
  grid-template-columns: 1.5fr 1fr 0.5fr 1.5fr auto;
@@ -17,12 +17,12 @@
  width: 250px;
   max-width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .footer-about p {
   text-align: justify;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   color: #ddd;
 }
@@ -83,7 +83,7 @@
 
 /* Get in touch */
 .footer-col p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: #ddd;
 }

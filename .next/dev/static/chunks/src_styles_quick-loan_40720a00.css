@@ -24,7 +24,7 @@
 
 .title {
   text-align: center;
-  color: #0b7a2b;
+  color: #fff;
   margin-bottom: 30px;
   font-weight: 700;
 }
@@ -46,6 +46,7 @@
 }
 
 label {
+  color: #fff;
   margin-bottom: 6px;
   font-weight: 600;
 }

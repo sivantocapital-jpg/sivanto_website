@@ -1,14 +1,11 @@
-
-/* Navbar for Loan Process page */
-.navbar {
-  position: absolute;  /* sit on top of hero */
+.hero-navbar {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;         /* above hero */
-  background: transparent; /* fully transparent by default */
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
 }
+
 
 /* Dark background after scroll */
 .navbar.scrolled {
@@ -26,28 +23,34 @@
 .loan-hero {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 450px;
   overflow: hidden;
 }
 
 /* Background Image */
 .loan-bg {
- position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1; /* behind overlay & content */
+  z-index: 1;
+  pointer-events: none; /* 🔥 CRITICAL */
+  filter: none;
 }
+
 
 /* Dark Overlay */
 .loan-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8); /* same dark transparent black */
-  z-index: 2;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+   z-index: 2;
+    pointer-events: none; /* 🔥 REQUIRED */
 }
+
 
 /* Centered Text */
 .loan-content {
@@ -60,10 +63,6 @@
   align-items: center;
   color: white;
   text-align: center;
-
-  padding: 40px 20px;
-
-
 }
 
 /* Big heading */
@@ -85,33 +84,11 @@
 .loan-process-page {
   background-color: #000;
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 3rem;
 }
 
-.loan-hero {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-}
 
-.loan-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-.loan-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  pointer-events: none;
-}
 
 .loan-content h1 {
   font-size: 2.5rem;
@@ -337,6 +314,8 @@
     flex-direction: column;
     align-items: center;
   }
+
+  
 
   .info-box {
     width: 90%;

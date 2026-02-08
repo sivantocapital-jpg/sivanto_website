@@ -55,13 +55,24 @@ function Navbar({ isScrolled = false }) {
         message: ""
     });
     const [errors, setErrors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
-    // ESC key close for modal
-    const escHandler = (e)=>{
-        if (e.key === "Escape") setOpen(false);
-    };
-    if ("TURBOPACK compile-time truthy", 1) {
-        window.addEventListener("keydown", escHandler);
-    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Navbar.useEffect": ()=>{
+            if (!open) return;
+            const escHandler = {
+                "Navbar.useEffect.escHandler": (e)=>{
+                    if (e.key === "Escape") setOpen(false);
+                }
+            }["Navbar.useEffect.escHandler"];
+            window.addEventListener("keydown", escHandler);
+            return ({
+                "Navbar.useEffect": ()=>{
+                    window.removeEventListener("keydown", escHandler);
+                }
+            })["Navbar.useEffect"];
+        }
+    }["Navbar.useEffect"], [
+        open
+    ]);
     const validate = ()=>{
         const err = {};
         if (!form.name.trim()) err.name = "Name is required";
@@ -71,17 +82,37 @@ function Navbar({ isScrolled = false }) {
         setErrors(err);
         return Object.keys(err).length === 0;
     };
-    const submitHandler = ()=>{
+    const submitHandler = async ()=>{
         if (!validate()) return;
-        alert("Form submitted successfully ✅");
-        setOpen(false);
-        setForm({
-            name: "",
-            email: "",
-            phone: "",
-            loanType: "",
-            message: ""
-        });
+        try {
+            const res = await fetch("/api/sendEmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    formType: "form1",
+                    ...form // <-- spread the existing form fields
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                alert("Form submitted successfully ✅");
+                setOpen(false);
+                setForm({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    loanType: "",
+                    message: ""
+                });
+            } else {
+                alert("Failed to send email. Try again later.");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Something went wrong. Try again later.");
+        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -97,12 +128,12 @@ function Navbar({ isScrolled = false }) {
                                 alt: "Logo"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                lineNumber: 80,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 79,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -114,12 +145,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Home"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 111,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -128,12 +159,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "About"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 112,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -146,18 +177,18 @@ function Navbar({ isScrolled = false }) {
                                                     "Services ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronDown"], {}, void 0, false, {
                                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                                        lineNumber: 91,
+                                                        lineNumber: 118,
                                                         columnNumber: 28
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                                lineNumber: 90,
+                                                lineNumber: 117,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 116,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -168,23 +199,23 @@ function Navbar({ isScrolled = false }) {
                                                         children: s
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                                        lineNumber: 97,
+                                                        lineNumber: 124,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, s, false, {
                                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 123,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 121,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -193,12 +224,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Loan Process"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 131,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -207,12 +238,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Contact"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 134,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -222,29 +253,29 @@ function Navbar({ isScrolled = false }) {
                                         children: "Apply Now"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 136,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 83,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Navbar.tsx",
-                    lineNumber: 78,
+                    lineNumber: 105,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar.tsx",
-                lineNumber: 77,
+                lineNumber: 104,
                 columnNumber: 7
             }, this),
             open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -261,7 +292,7 @@ function Navbar({ isScrolled = false }) {
                                     children: "QUICK LOAN APPLICATION FORM"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 150,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaTimes"], {
@@ -269,13 +300,13 @@ function Navbar({ isScrolled = false }) {
                                     onClick: ()=>setOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 151,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 122,
+                            lineNumber: 149,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -290,7 +321,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 155,
                                     columnNumber: 15
                                 }, this),
                                 errors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -298,7 +329,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 160,
                                     columnNumber: 31
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -310,7 +341,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 162,
                                     columnNumber: 15
                                 }, this),
                                 errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -318,7 +349,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.email
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 167,
                                     columnNumber: 32
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -330,7 +361,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 169,
                                     columnNumber: 15
                                 }, this),
                                 errors.phone && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -338,7 +369,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.phone
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 174,
                                     columnNumber: 32
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -353,20 +384,20 @@ function Navbar({ isScrolled = false }) {
                                             children: "-- Select Loan Type --"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 180,
                                             columnNumber: 17
                                         }, this),
                                         services.map((s)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                 children: s
                                             }, s, false, {
                                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                                lineNumber: 155,
+                                                lineNumber: 182,
                                                 columnNumber: 19
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 176,
                                     columnNumber: 15
                                 }, this),
                                 errors.loanType && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -374,7 +405,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.loanType
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 185,
                                     columnNumber: 35
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -386,7 +417,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 187,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -395,30 +426,30 @@ function Navbar({ isScrolled = false }) {
                                     children: "Send Message"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 193,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 127,
+                            lineNumber: 154,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Navbar.tsx",
-                    lineNumber: 121,
+                    lineNumber: 148,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar.tsx",
-                lineNumber: 120,
+                lineNumber: 147,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true);
 }
-_s(Navbar, "7ijO7mwbMtwhRH/7DJxK5Oh19VA=");
+_s(Navbar, "YIxjufz7oofdwlflBK8fQNIdpkE=");
 _c = Navbar;
 var _c;
 __turbopack_context__.k.register(_c, "Navbar");
@@ -470,116 +501,74 @@ const HealthInsurance = ()=>{
                     "  ",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "loan-container",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "loan-left",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        children: "Health Insurance"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 23,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                children: "✅ Cashless treatment across network hospitals"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 25,
-                                                columnNumber: 15
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                children: "✅ Free medical check-ups included"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 26,
-                                                columnNumber: 15
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                children: "✅ Income tax benefits under section 80D"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 27,
-                                                columnNumber: 15
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                children: "✅ T&C Apply"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 28,
-                                                columnNumber: 15
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 24,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "loan-left",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                    children: "Health Insurance"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/health-insurance/page.tsx",
+                                    lineNumber: 23,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: "✅ Cashless treatment across network hospitals"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/health-insurance/page.tsx",
+                                            lineNumber: 25,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: "✅ Free medical check-ups included"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/health-insurance/page.tsx",
+                                            lineNumber: 26,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: "✅ Income tax benefits under section 80D"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/health-insurance/page.tsx",
+                                            lineNumber: 27,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: "✅ T&C Apply"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/health-insurance/page.tsx",
+                                            lineNumber: 28,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/health-insurance/page.tsx",
+                                    lineNumber: 24,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/quick-loan-app-form",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         className: "loan-btn",
                                         children: "Get Started"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 30,
-                                        columnNumber: 13
+                                        lineNumber: 32,
+                                        columnNumber: 3
                                     }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                lineNumber: 22,
-                                columnNumber: 11
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "loan-right",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        children: "Looking for a Health Insurance?"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 35,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "Let us help you find the most suitable offers."
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 36,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "text",
-                                        placeholder: "Name as Per Pancard"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 38,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "tel",
-                                        placeholder: "Your Mobile Number"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 39,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "loan-btn loan-full",
-                                        children: "Apply"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/health-insurance/page.tsx",
-                                        lineNumber: 41,
-                                        columnNumber: 13
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                lineNumber: 34,
-                                columnNumber: 11
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/health-insurance/page.tsx",
+                                    lineNumber: 31,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/health-insurance/page.tsx",
+                            lineNumber: 22,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
                         fileName: "[project]/src/app/health-insurance/page.tsx",
                         lineNumber: 20,
                         columnNumber: 9
@@ -603,23 +592,23 @@ const HealthInsurance = ()=>{
                                     children: "Health Insurance Plans"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                     className: "service-tagline",
-                                    children: "– Secure Your Health & Future with PaisaPulse"
+                                    children: "– Secure Your Health & Future with Sivanto Capital"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 50,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "service-desc",
-                                    children: "Health is unpredictable, and medical expenses can arise at any time. With PaisaPulse Health Insurance Plans, you and your family can stay financially protected against unexpected medical emergencies. Whether it’s hospitalisation, surgeries, daycare treatments, or medical check-ups, our policies cover a wide range of expenses while ensuring peace of mind. Enjoy benefits like cashless treatment, income tax deductions, and reimbursement of medical costs with a plan tailored to your healthcare needs."
+                                    children: "Health is unpredictable, and medical expenses can arise at any time. With Sivanto Capital Health Insurance Plans, you and your family can stay financially protected against unexpected medical emergencies. Whether it’s hospitalisation, surgeries, daycare treatments, or medical check-ups, our policies cover a wide range of expenses while ensuring peace of mind. Enjoy benefits like cashless treatment, income tax deductions, and reimbursement of medical costs with a plan tailored to your healthcare needs."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 56,
+                                    lineNumber: 54,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -631,7 +620,7 @@ const HealthInsurance = ()=>{
                                             children: "Why Choose"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 60,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -640,7 +629,7 @@ const HealthInsurance = ()=>{
                                             children: "Eligibility"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 68,
+                                            lineNumber: 66,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -649,13 +638,13 @@ const HealthInsurance = ()=>{
                                             children: "Documents"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 74,
+                                            lineNumber: 72,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 59,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -664,10 +653,10 @@ const HealthInsurance = ()=>{
                                         activeTab === "why" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                    children: "Why Choose PaisaPulse Health Insurance?"
+                                                    children: "Why Choose Sivanto Capital Health Insurance?"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 86,
+                                                    lineNumber: 84,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -676,41 +665,41 @@ const HealthInsurance = ()=>{
                                                             children: "Wide range of customized health plans for individuals & families"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 88,
+                                                            lineNumber: 86,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Cashless claim settlement at leading network hospitals across India"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 89,
+                                                            lineNumber: 87,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Affordable premiums with maximum coverage"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 90,
+                                                            lineNumber: 88,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Tax savings under Section 80D"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 91,
+                                                            lineNumber: 89,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Quick claim process with dedicated customer support"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 92,
+                                                            lineNumber: 90,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 87,
+                                                    lineNumber: 85,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
@@ -721,7 +710,7 @@ const HealthInsurance = ()=>{
                                                     children: "Eligibility Criteria for Health Insurance"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 97,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -734,25 +723,25 @@ const HealthInsurance = ()=>{
                                                                         children: "Eligibility Criteria"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                        lineNumber: 103,
+                                                                        lineNumber: 101,
                                                                         columnNumber: 25
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                                         children: "Specifications"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                        lineNumber: 104,
+                                                                        lineNumber: 102,
                                                                         columnNumber: 25
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                lineNumber: 102,
+                                                                lineNumber: 100,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 101,
+                                                            lineNumber: 99,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -763,20 +752,20 @@ const HealthInsurance = ()=>{
                                                                             children: "Age (Adults)"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 109,
+                                                                            lineNumber: 107,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "18 – 65 years"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 110,
+                                                                            lineNumber: 108,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                    lineNumber: 108,
+                                                                    lineNumber: 106,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -785,20 +774,20 @@ const HealthInsurance = ()=>{
                                                                             children: "Age (Children)"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 113,
+                                                                            lineNumber: 111,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "90 days – 18 years"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 114,
+                                                                            lineNumber: 112,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                    lineNumber: 112,
+                                                                    lineNumber: 110,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -807,20 +796,20 @@ const HealthInsurance = ()=>{
                                                                             children: "Pre-Medical Screening"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 117,
+                                                                            lineNumber: 115,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "Depends on the insurer & age of applicant"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 118,
+                                                                            lineNumber: 116,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                    lineNumber: 116,
+                                                                    lineNumber: 114,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -829,32 +818,32 @@ const HealthInsurance = ()=>{
                                                                             children: "Pre-Existing Diseases"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 121,
+                                                                            lineNumber: 119,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "Covered after a waiting period (typically 2–4 years)"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                            lineNumber: 122,
+                                                                            lineNumber: 120,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                                    lineNumber: 120,
+                                                                    lineNumber: 118,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 107,
+                                                            lineNumber: 105,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 100,
+                                                    lineNumber: 98,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
@@ -865,7 +854,7 @@ const HealthInsurance = ()=>{
                                                     children: "Documents Required for Health Insurance"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 129,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -874,48 +863,48 @@ const HealthInsurance = ()=>{
                                                             children: "Duly filled and signed application form"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 133,
+                                                            lineNumber: 131,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Identity Proof – Aadhaar / Passport / Voter ID / Driving Licence"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 134,
+                                                            lineNumber: 132,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Address Proof – Utility Bill / Passport / Aadhaar"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 135,
+                                                            lineNumber: 133,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Age Proof – Birth Certificate / 10th or 12th Marksheet / Passport"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 136,
+                                                            lineNumber: 134,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "PAN Card"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 137,
+                                                            lineNumber: 135,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Medical Reports (if required by insurer)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                            lineNumber: 138,
+                                                            lineNumber: 136,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 132,
+                                                    lineNumber: 130,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
@@ -923,7 +912,7 @@ const HealthInsurance = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -933,7 +922,7 @@ const HealthInsurance = ()=>{
                                             children: "Key Benefits of Health Insurance"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 146,
+                                            lineNumber: 144,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -942,55 +931,55 @@ const HealthInsurance = ()=>{
                                                     children: "Cashless Treatment – Get hassle-free treatment at network hospitals"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 148,
+                                                    lineNumber: 146,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Pre & Post-Hospitalisation Cover – Expenses before & after hospital stay included"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 149,
+                                                    lineNumber: 147,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Ambulance Charges – Coverage for emergency transportation"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 150,
+                                                    lineNumber: 148,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Medical Check-ups – Preventive health check-ups included in select plans"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 151,
+                                                    lineNumber: 149,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Tax Benefits – Premiums eligible for deductions under Section 80D"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 150,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Reimbursement Facility – Get back medical costs incurred at non-network hospitals"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 153,
+                                                    lineNumber: 151,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 147,
+                                            lineNumber: 145,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                             children: "Types of Health Insurance Policies"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 156,
+                                            lineNumber: 154,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -999,70 +988,70 @@ const HealthInsurance = ()=>{
                                                     children: "Individual Health Insurance – Covers a single individual"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 158,
+                                                    lineNumber: 156,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Family Floater Health Insurance – One plan for the entire family"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 159,
+                                                    lineNumber: 157,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Group / Employee Health Insurance – For organizations and their employees"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 160,
+                                                    lineNumber: 158,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Senior Citizen Health Insurance – Tailored for individuals aged 60+"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 161,
+                                                    lineNumber: 159,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Critical Illness Insurance – Coverage against life-threatening diseases"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 162,
+                                                    lineNumber: 160,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Top-Up Health Insurance – Extra coverage at affordable premiums"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 163,
+                                                    lineNumber: 161,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Personal Accident Insurance – Compensation for accidental injuries or death"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 164,
+                                                    lineNumber: 162,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Maternity Health Insurance – Coverage for pregnancy and childbirth-related expenses"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                    lineNumber: 165,
+                                                    lineNumber: 163,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 155,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "cta-text",
-                                            children: "👉 Apply Online for PaisaPulse Health Insurance Plans today and safeguard your health, wealth, and peace of mind."
+                                            children: "👉 Apply Online for Sivanto Capital Health Insurance Plans today and safeguard your health, wealth, and peace of mind."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 168,
+                                            lineNumber: 166,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1070,19 +1059,19 @@ const HealthInsurance = ()=>{
                                             children: "Disclaimer: Coverage, eligibility, and benefits depend on the chosen plan and insurer’s terms & conditions. T&C Apply."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 172,
+                                            lineNumber: 170,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 143,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                            lineNumber: 50,
+                            lineNumber: 48,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1092,7 +1081,7 @@ const HealthInsurance = ()=>{
                                     children: "OTHER SERVICES"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 178,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1101,6 +1090,34 @@ const HealthInsurance = ()=>{
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/personal-loan",
                                                 children: "Personal Loan"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/health-insurance/page.tsx",
+                                                lineNumber: 180,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/health-insurance/page.tsx",
+                                            lineNumber: 180,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/business-loan",
+                                                children: "Business Loan"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/health-insurance/page.tsx",
+                                                lineNumber: 181,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/health-insurance/page.tsx",
+                                            lineNumber: 181,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/education-loan",
+                                                children: "Education Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 182,
@@ -1113,8 +1130,8 @@ const HealthInsurance = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/business-loan",
-                                                children: "Business Loan"
+                                                href: "/home-loan",
+                                                children: "Home Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 183,
@@ -1127,8 +1144,8 @@ const HealthInsurance = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/education-loan",
-                                                children: "Education Loan"
+                                                href: "/loan-against-property",
+                                                children: "Loan Against Property"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 184,
@@ -1141,8 +1158,8 @@ const HealthInsurance = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/vehicle-loan",
-                                                children: "Vehicle Loan"
+                                                href: "/loan-against-insurance",
+                                                children: "Loan Against Insurance Policies"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 185,
@@ -1155,8 +1172,8 @@ const HealthInsurance = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/home-loan",
-                                                children: "Home Loan"
+                                                href: "/loan-against-mutual-funds",
+                                                children: "Loan Against Mutual Funds & Shares"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 186,
@@ -1168,13 +1185,14 @@ const HealthInsurance = ()=>{
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            className: "active",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/gold-loan",
-                                                children: "Gold Loan"
+                                                href: "/health-insurance",
+                                                children: "Health Insurance"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 187,
-                                                columnNumber: 19
+                                                columnNumber: 38
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
@@ -1183,8 +1201,8 @@ const HealthInsurance = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-property",
-                                                children: "Loan Against Property"
+                                                href: "/life-insurance",
+                                                children: "Life Insurance"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 188,
@@ -1197,8 +1215,8 @@ const HealthInsurance = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-insurance",
-                                                children: "Loan Against Insurance Policies"
+                                                href: "/credit-cards",
+                                                children: "Credit Cards"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/health-insurance/page.tsx",
                                                 lineNumber: 189,
@@ -1208,85 +1226,28 @@ const HealthInsurance = ()=>{
                                             fileName: "[project]/src/app/health-insurance/page.tsx",
                                             lineNumber: 189,
                                             columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-mutual-funds",
-                                                children: "Loan Against Mutual Funds & Shares"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 190,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 190,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            className: "active",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/health-insurance",
-                                                children: "Health Insurance"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 191,
-                                                columnNumber: 38
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 191,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/life-insurance",
-                                                children: "Life Insurance"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 192,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 192,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/credit-cards",
-                                                children: "Credit Cards"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/health-insurance/page.tsx",
-                                                lineNumber: 193,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/health-insurance/page.tsx",
-                                            lineNumber: 193,
-                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                                    lineNumber: 181,
+                                    lineNumber: 179,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/health-insurance/page.tsx",
-                            lineNumber: 179,
+                            lineNumber: 177,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/health-insurance/page.tsx",
-                    lineNumber: 48,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/app/health-insurance/page.tsx",
-                lineNumber: 47,
+                lineNumber: 45,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

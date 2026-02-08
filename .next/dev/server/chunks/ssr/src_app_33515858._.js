@@ -53,12 +53,18 @@ function Navbar({ isScrolled = false }) {
         message: ""
     });
     const [errors, setErrors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({});
-    // ESC key close for modal
-    const escHandler = (e)=>{
-        if (e.key === "Escape") setOpen(false);
-    };
-    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
-    ;
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (!open) return;
+        const escHandler = (e)=>{
+            if (e.key === "Escape") setOpen(false);
+        };
+        window.addEventListener("keydown", escHandler);
+        return ()=>{
+            window.removeEventListener("keydown", escHandler);
+        };
+    }, [
+        open
+    ]);
     const validate = ()=>{
         const err = {};
         if (!form.name.trim()) err.name = "Name is required";
@@ -68,17 +74,37 @@ function Navbar({ isScrolled = false }) {
         setErrors(err);
         return Object.keys(err).length === 0;
     };
-    const submitHandler = ()=>{
+    const submitHandler = async ()=>{
         if (!validate()) return;
-        alert("Form submitted successfully ✅");
-        setOpen(false);
-        setForm({
-            name: "",
-            email: "",
-            phone: "",
-            loanType: "",
-            message: ""
-        });
+        try {
+            const res = await fetch("/api/sendEmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    formType: "form1",
+                    ...form // <-- spread the existing form fields
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                alert("Form submitted successfully ✅");
+                setOpen(false);
+                setForm({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    loanType: "",
+                    message: ""
+                });
+            } else {
+                alert("Failed to send email. Try again later.");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Something went wrong. Try again later.");
+        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -94,12 +120,12 @@ function Navbar({ isScrolled = false }) {
                                 alt: "Logo"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                lineNumber: 80,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 79,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -111,12 +137,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Home"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 111,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -125,12 +151,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "About"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 112,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -143,18 +169,18 @@ function Navbar({ isScrolled = false }) {
                                                     "Services ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaChevronDown"], {}, void 0, false, {
                                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                                        lineNumber: 91,
+                                                        lineNumber: 118,
                                                         columnNumber: 28
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                                lineNumber: 90,
+                                                lineNumber: 117,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 116,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -165,23 +191,23 @@ function Navbar({ isScrolled = false }) {
                                                         children: s
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                                        lineNumber: 97,
+                                                        lineNumber: 124,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, s, false, {
                                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 123,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 121,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -190,12 +216,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Loan Process"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 131,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -204,12 +230,12 @@ function Navbar({ isScrolled = false }) {
                                         children: "Contact"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 134,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -219,29 +245,29 @@ function Navbar({ isScrolled = false }) {
                                         children: "Apply Now"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/Navbar.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 136,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 83,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Navbar.tsx",
-                    lineNumber: 78,
+                    lineNumber: 105,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar.tsx",
-                lineNumber: 77,
+                lineNumber: 104,
                 columnNumber: 7
             }, this),
             open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -258,7 +284,7 @@ function Navbar({ isScrolled = false }) {
                                     children: "QUICK LOAN APPLICATION FORM"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 150,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaTimes"], {
@@ -266,13 +292,13 @@ function Navbar({ isScrolled = false }) {
                                     onClick: ()=>setOpen(false)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 151,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 122,
+                            lineNumber: 149,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -287,7 +313,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 155,
                                     columnNumber: 15
                                 }, this),
                                 errors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -295,7 +321,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 160,
                                     columnNumber: 31
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -307,7 +333,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 162,
                                     columnNumber: 15
                                 }, this),
                                 errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -315,7 +341,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.email
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 167,
                                     columnNumber: 32
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -327,7 +353,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 169,
                                     columnNumber: 15
                                 }, this),
                                 errors.phone && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -335,7 +361,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.phone
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 174,
                                     columnNumber: 32
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -350,20 +376,20 @@ function Navbar({ isScrolled = false }) {
                                             children: "-- Select Loan Type --"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Navbar.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 180,
                                             columnNumber: 17
                                         }, this),
                                         services.map((s)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                 children: s
                                             }, s, false, {
                                                 fileName: "[project]/src/app/components/Navbar.tsx",
-                                                lineNumber: 155,
+                                                lineNumber: 182,
                                                 columnNumber: 19
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 176,
                                     columnNumber: 15
                                 }, this),
                                 errors.loanType && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -371,7 +397,7 @@ function Navbar({ isScrolled = false }) {
                                     children: errors.loanType
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 185,
                                     columnNumber: 35
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -383,7 +409,7 @@ function Navbar({ isScrolled = false }) {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 187,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -392,24 +418,24 @@ function Navbar({ isScrolled = false }) {
                                     children: "Send Message"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 193,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navbar.tsx",
-                            lineNumber: 127,
+                            lineNumber: 154,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Navbar.tsx",
-                    lineNumber: 121,
+                    lineNumber: 148,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar.tsx",
-                lineNumber: 120,
+                lineNumber: 147,
                 columnNumber: 9
             }, this)
         ]
@@ -589,9 +615,16 @@ function BusinessLoan() {
                                         lineNumber: 66,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "loan-btn",
-                                        children: "Boost Your Business – Apply Now"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "/quick-loan-app-form",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "loan-btn",
+                                            children: "Boost Your Business – Apply Now"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/business-loan/page.tsx",
+                                            lineNumber: 75,
+                                            columnNumber: 3
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/business-loan/page.tsx",
                                         lineNumber: 74,
@@ -610,14 +643,14 @@ function BusinessLoan() {
                                         children: "Looking for a Business Loan?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/business-loan/page.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 83,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Let us help you find the most suitable offers."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/business-loan/page.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -625,7 +658,7 @@ function BusinessLoan() {
                                         placeholder: "Name as Per Pancard"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/business-loan/page.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -633,7 +666,7 @@ function BusinessLoan() {
                                         placeholder: "Your Mobile Number"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/business-loan/page.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 86,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -641,13 +674,13 @@ function BusinessLoan() {
                                         children: "Apply"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/business-loan/page.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/business-loan/page.tsx",
-                                lineNumber: 80,
+                                lineNumber: 82,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -675,7 +708,7 @@ function BusinessLoan() {
                                     children: "Business Loan"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -683,7 +716,7 @@ function BusinessLoan() {
                                     children: "– Fuel Your Growth with Sivanto Capital"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -691,14 +724,14 @@ function BusinessLoan() {
                                     children: "Every growing business needs the right financial support to expand, upgrade, and manage operations seamlessly. With Sivanto Capital Business Loans, you can access funding up to ₹1 Crore with interest rates starting at 14% p.a., quick approvals, and simple documentation. Whether you are a startup, MSME, entrepreneur, or professional, our solutions are designed to help you scale faster."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 101,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                     children: "What is a Business Loan?"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -706,7 +739,7 @@ function BusinessLoan() {
                                     children: "A business loan is a financial facility offered by banks and NBFCs to meet working capital needs, purchase equipment, expand operations, or manage daily expenses."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 113,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -714,7 +747,7 @@ function BusinessLoan() {
                                     children: "At Sivanto Capital, we offer both secured and unsecured business loans:"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 119,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -725,14 +758,14 @@ function BusinessLoan() {
                                                     children: "Secured Loans"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 122,
+                                                    lineNumber: 124,
                                                     columnNumber: 19
                                                 }, this),
                                                 " – Collateral required"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 124,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -741,20 +774,20 @@ function BusinessLoan() {
                                                     children: "Unsecured Loans"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 123,
+                                                    lineNumber: 125,
                                                     columnNumber: 19
                                                 }, this),
                                                 " – No collateral required"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 123,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -762,7 +795,7 @@ function BusinessLoan() {
                                     children: "We also provide access to:"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 128,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -771,55 +804,55 @@ function BusinessLoan() {
                                             children: "Term Loans (Short, Intermediate & Long-term)"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 131,
+                                            lineNumber: 133,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Working Capital Loans"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 132,
+                                            lineNumber: 134,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Cash Credit & Overdraft Facilities"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 135,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Letter of Credit & Invoice Discounting"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 134,
+                                            lineNumber: 136,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Equipment & Machinery Loans"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 137,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "POS Loans / Merchant Cash Advance"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 136,
+                                            lineNumber: 138,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Loans under Government Schemes"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 139,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 130,
+                                    lineNumber: 132,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -831,7 +864,7 @@ function BusinessLoan() {
                                             children: "Why Sivanto Capital"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 144,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -840,7 +873,7 @@ function BusinessLoan() {
                                             children: "Eligibility"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 149,
+                                            lineNumber: 151,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -849,7 +882,7 @@ function BusinessLoan() {
                                             children: "Documents Required"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 156,
+                                            lineNumber: 158,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -858,13 +891,13 @@ function BusinessLoan() {
                                             children: "MSME Loan"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 164,
+                                            lineNumber: 166,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 143,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -876,7 +909,7 @@ function BusinessLoan() {
                                                     children: "Why Choose Sivanto Capital Business Loan?"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 176,
+                                                    lineNumber: 178,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -885,55 +918,55 @@ function BusinessLoan() {
                                                             children: "Attractive Interest Rates – Starting at 14% p.a."
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 178,
+                                                            lineNumber: 180,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Loan Amount – ₹10,000 to ₹1 Crore"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 179,
+                                                            lineNumber: 181,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Quick Approval – Within 4 hours"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 180,
+                                                            lineNumber: 182,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Fast Disbursal – Minimal waiting time"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 181,
+                                                            lineNumber: 183,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Flexible Tenure – Up to 36 months"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 182,
+                                                            lineNumber: 184,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Low Processing Fee – Transparent pricing"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 183,
+                                                            lineNumber: 185,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Easy Documentation – Faster processing"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 184,
+                                                            lineNumber: 186,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 177,
+                                                    lineNumber: 179,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -944,7 +977,7 @@ function BusinessLoan() {
                                                     children: "Eligibility Criteria"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 191,
+                                                    lineNumber: 193,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -953,41 +986,41 @@ function BusinessLoan() {
                                                             children: "Business vintage: Minimum 1 year"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 193,
+                                                            lineNumber: 195,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Annual Turnover: As per lender (₹1 Cr+ for MSME)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 194,
+                                                            lineNumber: 196,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Credit Score: Preferably 750+"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 195,
+                                                            lineNumber: 197,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "No previous loan defaults"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 196,
+                                                            lineNumber: 198,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 192,
+                                                    lineNumber: 194,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                     children: "Eligible Entities"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 199,
+                                                    lineNumber: 201,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -996,41 +1029,41 @@ function BusinessLoan() {
                                                             children: "Individuals, Startups, Entrepreneurs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 203,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Self-Employed Professionals (Doctors, CAs, etc.)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 202,
+                                                            lineNumber: 204,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "MSMEs & SMEs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 203,
+                                                            lineNumber: 205,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Proprietorships, Partnerships, LLPs, Pvt & Ltd Companies"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 204,
+                                                            lineNumber: 206,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "NGOs, Trusts & Co-operative Societies"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 205,
+                                                            lineNumber: 207,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 200,
+                                                    lineNumber: 202,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -1041,7 +1074,7 @@ function BusinessLoan() {
                                                     children: "Documents Required"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 212,
+                                                    lineNumber: 214,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1050,41 +1083,41 @@ function BusinessLoan() {
                                                             children: "KYC Documents (PAN, Aadhaar, Passport, etc.)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 214,
+                                                            lineNumber: 216,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Business Incorporation Certificate"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 215,
+                                                            lineNumber: 217,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Bank Statements – Last 12 months"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 216,
+                                                            lineNumber: 218,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Non-Collateral Overdraft Copy (if applicable)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 217,
+                                                            lineNumber: 219,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Any additional documents as per lender"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 218,
+                                                            lineNumber: 220,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 213,
+                                                    lineNumber: 215,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -1095,7 +1128,7 @@ function BusinessLoan() {
                                                     children: "Special MSME Loan with Sivanto Capital"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 225,
+                                                    lineNumber: 227,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1103,7 +1136,7 @@ function BusinessLoan() {
                                                     children: "We offer tailor-made MSME loans with government benefits and subsidy schemes to help small businesses grow faster."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 226,
+                                                    lineNumber: 228,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1112,34 +1145,34 @@ function BusinessLoan() {
                                                             children: "Minimum Turnover: ₹1 Crore"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 232,
+                                                            lineNumber: 234,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Interest Rate: Starting at 9% p.a."
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 233,
+                                                            lineNumber: 235,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "MSME Subsidy Applicable (as per Govt. schemes)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 234,
+                                                            lineNumber: 236,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Flexible repayment & attractive terms"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                                            lineNumber: 235,
+                                                            lineNumber: 237,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 231,
+                                                    lineNumber: 233,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
@@ -1147,7 +1180,7 @@ function BusinessLoan() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 173,
+                                    lineNumber: 175,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1157,7 +1190,7 @@ function BusinessLoan() {
                                             children: "How to Apply for a Sivanto Capital Business Loan?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 243,
+                                            lineNumber: 245,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1166,48 +1199,48 @@ function BusinessLoan() {
                                                     children: "Check Eligibility"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 245,
+                                                    lineNumber: 247,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Submit Application Online"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 246,
+                                                    lineNumber: 248,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Get Approval in 4 Hours"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 247,
+                                                    lineNumber: 249,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Loan Disbursal for Business Needs"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                                    lineNumber: 248,
+                                                    lineNumber: 250,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 244,
+                                            lineNumber: 246,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                             children: "Why Sivanto Capital is the Best Choice?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 251,
+                                            lineNumber: 253,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "With competitive rates, fast approvals, MSME benefits, and flexible repayment options, we help businesses grow without financial hurdles."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 254,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1215,7 +1248,7 @@ function BusinessLoan() {
                                             children: "👉 Apply Now for a Sivanto Capital Business Loan and give your business the financial strength it deserves."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 258,
+                                            lineNumber: 260,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1223,19 +1256,19 @@ function BusinessLoan() {
                                             children: "Disclaimer: Loan approval, eligibility, interest rates, and terms depend on lender’s discretion. T&C apply."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 265,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 242,
+                                    lineNumber: 244,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/business-loan/page.tsx",
-                            lineNumber: 95,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1245,7 +1278,7 @@ function BusinessLoan() {
                                     children: "OTHER SERVICES"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 272,
+                                    lineNumber: 274,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1254,35 +1287,6 @@ function BusinessLoan() {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/personal-loan",
                                                 children: "Personal Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/business-loan/page.tsx",
-                                                lineNumber: 274,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 274,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            className: "active",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/business-loan",
-                                                children: "Business Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/business-loan/page.tsx",
-                                                lineNumber: 275,
-                                                columnNumber: 38
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/business-loan/page.tsx",
-                                            lineNumber: 275,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/education-loan",
-                                                children: "Education Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 276,
@@ -1294,13 +1298,14 @@ function BusinessLoan() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            className: "active",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/home-loan",
-                                                children: "Home Loan"
+                                                href: "/business-loan",
+                                                children: "Business Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 277,
-                                                columnNumber: 19
+                                                columnNumber: 38
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
@@ -1309,8 +1314,8 @@ function BusinessLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-property",
-                                                children: "Loan Against Property"
+                                                href: "/education-loan",
+                                                children: "Education Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 278,
@@ -1323,8 +1328,8 @@ function BusinessLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-insurance",
-                                                children: "Loan Against Insurance Policies"
+                                                href: "/home-loan",
+                                                children: "Home Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 279,
@@ -1337,8 +1342,8 @@ function BusinessLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-mutual-funds",
-                                                children: "Loan Against Mutual Funds & Shares"
+                                                href: "/loan-against-property",
+                                                children: "Loan Against Property"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 280,
@@ -1351,8 +1356,8 @@ function BusinessLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/health-insurance",
-                                                children: "Health Insurance"
+                                                href: "/loan-against-insurance",
+                                                children: "Loan Against Insurance Policies"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 281,
@@ -1365,8 +1370,8 @@ function BusinessLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/life-insurance",
-                                                children: "Life Insurance"
+                                                href: "/loan-against-mutual-funds",
+                                                children: "Loan Against Mutual Funds & Shares"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 282,
@@ -1379,8 +1384,8 @@ function BusinessLoan() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/credit-cards",
-                                                children: "Credit Cards"
+                                                href: "/health-insurance",
+                                                children: "Health Insurance"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/business-loan/page.tsx",
                                                 lineNumber: 283,
@@ -1390,28 +1395,56 @@ function BusinessLoan() {
                                             fileName: "[project]/src/app/business-loan/page.tsx",
                                             lineNumber: 283,
                                             columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/life-insurance",
+                                                children: "Life Insurance"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/business-loan/page.tsx",
+                                                lineNumber: 284,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/business-loan/page.tsx",
+                                            lineNumber: 284,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/credit-cards",
+                                                children: "Credit Cards"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/business-loan/page.tsx",
+                                                lineNumber: 285,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/business-loan/page.tsx",
+                                            lineNumber: 285,
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/business-loan/page.tsx",
-                                    lineNumber: 273,
+                                    lineNumber: 275,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/business-loan/page.tsx",
-                            lineNumber: 271,
+                            lineNumber: 273,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/business-loan/page.tsx",
-                    lineNumber: 92,
+                    lineNumber: 94,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/business-loan/page.tsx",
-                lineNumber: 91,
+                lineNumber: 93,
                 columnNumber: 7
             }, this)
         ]

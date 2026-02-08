@@ -1,9 +1,7 @@
 /* [project]/src/styles/loan-process.css [app-client] (css) */
-.navbar {
+.hero-navbar {
   z-index: 10;
-  background: none;
   width: 100%;
-  transition: background .3s, box-shadow .3s;
   position: absolute;
   top: 0;
   left: 0;
@@ -20,7 +18,7 @@
 
 .loan-hero {
   width: 100%;
-  height: 600px;
+  height: 450px;
   position: relative;
   overflow: hidden;
 }
@@ -28,6 +26,8 @@
 .loan-bg {
   object-fit: cover;
   z-index: 1;
+  pointer-events: none;
+  filter: none;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -37,9 +37,13 @@
 
 .loan-overlay {
   z-index: 2;
+  pointer-events: none;
   background: #000c;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
 }
 
 .loan-content {
@@ -49,7 +53,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
   display: flex;
   position: absolute;
   inset: 0;
@@ -72,33 +75,6 @@
   color: #fff;
   background-color: #000;
   padding-bottom: 3rem;
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.loan-hero {
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-}
-
-.loan-bg {
-  object-fit: cover;
-  filter: brightness(.6);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.loan-overlay {
-  pointer-events: none;
-  background: #000000b3;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .loan-content h1 {

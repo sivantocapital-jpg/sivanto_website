@@ -6,25 +6,24 @@
 .page {
   min-height: 100vh;
   background: url("/assets/quickloan.jpg") no-repeat center center / cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  position: relative;
 }
 
 .form-container {
-  background: rgba(6, 6, 6, 0.2); /* semi-transparent white */
+  background: rgba(6, 6, 6, 0.2);
   max-width: 900px;
   width: 100%;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin: 40px auto; /* center horizontally */
 }
+
 
 
 .title {
   text-align: center;
-  color: #0b7a2b;
+  color: #fff;
   margin-bottom: 30px;
   font-weight: 700;
 }
@@ -48,6 +47,7 @@
 label {
   font-weight: 600;
   margin-bottom: 6px;
+  color: #fff;
 }
 
 input,

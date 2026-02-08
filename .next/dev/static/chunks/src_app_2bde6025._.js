@@ -524,9 +524,16 @@ const LoanAgainstProperty = ()=>{
                                         lineNumber: 24,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "loan-btn",
-                                        children: "Leverage Your Property Value Today"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: "/quick-loan-app-form",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "loan-btn",
+                                            children: "Leverage Your Property Value Today"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/loan-against-property/page.tsx",
+                                            lineNumber: 32,
+                                            columnNumber: 3
+                                        }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
                                         lineNumber: 31,
@@ -545,14 +552,14 @@ const LoanAgainstProperty = ()=>{
                                         children: "Looking for a Loan Against Property?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 41,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Let us help you find the most suitable offers."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 42,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -560,7 +567,7 @@ const LoanAgainstProperty = ()=>{
                                         placeholder: "Name as Per Pancard"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                        lineNumber: 41,
+                                        lineNumber: 44,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -568,7 +575,7 @@ const LoanAgainstProperty = ()=>{
                                         placeholder: "Your Mobile Number"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                        lineNumber: 42,
+                                        lineNumber: 45,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -576,13 +583,13 @@ const LoanAgainstProperty = ()=>{
                                         children: "Apply"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                        lineNumber: 44,
+                                        lineNumber: 47,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                lineNumber: 37,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
@@ -610,7 +617,7 @@ const LoanAgainstProperty = ()=>{
                                     children: "Loan Against Property"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -618,7 +625,7 @@ const LoanAgainstProperty = ()=>{
                                     children: "– Unlock the Value of Your Property with Sivanto Capital"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 58,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -626,7 +633,7 @@ const LoanAgainstProperty = ()=>{
                                     children: "Need funds for business expansion, higher education, wedding expenses, or medical emergencies? A Loan Against Property (LAP) from Sivanto Capital allows you to leverage the value of your residential, commercial, or special-use property and get access to substantial financing at competitive rates. With interest rates starting at 9% p.a., flexible tenure of up to 15 years, and an overdraft facility, we make borrowing against your property simple, secure, and stress-free."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 62,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -638,7 +645,7 @@ const LoanAgainstProperty = ()=>{
                                             children: "Why Choose"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 65,
+                                            lineNumber: 68,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -647,7 +654,7 @@ const LoanAgainstProperty = ()=>{
                                             children: "Eligibility"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 72,
+                                            lineNumber: 75,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -656,13 +663,13 @@ const LoanAgainstProperty = ()=>{
                                             children: "Documents"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 79,
+                                            lineNumber: 82,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 67,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -674,7 +681,7 @@ const LoanAgainstProperty = ()=>{
                                                     children: "Why Choose Sivanto Capital Loan Against Property?"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 91,
+                                                    lineNumber: 94,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -683,41 +690,41 @@ const LoanAgainstProperty = ()=>{
                                                             children: "Lower interest rates compared to personal loans"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 93,
+                                                            lineNumber: 96,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Higher loan eligibility depending on property value"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 94,
+                                                            lineNumber: 97,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Flexible usage – business, education, medical, or personal needs"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 95,
+                                                            lineNumber: 98,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Secure process – your property stays safe while you enjoy liquidity"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 96,
+                                                            lineNumber: 99,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Trusted financial partner with a customer-first approach"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 97,
+                                                            lineNumber: 100,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 92,
+                                                    lineNumber: 95,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
@@ -728,7 +735,7 @@ const LoanAgainstProperty = ()=>{
                                                     children: "Eligibility Criteria"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 104,
+                                                    lineNumber: 107,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -741,25 +748,25 @@ const LoanAgainstProperty = ()=>{
                                                                         children: "Particulars"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                        lineNumber: 108,
+                                                                        lineNumber: 111,
                                                                         columnNumber: 25
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                                         children: "Eligibility"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                        lineNumber: 109,
+                                                                        lineNumber: 112,
                                                                         columnNumber: 25
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                lineNumber: 107,
+                                                                lineNumber: 110,
                                                                 columnNumber: 23
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 106,
+                                                            lineNumber: 109,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -770,20 +777,20 @@ const LoanAgainstProperty = ()=>{
                                                                             children: "Nationality"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 114,
+                                                                            lineNumber: 117,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "Indian Citizen"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 115,
+                                                                            lineNumber: 118,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                    lineNumber: 113,
+                                                                    lineNumber: 116,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -792,20 +799,20 @@ const LoanAgainstProperty = ()=>{
                                                                             children: "Age (Salaried)"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 118,
+                                                                            lineNumber: 121,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "23 to 62 years"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 119,
+                                                                            lineNumber: 122,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                    lineNumber: 117,
+                                                                    lineNumber: 120,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -814,20 +821,20 @@ const LoanAgainstProperty = ()=>{
                                                                             children: "Age (Self-Employed)"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 122,
+                                                                            lineNumber: 125,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "25 to 70 years"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 123,
+                                                                            lineNumber: 126,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                    lineNumber: 121,
+                                                                    lineNumber: 124,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -836,7 +843,7 @@ const LoanAgainstProperty = ()=>{
                                                                             children: "Employment / Income"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 126,
+                                                                            lineNumber: 129,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -844,20 +851,20 @@ const LoanAgainstProperty = ()=>{
                                                                                 "Salaried – Minimum 3 years experience",
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                                    lineNumber: 128,
+                                                                                    lineNumber: 131,
                                                                                     columnNumber: 64
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 "Self-Employed – Steady & proven income"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 127,
+                                                                            lineNumber: 130,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                    lineNumber: 125,
+                                                                    lineNumber: 128,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -866,20 +873,20 @@ const LoanAgainstProperty = ()=>{
                                                                             children: "Credit Score"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 133,
+                                                                            lineNumber: 136,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "Depends on credit score & repayment history"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 134,
+                                                                            lineNumber: 137,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                    lineNumber: 132,
+                                                                    lineNumber: 135,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -888,32 +895,32 @@ const LoanAgainstProperty = ()=>{
                                                                             children: "Property Valuation"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 137,
+                                                                            lineNumber: 140,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             children: "Eligibility depends on property value"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                            lineNumber: 138,
+                                                                            lineNumber: 141,
                                                                             columnNumber: 25
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                                    lineNumber: 136,
+                                                                    lineNumber: 139,
                                                                     columnNumber: 23
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 112,
+                                                            lineNumber: 115,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 105,
+                                                    lineNumber: 108,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
@@ -924,7 +931,7 @@ const LoanAgainstProperty = ()=>{
                                                     children: "Documents Required"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 147,
+                                                    lineNumber: 150,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -933,62 +940,62 @@ const LoanAgainstProperty = ()=>{
                                                             children: "Latest salary slips (for salaried applicants)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 149,
+                                                            lineNumber: 152,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Bank statements of last 3 months"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 150,
+                                                            lineNumber: 153,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "PAN Card / Form 60 of all applicants"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 151,
+                                                            lineNumber: 154,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Valid ID proof (Aadhaar, Passport, Voter ID)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 152,
+                                                            lineNumber: 155,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Valid address proof (Utility bills, Rent Agreement, etc.)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 153,
+                                                            lineNumber: 156,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Property documents to be mortgaged"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 154,
+                                                            lineNumber: 157,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Income Tax Returns (ITR)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 155,
+                                                            lineNumber: 158,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                             children: "Title documents of the property"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                            lineNumber: 156,
+                                                            lineNumber: 159,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 148,
+                                                    lineNumber: 151,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
@@ -996,7 +1003,7 @@ const LoanAgainstProperty = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 91,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1006,7 +1013,7 @@ const LoanAgainstProperty = ()=>{
                                             children: "Key Features of Sivanto Capital LAP"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 164,
+                                            lineNumber: 167,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1015,55 +1022,55 @@ const LoanAgainstProperty = ()=>{
                                                     children: "Attractive Interest Rates – Starting at 9% p.a."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 166,
+                                                    lineNumber: 169,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Quick & Hassle-Free Processing – Simple online application & fast approvals"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 167,
+                                                    lineNumber: 170,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "High Loan Amount – Based on the property’s market value"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 171,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Flexible Tenure – Repay comfortably over up to 15 years"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 169,
+                                                    lineNumber: 172,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Overdraft Facility – Withdraw as needed & pay interest only on usage"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 170,
+                                                    lineNumber: 173,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Collateral Accepted – Residential, commercial & special-use properties"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 171,
+                                                    lineNumber: 174,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "Transparent Process – No hidden charges, clear documentation"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                    lineNumber: 172,
+                                                    lineNumber: 175,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 165,
+                                            lineNumber: 168,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1071,7 +1078,7 @@ const LoanAgainstProperty = ()=>{
                                             children: "👉 Apply Online for Sivanto Capital Loan Against Property today and unlock the hidden value of your property with ease."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 175,
+                                            lineNumber: 178,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1079,19 +1086,19 @@ const LoanAgainstProperty = ()=>{
                                             children: "Disclaimer: Loan eligibility, interest rate, and amount depend on applicant profile, income stability, property valuation, and lender’s discretion. T&C apply."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 179,
+                                            lineNumber: 182,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 166,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                            lineNumber: 53,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1101,7 +1108,7 @@ const LoanAgainstProperty = ()=>{
                                     children: "OTHER SERVICES"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 190,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1110,48 +1117,6 @@ const LoanAgainstProperty = ()=>{
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/personal-loan",
                                                 children: "Personal Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                lineNumber: 189,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 189,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/business-loan",
-                                                children: "Business Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                lineNumber: 190,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 190,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/education-loan",
-                                                children: "Education Loan"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                                lineNumber: 191,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                            lineNumber: 191,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/home-loan",
-                                                children: "Home Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
                                                 lineNumber: 192,
@@ -1163,14 +1128,13 @@ const LoanAgainstProperty = ()=>{
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            className: "active",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-property",
-                                                children: "Loan Against Property"
+                                                href: "/business-loan",
+                                                children: "Business Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
                                                 lineNumber: 193,
-                                                columnNumber: 38
+                                                columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
@@ -1179,8 +1143,8 @@ const LoanAgainstProperty = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-insurance",
-                                                children: "Loan Against Insurance Policies"
+                                                href: "/education-loan",
+                                                children: "Education Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
                                                 lineNumber: 194,
@@ -1193,8 +1157,8 @@ const LoanAgainstProperty = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/loan-against-mutual-funds",
-                                                children: "Loan Against Mutual Funds & Shares"
+                                                href: "/home-loan",
+                                                children: "Home Loan"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
                                                 lineNumber: 195,
@@ -1206,13 +1170,14 @@ const LoanAgainstProperty = ()=>{
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            className: "active",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/health-insurance",
-                                                children: "Health Insurance"
+                                                href: "/loan-against-property",
+                                                children: "Loan Against Property"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
                                                 lineNumber: 196,
-                                                columnNumber: 19
+                                                columnNumber: 38
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
@@ -1221,8 +1186,8 @@ const LoanAgainstProperty = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/life-insurance",
-                                                children: "Life Insurance"
+                                                href: "/loan-against-insurance",
+                                                children: "Loan Against Insurance Policies"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
                                                 lineNumber: 197,
@@ -1235,8 +1200,8 @@ const LoanAgainstProperty = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                href: "/credit-cards",
-                                                children: "Credit Cards"
+                                                href: "/loan-against-mutual-funds",
+                                                children: "Loan Against Mutual Funds & Shares"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/loan-against-property/page.tsx",
                                                 lineNumber: 198,
@@ -1246,28 +1211,70 @@ const LoanAgainstProperty = ()=>{
                                             fileName: "[project]/src/app/loan-against-property/page.tsx",
                                             lineNumber: 198,
                                             columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/health-insurance",
+                                                children: "Health Insurance"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/loan-against-property/page.tsx",
+                                                lineNumber: 199,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/loan-against-property/page.tsx",
+                                            lineNumber: 199,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/life-insurance",
+                                                children: "Life Insurance"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/loan-against-property/page.tsx",
+                                                lineNumber: 200,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/loan-against-property/page.tsx",
+                                            lineNumber: 200,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/credit-cards",
+                                                children: "Credit Cards"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/loan-against-property/page.tsx",
+                                                lineNumber: 201,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/loan-against-property/page.tsx",
+                                            lineNumber: 201,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 191,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/loan-against-property/page.tsx",
-                            lineNumber: 186,
+                            lineNumber: 189,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/loan-against-property/page.tsx",
-                    lineNumber: 51,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/app/loan-against-property/page.tsx",
-                lineNumber: 50,
+                lineNumber: 53,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]

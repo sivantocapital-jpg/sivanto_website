@@ -20,7 +20,7 @@
 }
 
 .loan-hero .navbar a:hover {
-  color: gold;
+  color: #01621d;
 }
 
 .loan-hero .navbar .dropdown {
@@ -100,6 +100,7 @@
 
 .loan-overlay {
   z-index: 1;
+  pointer-events: none;
   background: #000000d9;
   position: absolute;
   inset: 0;
@@ -112,7 +113,7 @@
   gap: 40px;
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 130px auto auto;
   padding: 0 20px;
   display: grid;
   position: relative;
@@ -186,18 +187,99 @@
   width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .service-left {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
 @media (max-width: 900px) {
+  .service-wrapper {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    align-items: center;
+    display: flex;
+  }
+
+  .service-left {
+    text-align: left;
+    width: 60%;
+    max-width: 600px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .service-title, .service-tagline {
+    text-align: center;
+  }
+
+  .service-desc {
+    text-align: left;
+  }
+
   .loan-hero {
     height: auto;
     padding: 40px 0;
   }
 
   .loan-container {
+    text-align: center;
+    flex-direction: column;
     grid-template-columns: 1fr;
+    align-items: center;
+    margin-top: 100px;
+    display: flex;
+  }
+
+  .loan-left {
+    text-align: left;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    max-width: 600px;
+    margin-bottom: 40px;
+    display: flex;
   }
 
   .loan-left h1 {
+    text-align: center;
+    margin-left: 0;
     font-size: 30px;
+  }
+
+  .loan-left ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .loan-left li {
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 16px;
+    list-style-position: outside;
+  }
+
+  .loan-right {
+    text-align: left;
+    width: 75%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .loan-right {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .loan-right {
+    width: 90%;
+    max-width: 350px;
   }
 }
 
@@ -374,7 +456,31 @@
 
 @media (max-width: 900px) {
   .service-wrapper {
+    flex-direction: column;
     grid-template-columns: 1fr;
+    align-items: center;
+    display: flex;
+  }
+
+  .service-left {
+    text-align: left;
+    width: 60%;
+    max-width: 600px;
+  }
+
+  .service-right {
+    order: 2;
+    width: 60%;
+    max-width: 600px;
+    margin: 40px auto 0;
+  }
+
+  .service-title, .service-tagline {
+    text-align: center;
+  }
+
+  .service-desc {
+    text-align: left;
   }
 }
 
