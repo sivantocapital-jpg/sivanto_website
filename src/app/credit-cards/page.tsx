@@ -68,40 +68,42 @@ export default function CreditCards() {
                 Compare 50+ Cards – From top banks like HDFC, SBI, ICICI, Axis,
                 Citi, Standard Chartered, American Express & more
               </li>
-              <li>Check Eligibility Instantly – Know your chances of approval</li>
-              <li>Smart Comparisons – Compare benefits, rewards & fees</li>
-              <li>Instant Approval – Apply online with minimal hassle</li>
-              <li>Personalized Matches – Based on your spending habits</li>
+              <li>Check Eligibility Instantly – Know your chances of approval in just seconds </li>
+              <li>Smart Comparisons – Compare benefits, rewards & fees, and cashback offers easily </li>
+              <li>Instant Approval – Apply online and get quick approval with minimal hassle</li>
+              <li>Personalized Matches – Get card recommendations based on your profile & spending habits </li>
             </ul>
 
             <h4>Benefits of Having a Credit Card</h4>
             <ul>
-              <li>Welcome Offers – Vouchers, cashback, or reward points</li>
-              <li>Reward Points & Cashback – Earn points on every purchase</li>
-              <li>Fuel Surcharge Waiver – Save more on fuel purchases</li>
-              <li>Easy EMI Conversions – Convert purchases into EMIs</li>
-              <li>Add-on Cards – For family members</li>
-              <li>Concierge Services – 24x7 travel and dining assistance</li>
-              <li>Insurance Cover – Complimentary insurance with select cards</li>
+              <li>Welcome Offers –  Get exciting vouchers, cashback, or bonus reward points on joining </li>
+              <li>Reward Points & Cashback – Earn points on every purchase and redeem them easily </li>
+              <li>Fuel Surcharge Waiver – Save more when you fuel up at partnered petrol pumps s</li>
+              <li>Easy EMI Conversions – Convert high-ticket purchases into affordable EMIs </li>
+              <li>Add-on Cards – Get supplementary cards for family members </li>
+              <li>Concierge Services – Get 24x7 assistance for travel, dining, and entertainment bookings </li>
+              <li>Insurance Cover – Complimentary travel, health, and accidental insurance with select cards </li>
             </ul>
 
             <h4>How to Choose the Best Credit Card for You</h4>
+            <p>Before applying, ask yourself these 7 important questions to pick the right credit card: </p>
             <ul>
               <li>Are you new to credit or already have a card?</li>
               <li>Do you prefer cashback, rewards, or air miles?</li>
-              <li>What do you spend most on – shopping, fuel, travel, dining?</li>
-              <li>Do you prefer certain airlines or brands?</li>
-              <li>Are you okay paying annual fee if benefits are higher?</li>
-              <li>Are you a heavy spender for bonus rewards?</li>
-              <li>Do you need lounge access, dining discounts, or fuel benefits?</li>
+              <li>What type of purchases do you spend most on – shopping, fuel, travel, dining, or utilities?</li>
+              <li>Do you prefer certain airlines, brands, or online platforms? </li>
+              <li>Are you okay with paying an annual fee if the card gives maximum benefits? </li>
+              <li>Are you a heavy spender who can reach spending milestones for bonus rewards or annual fee waivers? </li>
+              <li>Do you need lifestyle perks like airport lounge access, dining discounts, or fuel benefits? </li>
             </ul>
 
             <h4>Apply Online & Get Instant Credit Card Approval</h4>
+            <p>With PaisaPulse, your journey is quick, secure, and hassle-free: </p>
             <ul>
               <li>Check Eligibility – Answer quick questions</li>
-              <li>Compare Cards – Shortlist based on benefits</li>
-              <li>Apply Online – Complete a simple form</li>
-              <li>Get Instant Approval – Receive eligible cards instantly</li>
+              <li>Compare Cards – Shortlist based on benefits, fees & approval chances </li>
+              <li>Apply Online – Complete a simple digital form </li>
+              <li>Get Instant Approval – Receive your pre-approved or eligible cards instantly </li>
             </ul>
 
             <p>

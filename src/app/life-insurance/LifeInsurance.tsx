@@ -47,45 +47,54 @@ const LifeInsurance = () => {
             </h3>
 
             <p>
-              Life is unpredictable, and financial security for your loved ones is crucial...
+              Life is unpredictable, and financial security for your loved ones is crucial. 
+              A Life Insurance Policy ensures that your family is protected against 
+              unforeseen circumstances such as death, disability, or critical illness, 
+              by offering financial stability through lump sum payouts, monthly income, 
+              or maturity benefits.
             </p>
+            <p>At PaisaPulse, we bring you a wide range of life insurance plans – from 
+                Term Insurance, ULIPs, and Child Plans to Pension Plans – designed to 
+                suit every stage of life. </p>
 
             <h4>Key Features & Benefits of Life Insurance</h4>
             <ul>
               <li>Affordable Premiums – Get comprehensive life cover at low cost</li>
-              <li>Flexible Payout Options – Choose between lump sum or monthly income</li>
+              <li>Flexible Payout Options – Choose between lump sum or monthly income for your family </li>
               <li>Custom Policy Terms – Coverage from 5 to 30 years</li>
-              <li>Joint Life Coverage – Secure you & your spouse</li>
+              <li>Joint Life Coverage – Secure you & your spouse under a single policy</li>
               <li>Critical Illness Cover – Lump sum payout for major illnesses</li>
               <li>Accidental Death Benefit – Extra sum insured for accidental demise</li>
               <li>Income Protection – Monthly income for disability or loss of income</li>
               <li>Preferred Rates for Non-Smokers – Lower premiums for non-smokers</li>
-              <li>Tax Benefits – Save under Section 80C, 80D & 10(10D)</li>
+              <li>Tax Benefits – Save under Section 80C, 80D & 10(10D) of the Income Tax Act </li>
             </ul>
 
             <h4>Types of Life Insurance Plans</h4>
+            <p>Choose from a variety of plans depending on your needs and financial goals: </p>
             <ul>
-              <li>Term Insurance Plan – High cover at low premium</li>
-              <li>ULIP – Insurance + investment</li>
-              <li>Child Insurance Plan – Secure child’s future</li>
-              <li>Pension Plan – Guaranteed retirement income</li>
+              <li>Term Insurance Plan –  Pure protection plan offering high cover at low premiums </li>
+              <li>ULIP (Unit Linked Insurance Plan) – Combines insurance with investment opportunities </li>
+              <li>Child Insurance Plan – Secure your child’s education and future expenses </li>
+              <li>Pension / Retirement Plan – Guaranteed income after retirement for lifelong financial security </li>
             </ul>
 
             <h4>How to Apply for Life Insurance?</h4>
+            <p>Before applying for a policy with PaisaPulse, consider these key factors: </p>
             <ul>
-              <li>Choose plan type</li>
-              <li>Decide sum assured & policy term</li>
-              <li>Check insurer’s claim settlement ratio</li>
-              <li>Add riders if needed</li>
+              <li>Type of Plan – Do you need Term Insurance, ULIP, Child Plan, or a Pension Plan? </li>
+              <li>Sum Assured & Policy Term – Choose coverage and maturity age that fits your financial goals.</li>
+              <li>Claim Settlement Ratio – Check the insurer’s claim settlement history for reliability. </li>
+              <li>Additional Riders – Add-on benefits like critical illness, accidental death, or disability cover. </li>
             </ul>
 
             <h4>Why Choose Sivanto Capital?</h4>
             <ul>
-              <li>Wide range of plans</li>
-              <li>Affordable premiums</li>
-              <li>Transparent policies</li>
-              <li>Trusted insurers</li>
-              <li>Tax benefits</li>
+              <li>Wide range of customized life insurance plans </li>
+              <li>Affordable premiums with maximum benefits </li>
+              <li>Transparent policies with no hidden charges </li>
+              <li>Trusted insurers with strong claim settlement records </li>
+              <li>Tax savings while securing your family’s financial future </li>
             </ul>
 
             <p>

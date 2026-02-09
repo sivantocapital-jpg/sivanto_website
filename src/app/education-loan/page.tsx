@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import EducationTabs from "../components/EducationTabs"; // new client component
 import CommonSmallForm from "../components/CommonSmallForm";
+import Head from "next/head";
 
 export const metadata = {
   title: "Education Loan in India | Fast Approval & Low Interest – Sivanto Capital",
@@ -23,6 +24,48 @@ export const metadata = {
 export default function EducationLoan() {
   return (
     <>
+      {/* ================= SEO HEAD ================= */}
+      <Head>
+        <title>
+          Education Loan in India | Study Abroad & Domestic Loans – Sivanto Capital
+        </title>
+        <meta
+          name="description"
+          content="Apply for Education Loans up to ₹1 Crore in India and ₹2 Crore for overseas studies. Low interest rates starting from 9.25% p.a., quick approval, and flexible repayment with Sivanto Capital."
+        />
+        <meta
+          name="keywords"
+          content="Education Loan India, Study Abroad Education Loan, Student Loan, Overseas Education Loan, Education Loan Interest Rates, Sivanto Capital"
+        />
+        <link
+          rel="canonical"
+          href="https://www.sivantocapital.in/education-loan"
+        />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LoanOrCredit",
+              "name": "Education Loan",
+              "description":
+                "Education loans for domestic and international studies with funding up to ₹2 Crore, low interest rates, and flexible repayment options.",
+              "loanType": "Education Loan",
+              "areaServed": "IN",
+              "provider": {
+                "@type": "Organization",
+                "name": "Sivanto Capital",
+                "url": "https://www.sivantocapital.in",
+                "logo": "https://www.sivantocapital.in/assets/logo.png"
+              },
+              "url": "https://www.sivantocapital.in/education-loan"
+            })
+          }}
+        />
+      </Head>
+
       {/* ================= HERO SECTION ================= */}
       <section
         className="loan-hero"
@@ -38,12 +81,11 @@ export default function EducationLoan() {
             <ul>
               <li>✅ Attractive interest rates starting from 9.25% p.a.</li>
               <li>
-                ✅ Loan up to ₹1 Crore for domestic & ₹2 Crore for international
-                studies
+                ✅ Quick loan sanction for higher studies 
               </li>
-              <li>✅ Quick sanction & flexible repayment options</li>
+              <li>✅ Part-prepayment option available </li>
               <li>✅ Hassle-free documentation process</li>
-              <li>✅ Covers tuition, hostel, travel, books & more</li>
+              <li>✅ Loan amount up to ₹1 Crore</li>
               <li>✅ T&C Apply</li>
             </ul>
 
@@ -70,15 +112,65 @@ export default function EducationLoan() {
             </h3>
 
             <p className="service-desc">
-              Dreaming of higher education but worried about rising costs? Whether
-              you plan to study in India or abroad, Sivanto Capital Education Loans
-              help you finance your education with ease. Get funding up to ₹2
-              Crore at attractive interest rates with quick sanction and flexible
-              repayment options.
+              Dreaming of higher education but worried about the rising costs?
+               Whether it’s pursuing a professional course in India or studying at a 
+               prestigious university abroad, financing your education is no longer a 
+               challenge. With PaisaPulse Education Loans, you can avail funding up 
+               to ₹1 Crore at affordable interest rates starting from 9.25% p.a., 
+               with quick loan sanction and flexible repayment options. 
+            </p>
+
+            <p className="service-desc">
+              At Sivanto Capital, we believe financial barriers should never stop you 
+              from achieving your academic aspirations. Our student loan solutions are 
+              designed to give you the financial confidence to focus on your education 
+              while we take care of the expenses. 
             </p>
 
             {/* ================= TABS ================= */}
             <EducationTabs />
+
+            {/* ================= NEW CONTENT ================= */}
+            <div className="education-extra">
+              <h4>What Expenses Does the Loan Cover?</h4>
+              <ul>
+                <li>Tuition fees and admission charges</li>
+                <li>Hostel or accommodation expenses</li>
+                <li>Examination and library fees</li>
+                <li>Purchase of books, laptops, and study equipment</li>
+                <li>Travel expenses for overseas education</li>
+                <li>Other related costs required by the institution</li>
+              </ul>
+
+              <h4>How to Apply for PaisaPulse Education Loan?</h4>
+              <ul>
+                <li>
+                  <strong>Check Eligibility – </strong>
+                  Verify basic academic and financial requirements.
+                </li>
+                <li>
+                  <strong>Submit Documents – </strong>
+                  Upload all necessary documents online.
+                </li>
+                <li>
+                  <strong>Get Loan Sanction – </strong>
+                  Approval within a quick turnaround time.
+                </li>
+                <li>
+                  <strong>Loan Disbursal – </strong>
+                  Funds directly credited as per the requirement (domestic or international).
+                </li>
+              </ul>
+
+              <h4>Why PaisaPulse for Education Loans?</h4>
+              <ul>
+                <li>Tailored loan solutions for domestic & international studies</li>
+                <li>Quick sanction process to meet admission deadlines</li>
+                <li>Competitive interest rates & flexible repayment options</li>
+                <li>Support for students & parents through co-borrower facility</li>
+                <li>Coverage of all major educational expenses</li>
+              </ul>
+            </div>
 
             <p className="cta-text">
               👉 Apply Now for a Sivanto Capital Education Loan and take the first step

@@ -422,6 +422,12 @@
   margin-bottom: 8px;
 }
 
+.apply-steps ul li {
+  margin-bottom: 10px; /* Adds space between steps */
+  line-height: 1.6;    /* Makes text easier to read */
+}
+
+
 .cta-text {
   font-weight: 600;
   margin-top: 15px;

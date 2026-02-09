@@ -45,6 +45,7 @@ export default function HealthInsuranceTabs() {
         {activeTab === "eligibility" && (
           <>
             <h4>Eligibility Criteria for Health Insurance</h4>
+            <p>The eligibility depends on the insurer and type of policy. Common criteria include: </p>
             <table className="eligibility-table">
               <thead>
                 <tr>
@@ -77,6 +78,7 @@ export default function HealthInsuranceTabs() {
         {activeTab === "documents" && (
           <>
             <h4>Documents Required for Health Insurance</h4>
+            <p>To apply for a health insurance policy, you need minimal documentation: </p>
             <ul>
               <li>Duly filled and signed application form</li>
               <li>Identity Proof – Aadhaar / Passport / Voter ID / Driving Licence</li>

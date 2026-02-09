@@ -58,8 +58,14 @@ export default function HealthInsurance() {
             </h3>
 
             <p className="service-desc">
-              Health is unpredictable, and medical expenses can arise at any time...
+             Health is unpredictable, and medical expenses can arise at any time. 
+             With PaisaPulse Health Insurance Plans, you and your family can stay 
+             financially protected against unexpected medical emergencies. Whether 
+             it’s hospitalisation, surgeries, daycare treatments, or medical check-ups, 
+             our policies cover a wide range of expenses while ensuring peace of mind. 
             </p>
+            <p>Enjoy benefits like cashless treatment, income tax deductions, 
+              and reimbursement of medical costs with a plan tailored to your healthcare needs. </p>
 
             {/* TABS */}
             <HealthInsuranceTabs />
@@ -72,7 +78,7 @@ export default function HealthInsurance() {
                 <li>Pre & Post-Hospitalisation Cover – Expenses before & after hospital stay included</li>
                 <li>Ambulance Charges – Coverage for emergency transportation</li>
                 <li>Medical Check-ups – Preventive health check-ups included in select plans</li>
-                <li>Tax Benefits – Premiums eligible for deductions under Section 80D</li>
+                <li>Tax Benefits – Premiums eligible for deductions under Section 80D of the Income Tax Act </li>
                 <li>Reimbursement Facility – Get back medical costs incurred at non-network hospitals</li>
               </ul>
 

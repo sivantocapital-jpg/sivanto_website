@@ -134,6 +134,7 @@ export default function PersonalLoanClient() {
               {activeTab === "eligibility" && (
                 <>
                   <h4>Eligibility Criteria</h4>
+                  <p>To make the loan process simple, we have kept the eligibility requirements straightforward: </p>
                   <strong>For Salaried Individuals:</strong>
                   <ul>
                     <li>Minimum Age: 23 years</li>
@@ -153,43 +154,59 @@ export default function PersonalLoanClient() {
               {activeTab === "documents" && (
                 <>
                   <h4>Documents Required</h4>
+                  <p>Applying for a personal loan with PaisaPulse is hassle-free and requires only basic documents: </p>
                   <ul>
                     <li>Photo ID Proof (Aadhar, PAN, Passport, Voter ID)</li>
-                    <li>Address Proof</li>
+                    <li>Address Proof (Utility bills, Rental Agreement, Aadhar, Passport, etc.) </li>
                     <li>Income Proof Documents</li>
-                    <li>Latest Salary Slips (salaried)</li>
-                    <li>Business Proof (self-employed)</li>
+                    <li>Latest Salary Slips (for salaried individuals) </li>
+                    <li>Business Proof (for self-employed)</li>
                   </ul>
                 </>
               )}
             </div>
 
             {/* APPLY STEPS */}
-            <div className="apply-steps">
-              <h4>How to Apply for a Personal Loan with Sivanto Capital?</h4>
-              <ul>
-                <li>Check Your Eligibility</li>
-                <li>Submit Application Online</li>
-                <li>Instant Approval</li>
-                <li>Loan Disbursal within 24 Hours</li>
-              </ul>
+           <div className="apply-steps">
+  <h4>How to Apply for a Personal Loan with Sivanto Capital?</h4>
+  <ul>
+    <li>
+      <strong>Check Your Eligibility – </strong>
+      Quickly verify if you meet our loan criteria.
+    </li>
+    <li>
+      <strong>Submit Your Application Online – </strong>
+      Fill out the simple form and upload your documents.
+    </li>
+    <li>
+      <strong>Instant Approval – </strong>
+      Get a quick loan decision within minutes.
+    </li>
+    <li>
+      <strong>Loan Disbursal – </strong>
+      Receive funds directly in your bank account within 24 hours.
+    </li>
+  </ul>
 
-              <h4>Why Sivanto Capital is the Right Choice for You?</h4>
-              <p>
-                We offer fast, secure, and transparent personal loan solutions
-                with competitive rates, flexible repayment, and doorstep support.
-              </p>
+  <h4>Why Sivanto Capital is the Right Choice for You?</h4>
+  <p>
+    At Sivato Capital, we understand that financial needs can arise unexpectedly. 
+    That’s why we bring you fast, secure, and transparent personal loan solutions. 
+    With competitive interest rates, flexible repayment options, and doorstep support, 
+    we ensure your borrowing journey is stress-free. 
+  </p>
 
-              <p className="cta-text">
-                👉 Apply Now for a Sivanto Capital Personal Loan and enjoy
-                quick approvals and peace of mind.
-              </p>
+  <p className="cta-text">
+    👉 Apply Now for a Sivanto Capital Personal Loan and enjoy
+    quick approvals and peace of mind.
+  </p>
 
-              <p className="disclaimer">
-                Disclaimer: Loan approval, interest rates, and terms are subject
-                to eligibility and lender’s discretion. T&C apply.
-              </p>
-            </div>
+  <p className="disclaimer">
+    Disclaimer: Loan approval, interest rates, and terms are subject
+    to eligibility and lender’s discretion. T&C apply.
+  </p>
+</div>
+
           </div>
 
           {/* RIGHT */}
