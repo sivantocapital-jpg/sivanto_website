@@ -1,81 +1,52 @@
-"use client";
 import "../styles/home.css";
 import Link from "next/link";
-import Head from "next/head";
-import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar"; // Import your Navbar
+import NavbarClient from "./components/NavbarClient";
 
-// Make page static for SEO
 export const dynamic = "force-static";
 
+export const metadata = {
+  title: "Sivanto Capital Services | Personal, Business, Home Loans",
+  description:
+    "Sivanto Capital provides trusted personal, business, home, and education loans with fast approval, low interest rates, and flexible repayment options.",
+  keywords: [
+    "personal loan",
+    "business loan",
+    "home loan",
+    "education loan",
+    "loan services India",
+    "credit cards",
+    "insurance",
+  ],
+  alternates: {
+    canonical: "https://www.yourdomain.com/",
+  },
+};
+
+const services = [
+  { img: "loanPersonal.jpg", title: "Personal Loan", slug: "personal-loan", desc: "Get instant personal loans up to ₹1 Cr at 10.25% p.a. Fast approval, minimal docs & 24-hr disbursal for weddings, medical, travel & more.", rate: "10.25% p.a." },
+  { img: "loanBusiness.jpg", title: "Business Loan", slug: "business-loan", desc: "Fuel your business growth with loans up to ₹1 Cr at 14% p.a. Quick approval, easy docs & flexible repayment for startups, MSMEs & entrepreneurs.", rate: "14% p.a." },
+  { img: "loanEducation.jpg", title: "Education Loan", slug: "education-loan", desc: "Achieve your study goals in India or abroad with loans up to ₹1 Cr at 9.25% p.a. Quick sanction & flexible repayment for higher education.", rate: "9.25% p.a." },
+  { img: "loanHome.jpg", title: "Home Loan", slug: "home-loan", desc: "Buy, build, or renovate your dream home with loans up to ₹10 Cr at 8.65% p.a. Easy documentation, low fees & tenure up to 30 years.", rate: "8.65% p.a." },
+  { img: "loanAgainstProperty.jpg", title: "Loan Against Property", slug: "loan-against-property", desc: "Leverage your property's value for loans at 9% p.a. Flexible tenure up to 15 yrs & overdraft facility for business, education, or personal needs.", rate: "9% p.a." },
+  { img: "loanAgainstInsurancePolicy.jpg", title: "Loan Against Insurance Policy", slug: "loan-against-insurance", desc: "Raise instant funds using your insurance policies. unlock funds easily, no extra collateral needed, quick processing and flexible repayment options." },
+  { img: "loanAgainstMutualFunds.jpg", title: "Loan Against Mutual Funds", slug: "loan-against-mutual-funds", desc: "Get instant funds without redeeming your investments. Leverage your shares & mutual funds with quick approval, low rates & flexible repayment.", rate: "10.5% p.a." },
+  { img: "loanHealthInsurance.jpg", title: "Health Insurance", slug: "health-insurance", desc: "Stay protected from medical expenses. Cashless treatments, tax benefits & wide coverage for you & your family's healthcare needs." },
+  { img: "loanLifeInsurance.jpg", title: "Life Insurance", slug: "life-insurance", desc: "Secure your family's future with life insurance. Choose term, child, ULIPs & pension plans for protection & financial stability." },
+  { img: "loanCreditCards.jpg", title: "Credit Card", slug: "credit-cards", desc: "Compare & apply from 50+ bank credit cards. Get cashback, rewards, travel perks and easy EMIs—all in one place with PaisaPulse." }
+];
+
 export default function HomePage() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  
-  // Scroll listener for navbar
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const services = [
-    { img: "loanPersonal.jpg", title: "Personal Loan", slug: "personal-loan", desc: "Get instant personal loans up to ₹1 Cr at 10.25% p.a. Fast approval, minimal docs & 24-hr disbursal for weddings, medical, travel & more.", rate: "10.25% p.a." },
-    { img: "loanBusiness.jpg", title: "Business Loan", slug: "business-loan", desc: "Fuel your business growth with loans up to ₹1 Cr at 14% p.a. Quick approval, easy docs & flexible repayment for startups, MSMEs & entrepreneurs.", rate: "14% p.a." },
-    { img: "loanEducation.jpg", title: "Education Loan", slug: "education-loan", desc: "Achieve your study goals in India or abroad with loans up to ₹1 Cr at 9.25% p.a. Quick sanction & flexible repayment for higher education.", rate: "9.25% p.a." },
-
-    { img: "loanHome.jpg", title: "Home Loan", slug: "home-loan", desc: "Buy, build, or renovate your dream home with loans up to ₹10 Cr at 8.65% p.a. Easy documentation, low fees & tenure up to 30 years.", rate: "8.65% p.a." },
-    { img: "loanAgainstProperty.jpg", title: "Loan Against Property", slug: "loan-against-property", desc: "Leverage your property's value for loans at 9% p.a. Flexible tenure up to 15 yrs & overdraft facility for business, education, or personal needs.", rate: "9% p.a." },
-    { img: "loanAgainstInsurancePolicy.jpg", title: "Loan Against Insurance Policy", slug: "loan-against-insurance", desc: "Raise instant funds using your insurance policies. unlock funds easily, no extra collateral needed, quick processing and flexible repayment options." },
-
-    { img: "loanAgainstMutualFunds.jpg", title: "Loan Against Mutual Funds", slug: "loan-against-mutual-funds", desc: "Get instant funds without redeeming your investments. Leverage your shares & mutual funds with quick approval, low rates & flexible repayment.", rate: "10.5% p.a." },
-    { img: "loanHealthInsurance.jpg", title: "Health Insurance", slug: "health-insurance", desc: "Stay protected from medical expenses. Cashless treatments, tax benefits & wide coverage for you & your family's healthcare needs." },
-    { img: "loanLifeInsurance.jpg", title: "Life Insurance", slug: "life-insurance", desc: "Secure your family's future with life insurance. Choose term, child, ULIPs & pension plans for protection & financial stability." },
-
-    { img: "loanCreditCards.jpg", title: "Credit Card", slug: "credit-cards", desc: "Compare & apply from 50+ bank credit cards. Get cashback, rewards, travel perks and easy EMIs—all in one place with PaisaPulse." }
-  ];
-
   return (
     <>
-      {/* SEO Head */}
-      <Head>
-        <title>Sivanto Capital Services | Personal, Business, Home Loans</title>
-        <meta
-          name="description"
-          content="Sivanto Capital provides trusted personal, business, home, and education loans with fast approval, low interest rates, and flexible repayment options."
-        />
-        <meta
-          name="keywords"
-          content="personal loan, business loan, home loan, education loan, loan services India, credit cards, insurance"
-        />
-        <link rel="canonical" href="https://www.yourdomain.com/" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Sivanto Capital Services",
-              "url": "https://www.yourdomain.com",
-              "logo": "https://www.yourdomain.com/assets/logo.png",
-              "sameAs": [
-                "https://www.facebook.com/YourPage",
-                "https://www.linkedin.com/company/yourcompany"
-              ]
-            })
-          }}
-        />
-      </Head>
-
-      {/* HERO SECTION with Navbar INSIDE */}
+      {/* HERO SECTION */}
       <div className="slider-container">
-        {/* Navbar goes here - inside the hero section */}
-        <Navbar isScrolled={isScrolled} />
-        
+        <NavbarClient />
+
         <div className="slider-overlay"></div>
         <div className="slider-content">
+          {/* Hidden H1 for SEO (no design change) */}
+          <h1 className="sr-only">Sivanto Capital Service Pvt Ltd</h1>
+
           <h3>
             SIVANTO CAPITAL SERVICE Pvt Ltd is to position the company as a trusted
             and professionally managed Private Limited loan and financial services provider,

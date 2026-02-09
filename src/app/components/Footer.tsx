@@ -6,7 +6,8 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
-  FaYoutube
+  FaYoutube,
+  FaWhatsapp
 } from "react-icons/fa";
 
 import "../../styles/footer.css";
@@ -21,14 +22,16 @@ export default function Footer() {
       return;
     }
 
-    // Show alert immediately
+    if (!/^[6-9]\d{9}$/.test(mobile)) {
+      alert("Please enter a valid 10-digit mobile number!");
+      return;
+    }
+
     alert("Thank You, we will get back to you soon!!");
 
-    // Clear inputs immediately
     setName("");
     setMobile("");
 
-    // Send email in the background
     fetch("/api/sendEmail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -51,9 +54,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
-        {/* LEFT – Logo + Text */}
         <div className="footer-col footer-about">
-          <img src="/assets/logo.png" alt="Sivanto Capital" className="footer-logo" />
+          <img src="/assets/logo.png" alt="Sivanto Capital Services Logo" className="footer-logo" />
           <p>
             Get quick loans, credit cards & financial solutions with Sivanto Capital.
             3+ years of trusted service in Vijayawada. Fast approval, low
@@ -61,7 +63,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* QUICK LINKS */}
         <div className="footer-col">
           <h4>QUICK LINKS</h4>
           <ul>
@@ -72,19 +73,60 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* SOCIAL LINKS */}
         <div className="footer-col">
           <div className="footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61587500886611" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/sivantocapital_pvt_ltd/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://www.linkedin.com/in/hemanth-mogilipalepu-819b26399/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-            <a href="https://x.com/SivantoCapital" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="www.youtube.com/@SivantoCapital" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61587500886611"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sivanto Capital Facebook"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/sivantocapital_pvt_ltd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sivanto Capital Instagram"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hemanth-mogilipalepu-819b26399/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sivanto Capital LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://x.com/SivantoCapital"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sivanto Capital X (Twitter)"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://www.youtube.com/@SivantoCapital"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sivanto Capital YouTube"
+            >
+              <FaYoutube />
+            </a>
+            <a
+              href="https://wa.me/918639841133"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sivanto Capital WhatsApp"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
 
-        {/* SUBSCRIBE NOW */}
-        <div className="footer-col">
+        <div className="footer-col footer-subscribe">
           <h4>SUBSCRIBE NOW</h4>
           <input
             type="text"
@@ -98,13 +140,12 @@ export default function Footer() {
             value={mobile}
             onChange={(e) => setMobile(e.target.value)}
           />
-          <button className="send-btn" onClick={handleSubscribe}>
+          <button type="button" className="send-btn" onClick={handleSubscribe}>
             Send Now
           </button>
         </div>
 
-        {/* GET IN TOUCH */}
-        <div className="footer-col">
+        <div className="footer-col footer-contact">
           <h4>GET IN TOUCH</h4>
           <p><strong>Phone:</strong> +91 8639841133</p>
           <p><strong>E-Mail:</strong> info@sivantocapital.in</p>

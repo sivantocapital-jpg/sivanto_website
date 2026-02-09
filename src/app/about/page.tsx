@@ -1,66 +1,43 @@
-"use client";
 import "../../styles/about.css";
-import Head from "next/head";
-import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar"; // Import your Navbar
+import NavbarClient from "../components/NavbarClient";
 
-// Make page static for SEO
 export const dynamic = "force-static";
 
-export default function About() {
-  const [isScrolled, setIsScrolled] = useState(false);
-    
-    // Scroll listener for navbar
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 100);
-      };
-      
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+export const metadata = {
+  title: "About Us - Sivanto Capital Services",
+  description:
+    "Learn about Sivanto Capital Services Pvt Ltd, a trusted financial services company providing personal, business, home loans, insurance, and more with transparency and professionalism.",
+  keywords: [
+    "Sivanto Capital",
+    "about us",
+    "financial services India",
+    "personal loans",
+    "business loans",
+    "home loans",
+    "insurance",
+    "trusted financial partner",
+  ],
+  alternates: {
+    canonical: "https://www.sivantocapital.in/about"
+,
+  },
+};
 
+export default function About() {
   return (
     <>
-      {/* SEO Head */}
-      <Head>
-        <title>About Us - Sivanto Capital Services</title>
-        <meta
-          name="description"
-          content="Learn about Sivanto Capital Services Pvt Ltd, a trusted financial services company providing personal, business, home loans, insurance, and more with transparency and professionalism."
-        />
-        <meta
-          name="keywords"
-          content="Sivanto Capital, about us, financial services India, personal loans, business loans, home loans, insurance, trusted financial partner"
-        />
-        <link rel="canonical" href="https://www.yourdomain.com/about" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Sivanto Capital Services",
-              "url": "https://www.yourdomain.com",
-              "logo": "https://www.yourdomain.com/assets/logo.png",
-              "sameAs": [
-                "https://www.facebook.com/YourPage",
-                "https://www.linkedin.com/company/yourcompany"
-              ]
-            })
-          }}
-        />
-      </Head>
- 
-      {/* Original Page Content */}
       <div className="about-page">
         {/* HERO */}
         <div className="about-hero">
           {/* Navbar with scroll effect */}
-  <Navbar isScrolled={isScrolled} />
+          <NavbarClient />
+
           <img src="/assets/deal.jpeg" alt="About Us" className="about-bg" />
           <div className="about-overlay"></div>
           <div className="about-content">
+            {/* Hidden H1 for SEO */}
+            <h1 className="sr-only">About Us - Sivanto Capital Services</h1>
+
             <h1>About Us</h1>
             <p>Home &nbsp;&gt;&gt;&nbsp; About Us</p>
           </div>

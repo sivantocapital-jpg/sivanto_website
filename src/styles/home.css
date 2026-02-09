@@ -345,9 +345,25 @@
 
   .pill-btn {
     width: 100%;
-    max-width: 40%;
+    max-width: 50%;
   }
 }
+
+@media (max-width: 400px) {
+ 
+  .pill-btn {
+    width: 100%;
+    max-width: 70%;
+  }
+}
+@media (max-width: 320px) {
+ 
+  .pill-btn {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
 
 @media (min-width: 1025px) {
   .services-grid > .service-box:last-child:nth-child(3n + 1) {
@@ -391,3 +407,14 @@
 }
 
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

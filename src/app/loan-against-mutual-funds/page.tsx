@@ -1,20 +1,41 @@
-"use client";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import "../../styles/loan-common.css";
 import CommonSmallForm from "../components/CommonSmallForm";
 
+export const metadata = {
+  title: "Loan Against Mutual Funds & Shares | Sivanto Capital",
+  description:
+    "Get quick loans against your Mutual Funds & Shares with low interest rates, fast approval, and no redemption required. Apply online now!",
+  alternates: {
+    canonical: "https://www.sivantocapital.in/loan-against-mutual-funds",
+  },
+  openGraph: {
+    title: "Loan Against Mutual Funds & Shares | Sivanto Capital",
+    description:
+      "Get quick loans against your Mutual Funds & Shares with low interest rates, fast approval, and no redemption required. Apply online now!",
+    url: "https://www.sivantocapital.in/loan-against-mutual-funds",
+    siteName: "Sivanto Capital",
+    images: [
+      {
+        url: "https://www.sivantocapital.in/assets/loanAgainstMutualFunds.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
 
 const LoanAgainstMutualFunds = () => {
   return (
     <>
-      {/* ================= HERO SECTION ================= */}
+      {/* ================ HERO SECTION ================= */}
       <section
         className="loan-hero"
         style={{ backgroundImage: "url('/assets/loanAgainstMutualFunds.jpg')" }}
       >
         <div className="loan-overlay"></div>
-             <Navbar />  {/* ✅ Add Navbar here */}
+        <Navbar />
 
         <div className="loan-container">
           {/* LEFT CONTENT */}
@@ -28,15 +49,12 @@ const LoanAgainstMutualFunds = () => {
               <li>✅ T&amp;C Apply</li>
             </ul>
             <Link href="/quick-loan-app-form">
-  <button className="loan-btn">
-    Get Started
-  </button>
-</Link>
-            
+              <button className="loan-btn">Get Started</button>
+            </Link>
           </div>
 
           {/* RIGHT FORM */}
-           <CommonSmallForm formType="loan-against-mutual-funds" />
+          <CommonSmallForm formType="loan-against-mutual-funds" />
         </div>
       </section>
 

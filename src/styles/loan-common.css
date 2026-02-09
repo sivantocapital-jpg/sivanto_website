@@ -578,3 +578,37 @@ backdrop-filter: blur(4px);
 .eligibility-table tr:nth-child(even) td {
   background: rgba(255, 255, 255, 0.05); /* subtle row shading */
 }
+
+@media (max-width: 500px) {
+  .service-tabs {
+    justify-content: center;  /* center tabs horizontally */
+    flex-wrap: wrap;          /* allow wrapping if tabs exceed width */
+    gap: 10px;                /* optional: smaller gap for small screens */
+  }
+
+  .tab-btn {
+    flex: none;               /* prevent buttons from stretching */
+    width: auto;              /* auto width instead of flex:1 */
+  }
+}
+
+@media (max-width: 465px) {
+  .service-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center everything */
+    gap: 20px;           /* spacing between left content and right sidebar */
+  }
+
+  .service-left,
+  .service-right {
+    width: 90%;          /* almost full width of the screen */
+    max-width: 450px;    /* limit width for readability */
+    margin: 0 auto;      /* center horizontally */
+  }
+
+  .service-right {
+    order: 2;            /* ensure it comes after the left content */
+    margin-top: 20px;    /* optional spacing from content above */
+  }
+}

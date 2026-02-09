@@ -25,25 +25,20 @@ const CommonSmallForm: React.FC<Props> = ({ formType }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = () => {
-    if (isSubmitting) return; // prevent multiple clicks
+    if (isSubmitting) return;
     setIsSubmitting(true);
 
-    // Show alert immediately
     alert("Thank You, we will get back to you soon!!");
 
-    // Clear input fields immediately
+    const data = { formType, name, phone: mobile };
+
     setName("");
     setMobile("");
 
-    // Send the email in the background
     fetch("/api/sendEmail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        formType,
-        name,
-        phone: mobile,
-      }),
+      body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((result) => {
@@ -52,9 +47,7 @@ const CommonSmallForm: React.FC<Props> = ({ formType }) => {
         }
       })
       .catch((err) => console.error("Error sending email:", err))
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+      .finally(() => setIsSubmitting(false));
   };
 
   const title = formTitles[formType] || formTitles["default"];

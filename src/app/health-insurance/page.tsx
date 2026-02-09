@@ -1,14 +1,21 @@
-"use client";
-import { useState } from "react";
 import Link from "next/link";
 import "../../styles/loan-common.css";
 import Navbar from "../components/Navbar";
 import CommonSmallForm from "../components/CommonSmallForm";
- 
+import HealthInsuranceTabs from "../components/HealthInsuranceTabs";
 
-const HealthInsurance = () => {
-  const [activeTab, setActiveTab] = useState("why");
+export const metadata = {
+  title: "Health Insurance Plans in India | Sivanto Capital",
+  description:
+    "Get health insurance plans with cashless treatment, free check-ups, and tax benefits under Section 80D. Compare & apply online with Sivanto Capital.",
+  keywords:
+    "health insurance, cashless treatment, section 80D, family health insurance, senior citizen health insurance",
+  alternates: {
+    canonical: "https://www.sivantocapital.in/health-insurance",
+  },
+};
 
+export default function HealthInsurance() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
@@ -17,7 +24,7 @@ const HealthInsurance = () => {
         style={{ backgroundImage: "url('/assets/loanHealthInsurance.jpg')" }}
       >
         <div className="loan-overlay"></div>
-         <Navbar />  {/* ✅ Add Navbar here */}
+        <Navbar />
 
         <div className="loan-container">
           {/* LEFT CONTENT */}
@@ -29,17 +36,14 @@ const HealthInsurance = () => {
               <li>✅ Income tax benefits under section 80D</li>
               <li>✅ T&amp;C Apply</li>
             </ul>
-            
+
             <Link href="/quick-loan-app-form">
-  <button className="loan-btn">
-    Get Started
-  </button>
-</Link>
-            
+              <button className="loan-btn">Get Started</button>
+            </Link>
           </div>
 
           {/* RIGHT FORM */}
-           <CommonSmallForm formType="health-insurance" />
+          <CommonSmallForm formType="health-insurance" />
         </div>
       </section>
 
@@ -54,94 +58,13 @@ const HealthInsurance = () => {
             </h3>
 
             <p className="service-desc">
-              Health is unpredictable, and medical expenses can arise at any time. With Sivanto Capital Health Insurance Plans, you and your family can stay financially protected against unexpected medical emergencies. Whether it’s hospitalisation, surgeries, daycare treatments, or medical check-ups, our policies cover a wide range of expenses while ensuring peace of mind. Enjoy benefits like cashless treatment, income tax deductions, and reimbursement of medical costs with a plan tailored to your healthcare needs.
+              Health is unpredictable, and medical expenses can arise at any time...
             </p>
 
-            {/* ================= TABS ================= */}
-            <div className="service-tabs">
-              <button
-                className={`tab-btn ${activeTab === "why" ? "active" : ""}`}
-                onClick={() => setActiveTab("why")}
-              >
-                Why Choose
-              </button>
-              <button
-                className={`tab-btn ${activeTab === "eligibility" ? "active" : ""}`}
-                onClick={() => setActiveTab("eligibility")}
-              >
-                Eligibility
-              </button>
-              <button
-                className={`tab-btn ${activeTab === "documents" ? "active" : ""}`}
-                onClick={() => setActiveTab("documents")}
-              >
-                Documents
-              </button>
-            </div>
+            {/* TABS */}
+            <HealthInsuranceTabs />
 
-            {/* ================= TAB CONTENT ================= */}
-            <div className="tab-content">
-              {activeTab === "why" && (
-                <>
-                  <h4>Why Choose Sivanto Capital Health Insurance?</h4>
-                  <ul>
-                    <li>Wide range of customized health plans for individuals & families</li>
-                    <li>Cashless claim settlement at leading network hospitals across India</li>
-                    <li>Affordable premiums with maximum coverage</li>
-                    <li>Tax savings under Section 80D</li>
-                    <li>Quick claim process with dedicated customer support</li>
-                  </ul>
-                </>
-              )}
-
-              {activeTab === "eligibility" && (
-                <>
-                  <h4>Eligibility Criteria for Health Insurance</h4>
-                  <table className="eligibility-table">
-                    <thead>
-                      <tr>
-                        <th>Eligibility Criteria</th>
-                        <th>Specifications</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Age (Adults)</td>
-                        <td>18 – 65 years</td>
-                      </tr>
-                      <tr>
-                        <td>Age (Children)</td>
-                        <td>90 days – 18 years</td>
-                      </tr>
-                      <tr>
-                        <td>Pre-Medical Screening</td>
-                        <td>Depends on the insurer & age of applicant</td>
-                      </tr>
-                      <tr>
-                        <td>Pre-Existing Diseases</td>
-                        <td>Covered after a waiting period (typically 2–4 years)</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </>
-              )}
-
-              {activeTab === "documents" && (
-                <>
-                  <h4>Documents Required for Health Insurance</h4>
-                  <ul>
-                    <li>Duly filled and signed application form</li>
-                    <li>Identity Proof – Aadhaar / Passport / Voter ID / Driving Licence</li>
-                    <li>Address Proof – Utility Bill / Passport / Aadhaar</li>
-                    <li>Age Proof – Birth Certificate / 10th or 12th Marksheet / Passport</li>
-                    <li>PAN Card</li>
-                    <li>Medical Reports (if required by insurer)</li>
-                  </ul>
-                </>
-              )}
-            </div>
-
-            {/* ================= BOTTOM BENEFITS ================= */}
+            {/* BENEFITS */}
             <div className="apply-steps">
               <h4>Key Benefits of Health Insurance</h4>
               <ul>
@@ -175,7 +98,7 @@ const HealthInsurance = () => {
             </div>
           </div>
 
-          {/* ================= RIGHT SIDEBAR ================= */}
+          {/* RIGHT SIDEBAR */}
           <div className="service-right">
             <h3>OTHER SERVICES</h3>
             <ul>
@@ -195,6 +118,4 @@ const HealthInsurance = () => {
       </section>
     </>
   );
-};
-
-export default HealthInsurance;
+}

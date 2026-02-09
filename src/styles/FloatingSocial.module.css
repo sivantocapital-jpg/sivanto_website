@@ -1,0 +1,258 @@
+/* ================= Floating Button ================= */
+.floatingBtn {
+  position: fixed;
+  top: 50%;          
+  right: 20px;       
+  transform: translateY(-50%);
+  background-color: #ff5e57;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;     
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.floatingBtn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* ================= Social Icons Container ================= */
+.socialIcons {
+  position: fixed;
+  top: 50%;        
+  right: 20px; /* Same as button */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  z-index: 9998;
+}
+
+/* ================= Social Icons ================= */
+.social {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Start at center (button position) */
+}
+
+/* ================= Show icons on click - CLOCK POSITIONS (6 to 12 on left side) ================= */
+.show .social {
+  opacity: 1;
+  animation: swing 0.5s ease forwards;
+}
+
+/* Clock positions (radius: 100px) */
+/* 12 o'clock position (top) - Index 0 */
+.show .social:nth-child(1) { 
+  transform: translate(-100px, -100px) !important; /* 12 o'clock */
+}
+
+/* 11 o'clock position - Index 1 */
+.show .social:nth-child(2) { 
+  transform: translate(-130px, -70px) !important; /* 11 o'clock */
+}
+
+/* 10 o'clock position - Index 2 */
+.show .social:nth-child(3) { 
+  transform: translate(-150px, -25px) !important; /* 10 o'clock */
+}
+
+/* 9 o'clock position (left middle) - Index 3 */
+.show .social:nth-child(4) { 
+  transform: translate(-150px, 25px) !important; /* 9 o'clock */
+}
+
+/* 8 o'clock position - Index 4 */
+.show .social:nth-child(5) { 
+  transform: translate(-130px, 70px) !important; /* 8 o'clock */
+}
+
+/* 7 o'clock position - Index 5 */
+.show .social:nth-child(6) { 
+  transform: translate(-100px, 100px) !important; /* 7 o'clock */
+}
+
+/* 6 o'clock position (bottom) - We don't have 7th icon, so using 6 positions */
+
+/* ================= Staggered animation delays (from top to bottom) ================= */
+.show .social:nth-child(1) { animation-delay: 0s; }    /* 12 o'clock */
+.show .social:nth-child(2) { animation-delay: 0.05s; } /* 11 o'clock */
+.show .social:nth-child(3) { animation-delay: 0.1s; }  /* 10 o'clock */
+.show .social:nth-child(4) { animation-delay: 0.15s; } /* 9 o'clock */
+.show .social:nth-child(5) { animation-delay: 0.2s; }  /* 8 o'clock */
+.show .social:nth-child(6) { animation-delay: 0.25s; } /* 7 o'clock */
+
+/* ================= Social Colors ================= */
+.facebook { background-color: #3b5998; }
+.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.linkedin { background-color: #0077b5; }
+.twitter { background-color: #1da1f2; }
+.youtube { background-color: #ff0000; }
+.whatsapp { background-color: #25d366; }
+
+/* ================= Swing Animation ================= */
+@keyframes swing {
+  0% { 
+    transform: translate(-50%, -50%) rotate(0deg); /* Start from center */
+  }
+  20% { 
+    transform: translate(var(--target-x, -50%), var(--target-y, -50%)) rotate(15deg); 
+  }
+  40% { 
+    transform: translate(var(--target-x, -50%), var(--target-y, -50%)) rotate(-10deg); 
+  }
+  60% { 
+    transform: translate(var(--target-x, -50%), var(--target-y, -50%)) rotate(5deg); 
+  }
+  80% { 
+    transform: translate(var(--target-x, -50%), var(--target-y, -50%)) rotate(-5deg); 
+  }
+  100% { 
+    transform: translate(var(--target-x, -50%), var(--target-y, -50%)) rotate(0deg); 
+  }
+}
+
+/* CSS custom properties for target positions */
+.show .social:nth-child(1) { 
+  --target-x: -100px;
+  --target-y: -100px;
+}
+.show .social:nth-child(2) { 
+  --target-x: -130px;
+  --target-y: -70px;
+}
+.show .social:nth-child(3) { 
+  --target-x: -150px;
+  --target-y: -25px;
+}
+.show .social:nth-child(4) { 
+  --target-x: -150px;
+  --target-y: 25px;
+}
+.show .social:nth-child(5) { 
+  --target-x: -130px;
+  --target-y: 70px;
+}
+.show .social:nth-child(6) { 
+  --target-x: -100px;
+  --target-y: 100px;
+}
+
+/* ================= Responsive adjustments ================= */
+@media (max-width: 768px) {
+  .floatingBtn {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+  }
+  
+  .socialIcons {
+    right: 15px;
+  }
+  
+  .social {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  /* Adjusted positions for mobile (smaller radius) */
+  .show .social:nth-child(1) { 
+    transform: translate(-80px, -80px) !important;
+    --target-x: -80px;
+    --target-y: -80px;
+  }
+  .show .social:nth-child(2) { 
+    transform: translate(-100px, -55px) !important;
+    --target-x: -100px;
+    --target-y: -55px;
+  }
+  .show .social:nth-child(3) { 
+    transform: translate(-115px, -20px) !important;
+    --target-x: -115px;
+    --target-y: -20px;
+  }
+  .show .social:nth-child(4) { 
+    transform: translate(-115px, 20px) !important;
+    --target-x: -115px;
+    --target-y: 20px;
+  }
+  .show .social:nth-child(5) { 
+    transform: translate(-100px, 55px) !important;
+    --target-x: -100px;
+    --target-y: 55px;
+  }
+  .show .social:nth-child(6) { 
+    transform: translate(-80px, 80px) !important;
+    --target-x: -80px;
+    --target-y: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floatingBtn {
+    width: 45px;
+    height: 45px;
+    right: 10px;
+  }
+  
+  .socialIcons {
+    right: 10px;
+  }
+  
+  .social {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  /* Further adjust for very small screens */
+  .show .social:nth-child(1) { 
+    transform: translate(-70px, -70px) !important;
+    --target-x: -70px;
+    --target-y: -70px;
+  }
+  .show .social:nth-child(2) { 
+    transform: translate(-85px, -45px) !important;
+    --target-x: -85px;
+    --target-y: -45px;
+  }
+  .show .social:nth-child(3) { 
+    transform: translate(-95px, -15px) !important;
+    --target-x: -95px;
+    --target-y: -15px;
+  }
+  .show .social:nth-child(4) { 
+    transform: translate(-95px, 15px) !important;
+    --target-x: -95px;
+    --target-y: 15px;
+  }
+  .show .social:nth-child(5) { 
+    transform: translate(-85px, 45px) !important;
+    --target-x: -85px;
+    --target-y: 45px;
+  }
+  .show .social:nth-child(6) { 
+    transform: translate(-70px, 70px) !important;
+    --target-x: -70px;
+    --target-y: 70px;
+  }
+}
