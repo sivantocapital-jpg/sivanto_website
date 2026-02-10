@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import Footer from "./components/Footer";
-/* import FloatingSocial from "./components/FloatingSocial"; // Make sure path is correct */
+/* import FloatingSocial from "./components/FloatingSocial"; */
 import "./globals.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -25,12 +25,25 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Organization JSON-LD for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Sivanto Capital Services Pvt. Ltd.",
+              "url": "https://www.sivantocapital.in/",
+              "logo": "https://www.sivantocapital.in/assets/favicon.png"
+            }),
+          }}
+        />
+      </head>
       <body>
-        {/* Main page content */}
         {children}
 
         {/* Footer */}
