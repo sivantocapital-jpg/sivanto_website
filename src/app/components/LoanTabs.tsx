@@ -33,7 +33,7 @@ export default function LoanTabs() {
         {activeTab === "why" && (
           <div>
             <h4>Why Choose Sivanto Capital Loan Against Property?</h4>
-            <ul>
+            <ul className="bullet-margin">
               <li>Lower interest rates compared to personal loans</li>
               <li>Higher loan eligibility depending on property value</li>
               <li>Flexible usage – business, education, medical, or personal needs</li>
@@ -49,23 +49,23 @@ export default function LoanTabs() {
             <h4>Eligibility Criteria for Loan Against Property</h4>
 
             {/* Salaried Individuals */}
-            <h5>For Salaried Individuals</h5>
-            <ul>
+            <h5 className="top-margin-only">For Salaried Individuals</h5>
+            <ul className="bullet-margin">
               <li>Must be a resident Indian citizen</li>
               <li>Age: 23 to 62 years*</li>
               <li>Minimum 3 years of work experience in a public/private company or MNC</li>
             </ul>
 
             {/* Self-Employed Individuals */}
-            <h5>For Self-Employed Individuals</h5>
-            <ul>
+            <h5 className="extra-space">For Self-Employed Individuals</h5>
+            <ul className="bullet-margin">
               <li>Must be a resident Indian citizen</li>
               <li>Age: 25 to 70 years</li>
               <li>Should have a steady and proven income source</li>
             </ul>
 
             {/* Additional Notes */}
-            <p>
+            <p className="top-margin-only">
               Eligibility also depends on credit score, repayment history, and property valuation.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function LoanTabs() {
         {activeTab === "documents" && (
           <div>
             <h4>Documents Required</h4>
-            <ul>
+            <ul className="bullet-margin">
               <li>Latest salary slips (for salaried applicants)</li>
               <li>Bank statements of last 3 months</li>
               <li>PAN Card / Form 60 of all applicants</li>

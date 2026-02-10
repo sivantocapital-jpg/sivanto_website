@@ -72,7 +72,7 @@ const LoanAgainstMutualFunds = () => {
               Sivanto Capital helps you access quick loans at attractive interest rates with minimal paperwork and complete flexibility.
             </p>
 
-            <h4>Why Choose Loan Against Mutual Funds & Shares?</h4>
+            <h3 className="top-margin-only">Why Choose Loan Against Mutual Funds & Shares?</h3>
             <ul>
               <li>Low Interest Rates – Starting at just 10.5% p.a.</li>
               <li>Quick Disbursal – Loan approved and credited within 24 hours</li>
@@ -83,7 +83,7 @@ const LoanAgainstMutualFunds = () => {
               <li>Minimal Documentation – Apply online with ease</li>
             </ul>
 
-            <h4>Key Features of Loan Against Mutual Funds</h4>
+            <h3 className="top-margin-only">Key Features of Loan Against Mutual Funds</h3>
             <ul>
               <li>Loan Amount: ₹15,000 – ₹10,00,000</li>
               <li>EMI Example: As low as ₹1,500 for ₹1,00,000 loan</li>
@@ -92,7 +92,7 @@ const LoanAgainstMutualFunds = () => {
               <li>Repayment: Flexible EMI options or pay as you go</li>
             </ul>
 
-            <h4>Eligibility Criteria</h4>
+            <h3 className="top-margin-only">Eligibility Criteria</h3>
             <ul>
               <li>Must be a single unit holder of Mutual Funds</li>
               <li>Mutual Fund units should be available in CAMS (Registrar & Transfer Agent)</li>
@@ -100,14 +100,14 @@ const LoanAgainstMutualFunds = () => {
               <li>Minimum age: 21 years</li>
             </ul>
 
-            <h4>Documentation Required</h4>
+            <h3 className="top-margin-only">Documentation Required</h3>
             <ul>
               <li>KYC Documents (PAN, Aadhaar, Address Proof)</li>
               <li>Or quick digital verification via DigiLocker</li>
               <li>Mutual Funds reflected in CAMS Portal</li>
             </ul>
 
-            <h4>Benefits of Loan Against Mutual Funds & Shares</h4>
+            <h3 className="top-margin-only">Benefits of Loan Against Mutual Funds & Shares</h3>
             <ul>
               <li>Preserve Your Investments – No need to redeem mutual funds/shares</li>
               <li>Instant Liquidity – Quick solution for emergency needs</li>
@@ -116,7 +116,7 @@ const LoanAgainstMutualFunds = () => {
               <li>Hassle-free Online Process – Apply, verify, and get funds disbursed quickly</li>
             </ul>
 
-            <h4>Ideal For</h4>
+            <h3 className="top-margin-only">Ideal For</h3>
             <ul>
               <li>Medical emergencies</li>
               <li>Business working capital</li>
@@ -125,7 +125,7 @@ const LoanAgainstMutualFunds = () => {
               <li>Short-term cash requirements</li>
             </ul>
 
-            <p>
+            <p className="extra-space">
               With Sivanto Capital Loan Against Mutual Funds & Shares, you get quick access to funds without disturbing your long-term investments. Apply online today and enjoy instant approval, low interest rates, and complete repayment flexibility.
             </p>
 

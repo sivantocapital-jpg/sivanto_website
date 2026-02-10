@@ -40,7 +40,7 @@ export default function ClientTabs() {
         {activeTab === "why" && (
           <>
             <h4>Why Choose Sivanto Capital Business Loan?</h4>
-            <ul>
+            <ul className="bullet-margin">
               <li>Attractive Interest Rates – Starting at 14% p.a.</li>
               <li>Loan Amount – From ₹10,000 to ₹1 Crore</li>
               <li>Quick Approval – Get loan approval in just 4 hours </li>
@@ -55,16 +55,16 @@ export default function ClientTabs() {
         {activeTab === "eligibility" && (
           <>
             <h4>Eligibility Criteria</h4>
-            <p>To keep the process simple, here’s who can apply for a PaisaPulse Business Loan: </p>
-            <ul>
+            <p className="top-margin-only">To keep the process simple, here’s who can apply for a Sivanto Capital Business Loan: </p>
+            <ul className="bullet-margin">
               <li>Business vintage: Minimum 1 year in operation </li>
               <li>Annual Turnover: Varies as per lender (for MSME loans, minimum turnover of ₹1 Crore) )</li>
               <li>Credit Score: Preferably 750+</li>
               <li>No previous loan Defaults</li>
             </ul>
 
-            <h4>Eligible Entities</h4>
-            <ul>
+            <h4 className="extra-space">Eligible Entities</h4>
+            <ul className="bullet-margin">
               <li>Individuals, Business Owners, Startups, Entrepreneurs </li>
               <li>Self-Employed Professionals (Doctors, CAs, Architects, Designers, etc.) </li>
               <li>MSMEs, Small & Medium Enterprises </li>
@@ -77,8 +77,8 @@ export default function ClientTabs() {
         {activeTab === "documents" && (
           <>
             <h4>Documents Required</h4>
-            <p>Applying for a PaisaPulse Business Loan requires basic documentation: </p>
-            <ul>
+            <p className="top-margin-only">Applying for a Sivanto Capital Business Loan requires basic documentation: </p>
+            <ul className="bullet-margin">
               <li>KYC Documents (PAN, Aadhaar, Passport, Voter ID, Driving License, Utility Bills) </li>
               <li>Business Incorporation Certificate</li>
               <li>Bank Statements – Last 12 months</li>
@@ -95,7 +95,7 @@ export default function ClientTabs() {
               We also offer tailor-made MSME Loans with government subsidies and benefits: 
             </p>
 
-            <ul>
+            <ul className="bullet-margin">
               <li>Minimum Turnover: ₹1 Crore</li>
               <li>Interest Rate: Starting at 9% p.a.</li>
               <li>MSME Subsidy Applicable (as per Govt. schemes)</li>

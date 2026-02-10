@@ -107,21 +107,21 @@ export default function BusinessLoan() {
 
             <p className="service-desc">
               Every growing business needs the right financial support to expand, 
-              upgrade, and manage operations seamlessly. With PaisaPulse Business Loans,
+              upgrade, and manage operations seamlessly. With Sivanto Capital Business Loans,
                you can access funding up to ₹1 Crore with interest rates starting 
                at 14% p.a., quick approvals, and simple documentation. Whether you 
                are a startup, MSME, entrepreneur, or professional, our business loan 
                solutions are designed to help you take your business to the next level. 
             </p>
 
-            <h4>What is a Business Loan?</h4>
+            <h3>What is a Business Loan?</h3>
             <p className="service-desc">
               A business loan is a financial facility offered by banks and NBFCs
               to meet working capital needs, purchase equipment, expand operations,
               or manage daily expenses.
             </p>
 
-            <p className="service-desc">
+            <p className="service-small-heading">
               At Sivanto Capital, we offer both secured and unsecured business loans:
             </p>
 
@@ -131,7 +131,7 @@ export default function BusinessLoan() {
               small businesses and startups to access funds. </li>
             </ul>
             <br></br>
-            <p className="service-desc">
+            <p className="service-small-heading">
               We also provide access to various loan types, including: 
             </p>
 
@@ -150,7 +150,7 @@ export default function BusinessLoan() {
 
             {/* ================= APPLY SECTION ================= */}
             <div className="apply-steps">
-  <h4>How to Apply for a Personal Loan with Sivanto Capital?</h4>
+  <h3 className="service-small-heading">How to Apply for a Personal Loan with Sivanto Capital?</h3>
   <ul>
     <li>
       <strong>Check Your Eligibility – </strong>
@@ -170,7 +170,7 @@ export default function BusinessLoan() {
     </li>
   </ul>
 
-  <h4>Why Sivanto Capital is the Right Choice for You?</h4>
+  <h3 className="service-small-heading">Why Sivanto Capital is the Right Choice for You?</h3>
   <p>
     At Sivanto Capital, we understand that every business has unique financial needs.
      With our competitive rates, fast approvals, MSME benefits, and flexible repayment 

@@ -115,7 +115,7 @@ export default function EducationLoan() {
               Dreaming of higher education but worried about the rising costs?
                Whether it’s pursuing a professional course in India or studying at a 
                prestigious university abroad, financing your education is no longer a 
-               challenge. With PaisaPulse Education Loans, you can avail funding up 
+               challenge. With Sivanto Capital Education Loans, you can avail funding up 
                to ₹1 Crore at affordable interest rates starting from 9.25% p.a., 
                with quick loan sanction and flexible repayment options. 
             </p>
@@ -131,8 +131,8 @@ export default function EducationLoan() {
             <EducationTabs />
 
             {/* ================= NEW CONTENT ================= */}
-            <div className="education-extra">
-              <h4>What Expenses Does the Loan Cover?</h4>
+            <div className="education-extra" >
+              <h3 className="service-small-heading">What Expenses Does the Loan Cover?</h3>
               <ul>
                 <li>Tuition fees and admission charges</li>
                 <li>Hostel or accommodation expenses</li>
@@ -142,8 +142,8 @@ export default function EducationLoan() {
                 <li>Other related costs required by the institution</li>
               </ul>
 
-              <h4>How to Apply for PaisaPulse Education Loan?</h4>
-              <ul>
+              <h3 className="education-extra">How to Apply for Sivanto Capital Education Loan?</h3>
+              <ul className="service-small-heading">
                 <li>
                   <strong>Check Eligibility – </strong>
                   Verify basic academic and financial requirements.
@@ -162,7 +162,7 @@ export default function EducationLoan() {
                 </li>
               </ul>
 
-              <h4>Why PaisaPulse for Education Loans?</h4>
+              <h3 className="extra-space">Why Sivanto Capital for Education Loans?</h3>
               <ul>
                 <li>Tailored loan solutions for domestic & international studies</li>
                 <li>Quick sanction process to meet admission deadlines</li>

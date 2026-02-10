@@ -119,8 +119,8 @@ export default function PersonalLoanClient() {
             <div className="tab-content">
               {activeTab === "why" && (
                 <>
-                  <h4>Why Choose Sivanto Capital Personal Loan?</h4>
-                  <ul>
+                  <h3 className="top-margin-only">Why Choose Sivanto Capital Personal Loan?</h3>
+                  <ul className="bullet-margin">
                     <li>Attractive Interest Rates – Starting at 10.25% p.a.</li>
                     <li>Quick Disbursal – Funds within 24 hours</li>
                     <li>Flexible Loan Amount – ₹2 Lakhs to ₹1 Crore</li>
@@ -134,16 +134,16 @@ export default function PersonalLoanClient() {
               {activeTab === "eligibility" && (
                 <>
                   <h4>Eligibility Criteria</h4>
-                  <p>To make the loan process simple, we have kept the eligibility requirements straightforward: </p>
+                  <p className="top-margin-only">To make the loan process simple, we have kept the eligibility requirements straightforward: </p>
                   <strong>For Salaried Individuals:</strong>
-                  <ul>
+                  <ul className="top-margin-only bullet-margin">
                     <li>Minimum Age: 23 years</li>
                     <li>Maximum Age: 60 years or retirement age</li>
                     <li>Minimum Salary: ₹20,000 per month</li>
                   </ul>
 
-                  <strong>For Self-Employed Individuals:</strong>
-                  <ul>
+                  <strong >For Self-Employed Individuals:</strong>
+                  <ul className="top-margin-only bullet-margin">
                     <li>Minimum Age: 25 years</li>
                     <li>Maximum Age: 65 years at maturity</li>
                     <li>Business vintage: Minimum 3 years</li>
@@ -154,8 +154,8 @@ export default function PersonalLoanClient() {
               {activeTab === "documents" && (
                 <>
                   <h4>Documents Required</h4>
-                  <p>Applying for a personal loan with PaisaPulse is hassle-free and requires only basic documents: </p>
-                  <ul>
+                  <p className="top-margin-only">Applying for a personal loan with Sivanto Capital is hassle-free and requires only basic documents: </p>
+                  <ul className="bullet-margin">
                     <li>Photo ID Proof (Aadhar, PAN, Passport, Voter ID)</li>
                     <li>Address Proof (Utility bills, Rental Agreement, Aadhar, Passport, etc.) </li>
                     <li>Income Proof Documents</li>
@@ -168,7 +168,7 @@ export default function PersonalLoanClient() {
 
             {/* APPLY STEPS */}
            <div className="apply-steps">
-  <h4>How to Apply for a Personal Loan with Sivanto Capital?</h4>
+  <h3 className="service-small-heading">How to Apply for a Personal Loan with Sivanto Capital?</h3>
   <ul>
     <li>
       <strong>Check Your Eligibility – </strong>
@@ -188,7 +188,7 @@ export default function PersonalLoanClient() {
     </li>
   </ul>
 
-  <h4>Why Sivanto Capital is the Right Choice for You?</h4>
+  <h3 className="service-small-heading">Why Sivanto Capital is the Right Choice for You?</h3>
   <p>
     At Sivato Capital, we understand that financial needs can arise unexpectedly. 
     That’s why we bring you fast, secure, and transparent personal loan solutions. 

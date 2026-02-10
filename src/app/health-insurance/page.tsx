@@ -59,7 +59,7 @@ export default function HealthInsurance() {
 
             <p className="service-desc">
              Health is unpredictable, and medical expenses can arise at any time. 
-             With PaisaPulse Health Insurance Plans, you and your family can stay 
+             With Sivanto Capital Health Insurance Plans, you and your family can stay 
              financially protected against unexpected medical emergencies. Whether 
              it’s hospitalisation, surgeries, daycare treatments, or medical check-ups, 
              our policies cover a wide range of expenses while ensuring peace of mind. 
@@ -72,7 +72,7 @@ export default function HealthInsurance() {
 
             {/* BENEFITS */}
             <div className="apply-steps">
-              <h4>Key Benefits of Health Insurance</h4>
+              <h3 className="top-margin-only">Key Benefits of Health Insurance</h3>
               <ul>
                 <li>Cashless Treatment – Get hassle-free treatment at network hospitals</li>
                 <li>Pre & Post-Hospitalisation Cover – Expenses before & after hospital stay included</li>
@@ -82,7 +82,7 @@ export default function HealthInsurance() {
                 <li>Reimbursement Facility – Get back medical costs incurred at non-network hospitals</li>
               </ul>
 
-              <h4>Types of Health Insurance Policies</h4>
+              <h3 className="extra-space">Types of Health Insurance Policies</h3>
               <ul>
                 <li>Individual Health Insurance – Covers a single individual</li>
                 <li>Family Floater Health Insurance – One plan for the entire family</li>

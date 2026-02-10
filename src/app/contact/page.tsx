@@ -44,34 +44,35 @@ export default function ContactPage() {
         <div className="contact-wrapper">
           <ContactFormClient />
 
-          {/* SEO CONTENT SECTION */}
-          <div className="contact-info">
-            <h2>Get in Touch with Sivanto Capital</h2>
-            <p>
-              Need help choosing the right loan or insurance plan? Our team is here
-              to guide you through every step — from eligibility to final approval.
-              Fill out the form and we will respond within 24 hours.
-            </p>
+          {/* SEO CONTENT - Hidden from users */}
+<div style={{ display: "none" }}>
+  <h2>Get in Touch with Sivanto Capital</h2>
+  <p>
+    Need help choosing the right loan or insurance plan? Our team is here
+    to guide you through every step — from eligibility to final approval.
+    Fill out the form and we will respond within 24 hours.
+  </p>
 
-            <h3>Contact Details</h3>
-            <ul>
-              <li><strong>Phone:</strong> +91-8639841133</li>
-              <li><strong>Email:</strong> info@sivantocapital.in</li>
-              <li><strong>Address:</strong> Vijaywada, Andhra Pradesh 520008, India</li>
-            </ul>
+  <h3>Contact Details</h3>
+  <ul>
+    <li><strong>Phone:</strong> +91-8639841133</li>
+    <li><strong>Email:</strong> info@sivantocapital.in</li>
+    <li><strong>Address:</strong> Vijaywada, Andhra Pradesh 520008, India</li>
+  </ul>
 
-            <h3>Office Hours</h3>
-            <p>Monday to Saturday: 10:00 AM – 7:00 PM</p>
+  <h3>Office Hours</h3>
+  <p>Monday to Saturday: 10:00 AM – 7:00 PM</p>
 
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/personal-loan">Personal Loan</a></li>
-              <li><a href="/business-loan">Business Loan</a></li>
-              <li><a href="/home-loan">Home Loan</a></li>
-              <li><a href="/credit-cards">Credit Cards</a></li>
-            </ul>
-          </div>
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/personal-loan">Personal Loan</a></li>
+    <li><a href="/business-loan">Business Loan</a></li>
+    <li><a href="/home-loan">Home Loan</a></li>
+    <li><a href="/credit-cards">Credit Cards</a></li>
+  </ul>
+</div>
+
         </div>
       </section>
 
@@ -88,7 +89,7 @@ export default function ContactPage() {
             contactPoint: [
               {
                 "@type": "ContactPoint",
-                telephone: "+91-XXXXXXXXXX",
+                telephone: "+91-8639841133",
                 contactType: "customer support",
                 areaServed: "IN",
                 availableLanguage: ["English", "Hindi"],

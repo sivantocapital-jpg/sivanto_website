@@ -60,7 +60,7 @@ export default function LoanAgainstPropertyPage() {
               secure, and stress-free.
             </p>
 
-            <h4>What is Loan Against Property?</h4>
+            <h3  className="extra-space">What is Loan Against Property?</h3>
             <p>
               A Loan Against Property (LAP) is a secured loan that allows you to borrow by mortgaging 
               your owned property. Instead of selling your asset, you can unlock its value 
@@ -76,7 +76,7 @@ export default function LoanAgainstPropertyPage() {
 
             {/* ================= BOTTOM FEATURES ================= */}
             <div className="apply-steps">
-              <h4>Key Features of Sivanto Capital LAP</h4>
+              <h3  className="extra-space">Key Features of Sivanto Capital LAP</h3>
               <ul>
                 <li>Attractive Interest Rates – Starting at 9% p.a.</li>
                 <li>Quick & Hassle-Free Processing – Simple online application & fast approvals</li>

@@ -32,7 +32,7 @@ export default function HealthInsuranceTabs() {
         {activeTab === "why" && (
           <>
             <h4>Why Choose Sivanto Capital Health Insurance?</h4>
-            <ul>
+            <ul className="bullet-margin">
               <li>Wide range of customized health plans for individuals & families</li>
               <li>Cashless claim settlement at leading network hospitals across India</li>
               <li>Affordable premiums with maximum coverage</li>
@@ -78,8 +78,8 @@ export default function HealthInsuranceTabs() {
         {activeTab === "documents" && (
           <>
             <h4>Documents Required for Health Insurance</h4>
-            <p>To apply for a health insurance policy, you need minimal documentation: </p>
-            <ul>
+            <p className="top-margin-only">To apply for a health insurance policy, you need minimal documentation: </p>
+            <ul className="bullet-margin">
               <li>Duly filled and signed application form</li>
               <li>Identity Proof – Aadhaar / Passport / Voter ID / Driving Licence</li>
               <li>Address Proof – Utility Bill / Passport / Aadhaar</li>

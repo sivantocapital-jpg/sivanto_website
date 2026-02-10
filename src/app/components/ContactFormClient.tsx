@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaPhoneAlt, FaTelegramPlane, FaGlobeAmericas } from "react-icons/fa";
 
 export default function ContactFormClient() {

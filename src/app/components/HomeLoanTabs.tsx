@@ -23,7 +23,7 @@ export default function HomeLoanTabs() {
         {activeTab === "why" && (
           <>
             <h4>Why Choose Sivanto Capital Home Loan?</h4>
-            <ul>
+            <ul className="bullet-margin">
               <li>Attractive Interest Rates – Starting at 8.65% p.a.</li>
               <li>High Loan Amount – Finance up to ₹10 Crore</li>
               <li>Long Tenure Options – Repay comfortably over up to 30 years</li>
@@ -38,7 +38,7 @@ export default function HomeLoanTabs() {
         {activeTab === "eligibility" && (
   <>
     <h4>Home Loan Eligibility – Salaried Individuals</h4>
-    <p>To keep things simple, PaisaPulse ensures clear eligibility criteria:</p>
+    <p>To keep things simple, Sivanto Capital ensures clear eligibility criteria:</p>
 
     {/* First Table: Nationality & Age */}
     <table className="eligibility-table">
@@ -61,7 +61,7 @@ export default function HomeLoanTabs() {
     </table>
 
     {/* Employment Status Line */}
-    <p><strong>Employment Status – </strong>Minimum 3 years of work experience</p>
+    <p className="extra-space"><strong>Employment Status – </strong>Minimum 3 years of work experience</p>
 
     {/* Second Table: CIBIL, Income, Loan Amount */}
     <table className="eligibility-table">
@@ -93,7 +93,7 @@ export default function HomeLoanTabs() {
        {activeTab === "documents" && (
   <>
     <h4>Documents Required</h4>
-    <ul>
+    <ul className="bullet-margin">
       <li>Application Form – Duly filled and signed with passport-sized photograph</li>
       <li>Identity Proof – Aadhaar Card, PAN, Passport, Voter ID, Driving License</li>
       <li>Residence & Age Proof – Aadhaar, Utility Bills, Rent Agreement, Birth/School Certificate</li>

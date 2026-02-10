@@ -23,7 +23,7 @@ export default function EducationTabs() {
         {activeTab === "why" && (
           <>
             <h4>Why Choose Sivanto Capital Education Loan?</h4>
-            <ul>
+            <ul className="bullet-margin">
               <li>Attractive Interest Rates – Starting at just 9.25% p.a. </li>
               <li>Loan Amount – Up to ₹1 Crore for domestic studies and up to ₹2 Crore for international studies </li>
               <li>Quick Loan Sanction – Fast and easy approval process</li>
@@ -91,8 +91,8 @@ export default function EducationTabs() {
         {activeTab === "documents" && (
           <>
             <h4>Documents Required for Education Loan</h4>
-            <p>Here’s the list of documents required while applying: </p>
-            <ul>
+            <p className="top-margin-only">Here’s the list of documents required while applying: </p>
+            <ul className="bullet-margin">
               <li>Application Form – Duly filled online iLENS form with photographs</li>
               <li>Photographs – 2 recent passport-sized photographs </li>
               <li>Academic Records – Mark sheets of 10th/12th or latest education certificate </li>

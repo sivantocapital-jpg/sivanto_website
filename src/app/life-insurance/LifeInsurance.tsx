@@ -53,11 +53,11 @@ const LifeInsurance = () => {
               by offering financial stability through lump sum payouts, monthly income, 
               or maturity benefits.
             </p>
-            <p>At PaisaPulse, we bring you a wide range of life insurance plans – from 
+            <p>At Sivanto Capital, we bring you a wide range of life insurance plans – from 
                 Term Insurance, ULIPs, and Child Plans to Pension Plans – designed to 
                 suit every stage of life. </p>
 
-            <h4>Key Features & Benefits of Life Insurance</h4>
+            <h3 className="top-margin-only">Key Features & Benefits of Life Insurance</h3>
             <ul>
               <li>Affordable Premiums – Get comprehensive life cover at low cost</li>
               <li>Flexible Payout Options – Choose between lump sum or monthly income for your family </li>
@@ -70,8 +70,8 @@ const LifeInsurance = () => {
               <li>Tax Benefits – Save under Section 80C, 80D & 10(10D) of the Income Tax Act </li>
             </ul>
 
-            <h4>Types of Life Insurance Plans</h4>
-            <p>Choose from a variety of plans depending on your needs and financial goals: </p>
+            <h3 className="top-margin-only">Types of Life Insurance Plans</h3>
+            <p className="top-margin-only">Choose from a variety of plans depending on your needs and financial goals: </p>
             <ul>
               <li>Term Insurance Plan –  Pure protection plan offering high cover at low premiums </li>
               <li>ULIP (Unit Linked Insurance Plan) – Combines insurance with investment opportunities </li>
@@ -79,8 +79,8 @@ const LifeInsurance = () => {
               <li>Pension / Retirement Plan – Guaranteed income after retirement for lifelong financial security </li>
             </ul>
 
-            <h4>How to Apply for Life Insurance?</h4>
-            <p>Before applying for a policy with PaisaPulse, consider these key factors: </p>
+            <h3 className="top-margin-only">How to Apply for Life Insurance?</h3>
+            <p  className="top-margin-only">Before applying for a policy with Sivanto Capital, consider these key factors: </p>
             <ul>
               <li>Type of Plan – Do you need Term Insurance, ULIP, Child Plan, or a Pension Plan? </li>
               <li>Sum Assured & Policy Term – Choose coverage and maturity age that fits your financial goals.</li>
@@ -88,7 +88,7 @@ const LifeInsurance = () => {
               <li>Additional Riders – Add-on benefits like critical illness, accidental death, or disability cover. </li>
             </ul>
 
-            <h4>Why Choose Sivanto Capital?</h4>
+            <h3  className="top-margin-only">Why Choose Sivanto Capital?</h3>
             <ul>
               <li>Wide range of customized life insurance plans </li>
               <li>Affordable premiums with maximum benefits </li>
@@ -97,12 +97,12 @@ const LifeInsurance = () => {
               <li>Tax savings while securing your family’s financial future </li>
             </ul>
 
-            <p>
-              👉 Apply Online for Sivanto Capital Life Insurance Plans today.
+            <p  className="top-margin-only">
+              👉 Online for Sivanto Capital Life Insurance Plans today and protect your loved ones against life’s uncertainties. 
             </p>
 
             <p className="disclaimer">
-              Disclaimer: Coverage depends on plan and insurer terms. T&C Apply.
+              Disclaimer: Coverage, eligibility, and benefits depend on the chosen plan and insurer’s terms & conditions. T&C Apply. 
             </p>
           </div>
 

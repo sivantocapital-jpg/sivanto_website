@@ -2,6 +2,9 @@ import "../styles/home.css";
 import Link from "next/link";
 import NavbarClient from "./components/NavbarClient";
 
+
+
+
 export const dynamic = "force-static";
 
 export const metadata = {
@@ -32,7 +35,7 @@ const services = [
   { img: "loanAgainstMutualFunds.jpg", title: "Loan Against Mutual Funds", slug: "loan-against-mutual-funds", desc: "Get instant funds without redeeming your investments. Leverage your shares & mutual funds with quick approval, low rates & flexible repayment.", rate: "10.5% p.a." },
   { img: "loanHealthInsurance.jpg", title: "Health Insurance", slug: "health-insurance", desc: "Stay protected from medical expenses. Cashless treatments, tax benefits & wide coverage for you & your family's healthcare needs." },
   { img: "loanLifeInsurance.jpg", title: "Life Insurance", slug: "life-insurance", desc: "Secure your family's future with life insurance. Choose term, child, ULIPs & pension plans for protection & financial stability." },
-  { img: "loanCreditCards.jpg", title: "Credit Card", slug: "credit-cards", desc: "Compare & apply from 50+ bank credit cards. Get cashback, rewards, travel perks and easy EMIs—all in one place with PaisaPulse." }
+  { img: "loanCreditCards.jpg", title: "Credit Card", slug: "credit-cards", desc: "Compare & apply from 50+ bank credit cards. Get cashback, rewards, travel perks and easy EMIs—all in one place with Sivanto Capital." }
 ];
 
 export default function HomePage() {
@@ -45,7 +48,7 @@ export default function HomePage() {
         <div className="slider-overlay"></div>
         <div className="slider-content">
           {/* Hidden H1 for SEO (no design change) */}
-          <h1 className="sr-only">Sivanto Capital Service Pvt Ltd</h1>
+          <h1 className="sr-only">Sivanto Capital Service Pvt. Ltd.</h1>
 
           <h3>
             SIVANTO CAPITAL SERVICE Pvt Ltd is to position the company as a trusted

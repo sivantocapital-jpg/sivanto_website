@@ -81,33 +81,32 @@ export default function Navbar({ isScrolled = false }: { isScrolled?: boolean })
     return Object.keys(err).length === 0;
   };
 
-  const submitHandler = async () => {
-    if (!validate()) return;
+const submitHandler = async () => {
+  if (!validate()) return;
 
-    try {
-      const res = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          formType: "form1",
-          ...form
-        })
-      });
+  // Show message immediately
+  alert("Thank You, we will get back to you soon!!");
+  setOpen(false);
+  setForm({ name: "", email: "", phone: "", loanType: "", message: "" });
 
-      const data = await res.json();
-
-      if (data.success) {
-        alert("Form submitted successfully ✅");
-        setOpen(false);
-        setForm({ name: "", email: "", phone: "", loanType: "", message: "" });
-      } else {
-        alert("Failed to send email. Try again later.");
+  // Send data to server asynchronously (no need to wait for it)
+  fetch("/api/sendEmail", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      formType: "form1",
+      ...form
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data.success) {
+        console.error("Email sending failed:", data.error);
       }
-    } catch (err) {
-      console.error(err);
-      alert("Something went wrong. Try again later.");
-    }
-  };
+    })
+    .catch((err) => console.error("Error sending email:", err));
+};
+
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);

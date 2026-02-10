@@ -62,7 +62,7 @@ export default function CreditCards() {
               easy EMIs, we help you find the perfect card instantly.
             </p>
 
-            <h4>Why Choose Credit Cards from Sivanto Capital?</h4>
+            <h3 className="extra-space">Why Choose Credit Cards from Sivanto Capital?</h3>
             <ul>
               <li>
                 Compare 50+ Cards – From top banks like HDFC, SBI, ICICI, Axis,
@@ -74,7 +74,7 @@ export default function CreditCards() {
               <li>Personalized Matches – Get card recommendations based on your profile & spending habits </li>
             </ul>
 
-            <h4>Benefits of Having a Credit Card</h4>
+            <h3 className="extra-space">Benefits of Having a Credit Card</h3>
             <ul>
               <li>Welcome Offers –  Get exciting vouchers, cashback, or bonus reward points on joining </li>
               <li>Reward Points & Cashback – Earn points on every purchase and redeem them easily </li>
@@ -85,8 +85,8 @@ export default function CreditCards() {
               <li>Insurance Cover – Complimentary travel, health, and accidental insurance with select cards </li>
             </ul>
 
-            <h4>How to Choose the Best Credit Card for You</h4>
-            <p>Before applying, ask yourself these 7 important questions to pick the right credit card: </p>
+            <h3 className="extra-space">How to Choose the Best Credit Card for You</h3>
+            <p className="top-margin-only">Before applying, ask yourself these 7 important questions to pick the right credit card: </p>
             <ul>
               <li>Are you new to credit or already have a card?</li>
               <li>Do you prefer cashback, rewards, or air miles?</li>
@@ -97,8 +97,8 @@ export default function CreditCards() {
               <li>Do you need lifestyle perks like airport lounge access, dining discounts, or fuel benefits? </li>
             </ul>
 
-            <h4>Apply Online & Get Instant Credit Card Approval</h4>
-            <p>With PaisaPulse, your journey is quick, secure, and hassle-free: </p>
+            <h3 className="extra-space">Apply Online & Get Instant Credit Card Approval</h3>
+            <p className="top-margin-only">With Sivanto Capital, your journey is quick, secure, and hassle-free: </p>
             <ul>
               <li>Check Eligibility – Answer quick questions</li>
               <li>Compare Cards – Shortlist based on benefits, fees & approval chances </li>
@@ -106,7 +106,7 @@ export default function CreditCards() {
               <li>Get Instant Approval – Receive your pre-approved or eligible cards instantly </li>
             </ul>
 
-            <p>
+            <p className="education-extra">
               👉 Start your credit card journey today with Sivanto Capital and
               unlock rewards, cashback, and financial flexibility.
             </p>

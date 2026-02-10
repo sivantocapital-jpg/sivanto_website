@@ -52,7 +52,7 @@ const LoanAgainstInsurance = () => {
                options, and meet your urgent financial needs stress-free. 
             </p>
 
-            <h4>Why Choose a Loan Against Insurance Policy?</h4>
+            <h3 className="top-margin-only">Why Choose a Loan Against Insurance Policy?</h3>
             <ul>
               <li>Easy Repayments – Flexible EMI options to suit your budget </li>
               <li>Hassle-free Access –  Manage your loan and track repayments online </li>
@@ -62,7 +62,7 @@ const LoanAgainstInsurance = () => {
               <li>Lower Interest Rates – More affordable than a personal loan </li>
             </ul>
 
-            <h4>What is a Loan Against Insurance Policy?</h4>
+            <h3 className="top-margin-only">What is a Loan Against Insurance Policy?</h3>
             <p>
               An insurance policy is usually meant to protect your family’s future,
                but it can also serve as a financial safety net for you. Many banks and 
@@ -73,8 +73,8 @@ const LoanAgainstInsurance = () => {
             <p>This makes it one of the fastest and most convenient ways to raise funds during 
                 emergencies—without liquidating your investments or pledging additional assets. </p>
 
-            <h4>Eligibility Criteria for Loan Against Insurance</h4>
-            <p>Getting a loan against your insurance policy is simpler compared to most loans: </p>
+            <h3>Eligibility Criteria for Loan Against Insurance</h3>
+            <p className="top-margin-only">Getting a loan against your insurance policy is simpler compared to most loans: </p>
             <ul>
               <li>Minimum Age: 21 years</li>
               <li>Employment: Salaried or self-employed individuals with an active policy </li>
@@ -83,7 +83,7 @@ const LoanAgainstInsurance = () => {
               <li>Income: Must have a regular source of income for repayment assurance </li>
             </ul>
 
-            <h4>Key Benefits of Loan Against Insurance Policy</h4>
+            <h3 className="top-margin-only">Key Benefits of Loan Against Insurance Policy</h3>
             <ul>
               <li>No Additional Collateral Needed  – Policy itself is the guarantee </li>
               <li>Lower Interest Rates – Usually cheaper than unsecured personal loans </li>
@@ -93,8 +93,8 @@ const LoanAgainstInsurance = () => {
               <li>Fast & Easy Process – Apply online and get funds disbursed quickly </li>
             </ul>
 
-            <h4>Why Loan Against Insurance is a Smart Choice</h4>
-            <p>A Loan Against Insurance Policy is ideal if you need: </p>
+            <h3>Why Loan Against Insurance is a Smart Choice</h3>
+            <p className="top-margin-only">A Loan Against Insurance Policy is ideal if you need: </p>
             <ul>
               <li>Emergency medical funds</li>
               <li>Short-term working capital</li>
@@ -103,11 +103,11 @@ const LoanAgainstInsurance = () => {
               <li>Any urgent financial requirement</li>
             </ul>
 
-            <p>Instead of liquidating your investments or taking a high-interest personal loan,
+            <p className="extra-space">Instead of liquidating your investments or taking a high-interest personal loan,
                 use your insurance policy as leverage and get funds instantly. </p>
 
             <p className="cta-text">
-              👉 Start your application with PaisaPulse today and get quick approval 
+              👉 Start your application with Sivanto Capital today and get quick approval 
               on loans against your insurance policy — with ease, transparency, and security. 
             </p>
 

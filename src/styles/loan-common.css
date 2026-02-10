@@ -148,6 +148,21 @@
   font-size: 16px;
 }
 
+.education-extra{
+  margin-top: 50px;
+}
+.extra-space{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.top-margin-only{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bullet-margin {
+  margin-left: 15px;
+}
 /* ================= RIGHT FORM (FULLY TRANSPARENT) ================= */
 .loan-right {
   background: none; /* completely transparent */
@@ -188,6 +203,7 @@
   background: #e53935;
   color: white;
   border: none;
+  margin-top: 10px;
   padding: 12px 22px;
   border-radius: 10px;
   font-weight: 600;
@@ -202,6 +218,9 @@
   width: 100%;
 }
 
+.service-left ul {
+  padding-left: 30px; /* 👈 increase bullet indentation */
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1200px) {
@@ -238,6 +257,7 @@
   
   .service-desc {
     text-align: left; /* Keep description left-aligned */
+    margin-top: 10px;;
   }
   .loan-hero {
     height: auto;
@@ -262,13 +282,7 @@
     align-items: center; /* Center the content block */
   }
 
-   .loan-left {
-    width: 60%; /* Same as loan-right for consistency */
-    max-width: 600px;
-    margin-bottom: 40px;
-    text-align: left; /* Keep text left-aligned */
-  }
-
+  
   .loan-left h1 {
     font-size: 30px;
     text-align: center; /* Only center the heading */
@@ -303,6 +317,16 @@
     width: 80%; /* Increase width on very small screens */
     max-width: 400px; /* Adjust max width */
   }
+  .loan-left {
+    width: 90%;
+    max-width: 700px;
+    margin-bottom: 40px;
+    text-align: left; /* Keep text left-aligned inside container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content block */
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -330,16 +354,26 @@
 
 /* ================= LEFT ================= */
 .service-title {
-  font-size: 42px;
+  font-size: 33px;
   margin-bottom: 10px;
 }
 
 .service-tagline {
   font-size: 18px;
   color: #ccc;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
+.service-small-heading{
+  margin-top : 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 17px;
+}
+.little-big {
+  font-size: 30px;
+}
 .service-desc {
   font-size: 15px;
   line-height: 1.7;
@@ -414,7 +448,7 @@
 }
 
 .apply-steps ul {
-  padding-left: 20px;
+  padding-left: 30px;
   margin-bottom: 20px;
 }
 
@@ -511,7 +545,7 @@ backdrop-filter: blur(4px);
 }
 
 
-.service-left > h4 {
+.service-left > h3 {
   margin-top: 28px;
 }
 

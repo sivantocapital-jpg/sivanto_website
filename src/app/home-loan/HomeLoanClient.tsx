@@ -117,7 +117,7 @@ export default function HomeLoanClient() {
             <HomeLoanTabs />
 
             {/* ================= ADDITIONAL CONTENT ================= */}
-            <h4>Benefits of Sivanto Capital Home Loan</h4>
+            <h3 className="extra-space">Benefits of Sivanto Capital Home Loan</h3>
             <ul>
               <li><strong>Buy, build, or renovate –</strong> one loan for all home needs</li>
               <li><strong>Flexible repayment tenure –</strong> up to 30 years for easy EMIs</li>
@@ -126,7 +126,7 @@ export default function HomeLoanClient() {
               <li><strong>Online application & digital approval –</strong> get sanctioned in just 5 steps</li>
             </ul>
 
-            <h4>How to Apply for a Home Loan with Sivanto Capital?</h4>
+            <h3  className="extra-space">How to Apply for a Home Loan with Sivanto Capital?</h3>
             <ul>
               <li><strong>Check Eligibility –</strong> Confirm you meet the basic criteria.</li>
               <li><strong>Fill Online Application –</strong> Complete the simple loan form.</li>
@@ -135,7 +135,7 @@ export default function HomeLoanClient() {
               <li><strong>Loan Disbursal –</strong> Funds credited quickly to help you own your dream home.</li>
             </ul>
 
-            <h4>Why Sivanto Capital is the Right Choice?</h4>
+            <h3 className="extra-space">Why Sivanto Capital is the Right Choice?</h3>
             <p>
               At Sivanto Capital, we make your home-buying journey effortless by combining 
               affordable rates, long tenures, digital approvals, and fast processing. 
