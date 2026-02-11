@@ -3,7 +3,7 @@ import LoanProcessClient from "./LoanProcessClient";
 export const dynamic = "force-static";
 
 export const metadata = {
-  title: "Loan Process - Sivanto Capital Services",
+  title: "Loan Process",
   description:
     "Understand the complete loan process with Sivanto Capital Services, from eligibility check to document submission, approval, and EMI calculation. Apply for personal, business, or home loans easily.",
   keywords: [

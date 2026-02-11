@@ -11,7 +11,7 @@ export const metadata = {
   keywords:
     "business loan, MSME loan, startup loan, loan for small business, low interest business loan, loan India",
   alternates: {
-    canonical: "https://www.yourdomain.com/business-loan",
+    canonical: "https://www.sivantocapital.in/business-loan",
   },
 };
 

@@ -21,7 +21,7 @@ export const metadata = {
     "insurance",
   ],
   alternates: {
-    canonical: "https://www.yourdomain.com/",
+    canonical: "https://www.sivantocapital.in/",
   },
 };
 
@@ -48,7 +48,7 @@ export default function HomePage() {
         <div className="slider-overlay"></div>
         <div className="slider-content">
           {/* Hidden H1 for SEO (no design change) */}
-          <h1 className="sr-only">Sivanto Capital Service Pvt. Ltd.</h1>
+          <h1 className="sr-only">Sivanto Capital Services Pvt. Ltd.</h1>
 
           <h3>
             SIVANTO CAPITAL SERVICE Pvt Ltd is to position the company as a trusted

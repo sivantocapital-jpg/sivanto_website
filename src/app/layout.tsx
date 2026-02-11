@@ -19,9 +19,9 @@ export const metadata = {
     url: "https://www.sivantocapital.in",
   },
   icons: {
-    icon: "/assets/favicon.png",          // default icon
-    shortcut: "/assets/favicon.png",      // for browser shortcuts
-    apple: "/assets/favicon.png",         // for Apple devices
+    icon: "/favicon.ico",          // default icon
+    shortcut: "/favicon.ico",      // for browser shortcuts
+    apple: "/favicon.ico",         // for Apple devices
   },
 };
 
