@@ -8,7 +8,7 @@ import NavbarClient from "./components/NavbarClient";
 export const dynamic = "force-static";
 
 export const metadata = {
-  title: "Sivanto Capital Services | Personal, Business, Home Loans",
+  title: "Sivanto Capital Services Pvt. Ltd. | Official Website - Personal, Business, Home Loans",
   description:
     "Sivanto Capital provides trusted personal, business, home, and education loans with fast approval, low interest rates, and flexible repayment options.",
   keywords: [
@@ -51,7 +51,7 @@ export default function HomePage() {
           <h1 className="sr-only">Sivanto Capital Services Pvt. Ltd.</h1>
 
           <h3>
-            SIVANTO CAPITAL SERVICE Pvt Ltd is to position the company as a trusted
+            Sivanto Capital Services Pvt. Ltd. is a trusted
             and professionally managed Private Limited loan and financial services provider,
             clearly presenting a wide range of loan solutions for individuals and
             businesses while building strong customer confidence through transparent
