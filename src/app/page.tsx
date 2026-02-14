@@ -51,7 +51,7 @@ export default function HomePage() {
             "@type": "Organization",
             name: "Sivanto Capital Services Pvt. Ltd.",
             url: "https://www.sivantocapital.in/",
-            logo: "https://www.sivantocapital.in/google-logo.png",
+            logo: "https://www.sivantocapital.in/google-icon.png",
           }),
         }}
       />
