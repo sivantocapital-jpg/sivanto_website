@@ -41,6 +41,20 @@ const services = [
 export default function HomePage() {
   return (
     <>
+
+    {/* Organization schema for Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Sivanto Capital Services Pvt. Ltd.",
+            url: "https://www.sivantocapital.in/",
+            logo: "https://www.sivantocapital.in/google-logo.png",
+          }),
+        }}
+      />
       {/* HERO SECTION */}
       <div className="slider-container">
         <NavbarClient />
