@@ -74,6 +74,15 @@
 .menu li a:hover {
   color: #01621d;
 }
+/* For the main menu "Services" dropdown */
+.menu li.dropdown .dropdown-trigger {
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.menu li.dropdown .dropdown-trigger:hover {
+  color: #01621d;
+}
 
 /* ================= DROPDOWN ================= */
 .dropdown {

@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import Link from "next/link";
+import Head from "next/head";
 import NavbarClient from "./components/NavbarClient";
 
 
@@ -23,6 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sivantocapital.in/",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 const services = [
@@ -41,7 +45,8 @@ const services = [
 export default function HomePage() {
   return (
     <>
-
+   {/* JSON-LD for Google Organization logo */}
+      <Head>
     {/* Organization schema for Google */}
       <script
         type="application/ld+json"
@@ -55,6 +60,7 @@ export default function HomePage() {
           }),
         }}
       />
+      </Head>
       {/* HERO SECTION */}
       <div className="slider-container">
         <NavbarClient />

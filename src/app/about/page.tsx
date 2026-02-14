@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 export const metadata = {
   title: "About Us - Sivanto Capital Services",
   description:
-    "Learn about Sivanto Capital Services Pvt Ltd, a trusted financial services company providing personal, business, home loans, insurance, and more with transparency and professionalism.",
+    "Learn about Sivanto Capital Services Pvt. Ltd., a trusted financial services company providing personal, business, home loans, insurance, and more with transparency and professionalism.",
   keywords: [
     "Sivanto Capital",
     "about us",
@@ -49,7 +49,7 @@ export default function About() {
             <div className="who-text">
               <h2>Who We Are</h2>
               <p>
-                Sivanto Capital Services Pvt Ltd is a professionally structured and
+                Sivanto Capital Services Pvt. Ltd. is a professionally structured and
                 customer-focused financial services company dedicated to providing
                 comprehensive loan and insurance assistance solutions for individuals,
                 self-employed professionals, and business enterprises. We operate as a
@@ -72,7 +72,7 @@ export default function About() {
                 property, loans against financial assets, insurance solutions, and credit
                 cards.
                 <br /><br />
-                At Sivanto Capital Services Pvt Ltd, we strongly believe in ethical
+                At Sivanto Capital Services Pvt. Ltd., we strongly believe in ethical
                 business practices, data confidentiality, and responsible financial
                 guidance. Our team works with dedication, speed, and accountability to
                 deliver dependable service and build long-term relationships with our
@@ -97,7 +97,7 @@ export default function About() {
 
               <p>
                 <strong>1. Built on Trust and Transparency</strong><br />
-                At Sivanto Capital Services Pvt Ltd, we place trust and transparency at the
+                At Sivanto Capital Services Pvt. Ltd., we place trust and transparency at the
                 center of every customer interaction. We believe financial services should
                 be delivered with clear communication, honest assessment, and complete
                 process visibility. Our team ensures that customers understand eligibility,
