@@ -30,6 +30,7 @@ export default function QuickLoanClient() {
   });
 
   const services = [
+    "Web Development",
     "Personal Loan",
     "Business Loan",
     "Education Loan",
@@ -136,7 +137,7 @@ export default function QuickLoanClient() {
                 onChange={handleChange}
                 required
               >
-                <option value="">-- Select Loan Type --</option>
+                <option value="">-- Select Service --</option>
                 {services.map((service) => (
                   <option key={service} value={service}>
                     {service}

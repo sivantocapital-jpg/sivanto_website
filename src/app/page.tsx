@@ -9,10 +9,11 @@ import NavbarClient from "./components/NavbarClient";
 export const dynamic = "force-static";
 
 export const metadata = {
-  title: "Sivanto Capital Services Pvt. Ltd. | Official Website - Personal, Business, Home Loans",
+  title: "Sivanto Capital Services Pvt. Ltd. | Official Website - Personal, Business, Home Loans and web development solutions",
   description:
-    "Sivanto Capital provides trusted personal, business, home, and education loans with fast approval, low interest rates, and flexible repayment options.",
+    "Sivanto Capital delivers expert web development solutions and reliable financial services, including personal, business, home, and education loans with fast approval and flexible repayment plans.",
   keywords: [
+    "web development",
     "personal loan",
     "business loan",
     "home loan",
@@ -30,6 +31,8 @@ export const metadata = {
 };
 
 const services = [
+  { img: "webdevelopment.jpg", title: "Web Development", slug: "web-development", desc: "Launch your website today and take your business or school global. Our experienced developers create modern, high-performance websites designed to help you stand out in the digital world."},
+
   { img: "loanPersonal.jpg", title: "Personal Loan", slug: "personal-loan", desc: "Get instant personal loans up to ₹1 Cr at 10.25% p.a. Fast approval, minimal docs & 24-hr disbursal for weddings, medical, travel & more.", rate: "10.25% p.a." },
   { img: "loanBusiness.jpg", title: "Business Loan", slug: "business-loan", desc: "Fuel your business growth with loans up to ₹1 Cr at 14% p.a. Quick approval, easy docs & flexible repayment for startups, MSMEs & entrepreneurs.", rate: "14% p.a." },
   { img: "loanEducation.jpg", title: "Education Loan", slug: "education-loan", desc: "Achieve your study goals in India or abroad with loans up to ₹1 Cr at 9.25% p.a. Quick sanction & flexible repayment for higher education.", rate: "9.25% p.a." },
@@ -71,14 +74,15 @@ export default function HomePage() {
           <h1 className="sr-only">Sivanto Capital Services Pvt. Ltd.</h1>
 
           <h3>
-            Sivanto Capital Services Pvt. Ltd. is a trusted
-            and professionally managed Private Limited loan and financial services provider,
-            clearly presenting a wide range of loan solutions for individuals and
-            businesses while building strong customer confidence through transparent
-            processes, fast turnaround, and expert guidance. Our goal is to connect
-            customers with the right lenders, simplify the loan journey from enquiry to
-            approval, and encourage immediate action through reliable support and
-            result-driven service.
+            SIVANTO CAPITAL SERVICES PRIVATE LIMITED is a professionally managed Private 
+            Limited company delivering comprehensive loan, financial, and digital business 
+            solutions. We offer personal loans, business loans, MSME funding, startup 
+            finance, and customized financial services with a strong focus on transparency, 
+            quick processing, and expert guidance.<br></br>
+            In addition, we provide professional web design and development services 
+            including responsive business websites, e-commerce solutions, WordPress 
+            development, SEO setup, and technical support — enabling businesses to grow 
+            with financial strength and digital excellence. Complete Business Solutions. Financial Growth. Digital Success.
           </h3>
         </div>
       </div>
@@ -96,6 +100,7 @@ export default function HomePage() {
 
         {/* Services Grid */}
         <div className="services-section">
+          <div className="services-wrapper">
           <div className="services-grid">
             {services.map((service) => (
               <div className="service-box" key={service.title}>
@@ -120,6 +125,7 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </div>
 

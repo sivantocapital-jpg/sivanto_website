@@ -221,6 +221,11 @@
 .service-left ul {
   padding-left: 30px; /* 👈 increase bullet indentation */
 }
+
+.service-list li {
+  margin-bottom: 10px; /* spacing between each bullet */
+  line-height: 1.6;    /* optional: makes it more readable */
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1200px) {
@@ -651,4 +656,74 @@ backdrop-filter: blur(4px);
     order: 2;            /* ensure it comes after the left content */
     margin-top: 20px;    /* optional spacing from content above */
   }
+}
+
+/* ================= pricing row and related images ================= */
+
+.pricing-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Alternating rows */
+.pricing-row:nth-child(odd) {
+  flex-direction: row;      /* text left, image right */
+}
+
+.pricing-row:nth-child(even) {
+  flex-direction: row-reverse; /* text right, image left */
+}
+
+.pricing-text,
+.pricing-image {
+  flex: .5;                  /* equal width */
+}
+
+.pricing-text ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.pricing-image img {
+  width: 100%;
+  max-width: 250px;     /* consistent width */
+  height: 150px;        /* consistent height */
+  object-fit: cover;    /* crop without stretching */
+  border-radius: 5px;
+}
+
+@media (max-width: 975px) {
+  .pricing-row {
+    flex-direction: column !important; /* stack image on top of text */
+    align-items: flex-start;           /* align everything to the left */
+    text-align: left;                  /* text left-aligned */
+  }
+
+  .pricing-image {
+    margin-bottom: 15px;               /* space between image and text */
+  }
+
+  .pricing-text {
+    width: 100%;                        /* full width below image */
+  }
+
+  .pricing-image img {
+    width: 100%;                        /* make image responsive */
+    max-width: 400px;                   /* optional max width */
+    height: auto;                        /* maintain aspect ratio */
+  }
+}
+/* Hover effect for pricing rows */
+.pricing-row:hover .pricing-image img {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); /* white glow */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Highlight first line of the text when hovering on the row */
+.pricing-row:hover .pricing-text h3::first-line {
+  color: #fff;              /* glow color for the first line */
+  text-shadow: 0 0 8px #fff; /* optional glowing effect */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }

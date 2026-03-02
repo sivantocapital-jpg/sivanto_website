@@ -8,6 +8,7 @@ import "../../styles/applyModal.css";
 
 // Display names for menu
 const services = [
+  "Web Development",
   "Personal Loan",
   "Business Loan",
   "Education Loan",
@@ -22,6 +23,7 @@ const services = [
 
 // Mapping to slugs/pages
 const serviceRoutes: Record<string, string> = {
+  "Web Development": "/web-development",
   "Personal Loan": "/personal-loan",
   "Business Loan": "/business-loan",
   "Education Loan": "/education-loan",
@@ -273,7 +275,7 @@ const submitHandler = async () => {
                 value={form.loanType}
                 onChange={e => setForm({ ...form, loanType: e.target.value })}
               >
-                <option value="">-- Select Loan Type --</option>
+                <option value="">-- Select Service --</option>
                 {services.map(s => (
                   <option key={s}>{s}</option>
                 ))}

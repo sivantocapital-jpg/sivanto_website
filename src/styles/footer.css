@@ -115,7 +115,7 @@
 
   .footer-subscribe {
   grid-column: 1 / -1;      /* span full row */
-    width: 50%;               /* take half the width */
+    width: 70%;               /* take half the width */
     margin: 20px auto;        /* center horizontally */
     display: flex;
     flex-direction: column;

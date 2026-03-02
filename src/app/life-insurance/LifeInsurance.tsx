@@ -110,6 +110,7 @@ const LifeInsurance = () => {
           <div className="service-right">
             <h3>OTHER SERVICES</h3>
             <ul>
+              <li><Link href="/web-development">Web Development</Link></li>
               <li><Link href="/personal-loan">Personal Loan</Link></li>
               <li><Link href="/business-loan">Business Loan</Link></li>
               <li><Link href="/education-loan">Education Loan</Link></li>
