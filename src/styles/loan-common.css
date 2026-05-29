@@ -100,11 +100,20 @@
 /* ================= HERO SECTION ================= */
 .loan-hero {
   position: relative;
-  height: 500px;
+  height: 510px;
   background-size: cover;
   background-position: bottom;
   display: flex;
   align-items: center;
+  overflow: hidden; /* IMPORTANT */
+}
+
+/* ONLY WEB DEVELOPMENT PAGE */
+.web-dev-hero {
+  height: 610px !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Overlay */
@@ -116,19 +125,76 @@
     pointer-events: none;
 }
 
+.loan-overlay-app {
+  position: absolute;
+  inset: 0;
+
+  /* Smooth black film transition */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.88) 35%,
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0.45) 65%,
+    rgba(0, 0, 0, 0.15) 78%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* Container */
 .loan-container {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin: auto;
-   margin-top: 130px; 
+   margin-top: 50px; 
   padding: 0 20px;
   width: 100%;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 40px;
   color: white;
+}
+.web-dev-hero .loan-container {
+  margin-top: 40px;
+  margin-left: 60px;
+  grid-template-columns: 1fr !important;
+}
+
+/* APP HERO CONTENT POSITION */
+.loan-hero .loan-container {
+  align-items: center;
+  height: 100%;
+}
+
+.loan-hero .web-hero-content {
+  max-width: 650px;
+  padding-left: 20px;
+}
+
+/* Bigger title for app page */
+
+
+/* Better spacing */
+.loan-hero .web-description {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+.loan-hero .web-hero-content {
+  padding-left: 0;
+}
+
+.loan-hero .web-features {
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 /* ================= LEFT CONTENT ================= */
@@ -227,6 +293,151 @@
   line-height: 1.6;    /* optional: makes it more readable */
 }
 /* ================= RESPONSIVE ================= */
+
+
+/* ================= MOBILE HERO RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .web-dev-hero .loan-container {
+    margin-top: 20px !important;
+    padding: 0 18px;
+  }
+
+  .web-hero-content {
+    max-width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  /* Badge */
+  .web-badge {
+    font-size: 10px;
+    padding: 8px 14px;
+    margin-bottom: 18px;
+  }
+
+  .web-badge .dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Main heading */
+  .web-title {
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 800;
+  color: white;
+}
+
+  /* Description */
+  .web-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+
+  /* Features row */
+  .web-features {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  /* Feature item */
+  .feature-item {
+    padding-right: 14px;
+  }
+
+  /* Remove long separators on mobile */
+  .feature-item:not(:last-child)::after {
+    height: 45px;
+  }
+
+  /* Icon box */
+  .feature-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .feature-icon-box img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Feature text */
+  .feature-item p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+}
+
+
+/* ================= EXTRA SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .web-title {
+    font-size: 30px;
+    line-height: 1.12;
+  }
+
+  .web-description {
+    font-size: 13px;
+  }
+
+  .web-features {
+    gap: 10px;
+  }
+
+  .feature-icon-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  .feature-icon-box img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .feature-item p {
+    font-size: 10px;
+  }
+
+  .web-badge {
+    font-size: 9px;
+    padding: 7px 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1200px) {
   .service-left {
@@ -341,6 +552,172 @@
   }
 }
 
+
+/* WEB HERO CONTENT */
+
+.web-hero-content {
+  max-width: 620px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: flex-start;
+}
+
+.web-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 40px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  background: rgba(255,255,255,0.03);
+
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  margin-bottom: 30px;
+}
+
+.web-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: #ff6b00;
+  border-radius: 50%;
+}
+
+.web-title {
+  font-size: 22px;
+  line-height: 1.08;
+  font-weight: 800;
+  color: white;
+
+  margin-bottom: 12px;
+}
+
+.web-title span {
+  color: #ff6b00;
+}
+
+.web-description {
+  max-width: 500px;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: rgba(255,255,255,0.75);
+
+  margin-bottom: 35px;
+}
+
+.web-features {
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: nowrap;
+
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.feature-item {
+  text-align: center;
+  color: white;
+  position: relative;
+
+  padding-right: 20px;
+}
+
+.feature-item img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.feature-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  right: 0;
+
+  width: 1px;
+  height: 60px;
+
+  background: rgba(255,255,255,0.25);
+}
+
+
+.web-tech {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  margin-top: 35px; 
+}
+
+.web-tech p {
+  color: rgba(255,255,255,0.7);
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+}
+
+.web-tech-icons {
+  display: flex;
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+}
+
+.web-tech-icons img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+} 
+
+.php-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+.tech-item {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.tech-item span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+}
+
 /* ================= SERVICE COMMON SECTION ================= */
 .service-common {
   background: #000;
@@ -349,12 +726,13 @@
 }
 
 .service-wrapper {
-  max-width: 1200px;
+  max-width: 1500px;   /* increased from 1200 */
+  width: 95%;          /* use more screen width */
   margin: auto;
-  padding: 0 20px;
+  padding: 0 10px;     /* reduced side padding */
   display: grid;
-  grid-template-columns: 1.7fr 0.6fr;
-  gap: 40px;
+  grid-template-columns: 1.9fr 0.5fr;
+  gap: 50px;
 }
 
 /* ================= LEFT ================= */
@@ -678,7 +1056,7 @@ backdrop-filter: blur(4px);
 
 .pricing-text,
 .pricing-image {
-  flex: .5;                  /* equal width */
+  flex: 1.4;                  /* equal width */
 }
 
 .pricing-text ul li {
@@ -688,10 +1066,10 @@ backdrop-filter: blur(4px);
 
 .pricing-image img {
   width: 100%;
-  max-width: 250px;     /* consistent width */
-  height: 150px;        /* consistent height */
+  max-width: 375px;     /* consistent width */
+  height: 225px;        /* consistent height */
   object-fit: cover;    /* crop without stretching */
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 @media (max-width: 975px) {
@@ -726,4 +1104,314 @@ backdrop-filter: blur(4px);
   color: #fff;              /* glow color for the first line */
   text-shadow: 0 0 8px #fff; /* optional glowing effect */
   transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE FIX FOR WEB + APP HERO
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .web-dev-hero {
+    height: auto !important;
+    padding: 120px 0 70px;
+    background-position: center;
+  }
+
+  .web-dev-hero .loan-container {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: left;
+  }
+
+  /* CONTENT WRAPPER */
+  .loan-hero .web-hero-content {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0 !important;
+  }
+
+  /* BADGE */
+  .web-badge {
+    font-size: 10px !important;
+    padding: 8px 14px !important;
+    margin-bottom: 18px !important;
+    letter-spacing: 0.8px;
+  }
+
+  .web-badge .dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* MAIN TITLE */
+  .loan-hero .web-title,
+  .web-title {
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* DESCRIPTION */
+  .loan-hero .web-description,
+  .web-description {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 28px !important;
+    max-width: 100%;
+  }
+
+  /* FEATURES ROW */
+  .web-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px !important;
+    align-items: flex-start;
+  }
+
+  /* FEATURE ITEM */
+  .feature-item {
+    min-width: 85px;
+    padding-right: 14px !important;
+  }
+
+  /* SEPARATOR */
+  .feature-item:not(:last-child)::after {
+    height: 45px !important;
+    top: 2px;
+  }
+
+  /* ICON BOX */
+  .feature-icon-box {
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .feature-icon-box img,
+  .feature-item img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  /* FEATURE TEXT */
+  .feature-item p {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* TECHNOLOGY SECTION */
+  .web-tech {
+    margin-top: 28px !important;
+  }
+
+  .web-tech p {
+    font-size: 13px !important;
+  }
+
+  .web-tech-icons {
+    gap: 12px !important;
+  }
+
+  .tech-item img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .php-item img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .tech-item span {
+    font-size: 11px !important;
+  }
+}
+
+
+/* ================= EXTRA SMALL DEVICES ================= */
+
+@media (max-width: 480px) {
+
+  .loan-hero .web-title,
+  .web-title {
+    font-size: 28px !important;
+    line-height: 1.12 !important;
+  }
+
+  .web-description {
+    font-size: 13px !important;
+  }
+
+  .web-features {
+    gap: 12px !important;
+  }
+
+  .feature-item {
+    min-width: 72px;
+  }
+
+  .feature-icon-box {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .feature-icon-box img,
+  .feature-item img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .feature-item p {
+    font-size: 10px !important;
+  }
+
+  .web-badge {
+    font-size: 9px !important;
+    padding: 7px 12px !important;
+  }
+}
+
+/* =====================================================
+   APP DEVELOPMENT FEATURE ALIGNMENT FIX
+===================================================== */
+
+.web-features {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* EACH ITEM SAME WIDTH */
+.feature-item {
+  width: 110px;
+  min-width: 110px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+
+  position: relative;
+}
+
+/* ICON BOX */
+.feature-icon-box {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.06);
+
+  margin-bottom: 12px;
+}
+
+/* ICON */
+.feature-icon-box img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.feature-item p {
+  margin: 0;
+  min-height: 38px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  line-height: 1.4;
+}
+
+/* SEPARATOR */
+.feature-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 8px;
+
+  width: 1px;
+  height: 58px;
+
+  background: rgba(255,255,255,0.22);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .web-features {
+    gap: 16px;
+  }
+
+  .feature-item {
+    width: 84px;
+    min-width: 84px;
+  }
+
+  .feature-icon-box {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 10px;
+  }
+
+  .feature-icon-box img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .feature-item p {
+    font-size: 11px;
+    min-height: 34px;
+  }
+
+  .feature-item:not(:last-child)::after {
+    height: 44px;
+  }
+}
+
+/* EXTRA SMALL */
+
+@media (max-width: 480px) {
+
+  .feature-item {
+    width: 72px;
+    min-width: 72px;
+  }
+
+  .feature-icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-icon-box img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .feature-item p {
+    font-size: 10px;
+    min-height: 30px;
+  }
 }

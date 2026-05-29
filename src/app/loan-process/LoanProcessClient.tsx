@@ -49,11 +49,12 @@ const LoanProcessClient = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <div className="loan-hero">
-        <div className="hero-navbar">
-          <NavbarClient />
-        </div>
 
+      <div className="loan-hero">
+        {/* Navbar MUST be absolute overlay */}
+  <div className="hero-navbar">
+    <NavbarClient />
+  </div>
         <img
           src="/assets/deal.jpeg"
           alt="Sivanto Capital Services Loan Process - Eligibility, Document Submission, Approval"

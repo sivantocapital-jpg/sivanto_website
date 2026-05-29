@@ -16,6 +16,7 @@ const formTitles: Record<string, string> = {
   "loan-against-mutual-funds": "Looking for a Loan Against Mutual Funds & Shares?",
   "health-insurance": "Looking for Health Insurance?",
   "life-insurance": "Looking for Life Insurance?",
+  "web-development": "Looking for a website for your business?",
   "default": "Looking for Financial Solutions?",
 };
 

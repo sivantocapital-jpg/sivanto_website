@@ -196,15 +196,10 @@ export default function BusinessLoan() {
             <h3>OTHER SERVICES</h3>
             <ul>
               <li><Link href="/web-development">Web Development</Link></li>
+              <li><Link href="/app-development">App Development</Link></li>
               <li><Link href="/personal-loan">Personal Loan</Link></li>
               <li className="active"><Link href="/business-loan">Business Loan</Link></li>
-              <li><Link href="/education-loan">Education Loan</Link></li>
               <li><Link href="/home-loan">Home Loan</Link></li>
-              <li><Link href="/loan-against-property">Loan Against Property</Link></li>
-              <li><Link href="/loan-against-insurance">Loan Against Insurance Policies</Link></li>
-              <li><Link href="/loan-against-mutual-funds">Loan Against Mutual Funds & Shares</Link></li>
-              <li><Link href="/health-insurance">Health Insurance</Link></li>
-              <li><Link href="/life-insurance">Life Insurance</Link></li>
               <li><Link href="/credit-cards">Credit Cards</Link></li>
             </ul>
           </div>

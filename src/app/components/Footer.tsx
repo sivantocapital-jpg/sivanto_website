@@ -55,12 +55,16 @@ export default function Footer() {
       <div className="footer-container">
 
         <div className="footer-col footer-about">
+          <Link href="/">
           <img src="/assets/logo.png" alt="Sivanto Capital Services Logo" className="footer-logo" />
+          </Link>
           <p>
-            Get quick loans, credit cards & financial solutions with Sivanto Capital.
-            3+ years of trusted service in Vijayawada. Fast approval, low
-            interest & hassle-free process.
+            Get quick loans, credit cards, financial solutions, web development, and app development services
+             with Sivanto Capital Services Pvt Ltd. Trusted for 3+ years in Vijayawada, we deliver fast approvals, 
+             low-interest solutions, modern websites, mobile apps, and hassle-free digital services for businesses and
+              individuals.
           </p>
+          
         </div>
 
         <div className="footer-col">
@@ -69,6 +73,9 @@ export default function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/loan-process">Loan Process</Link></li>
+            <li><Link href="/app-development">App Development</Link></li>
+            <li><Link href="/web-development">Web Development</Link></li>
+
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -144,10 +151,11 @@ export default function Footer() {
             Send Now
           </button>
         </div>
-
+      
         <div className="footer-col footer-contact">
           <h4>GET IN TOUCH</h4>
-          <p><strong>Phone:</strong> +91 8639841133</p>
+          <p><strong>Phone:</strong> +91 8143228758<br />&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91 9052730754</p>
           <p><strong>E-Mail:</strong> info@sivantocapital.in</p>
           <p>
             <strong>Location:</strong><br />

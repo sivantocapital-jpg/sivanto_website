@@ -19,15 +19,107 @@ export default function WebDevelopment() {
     <>
       {/* ================= HERO SECTION ================= */}
       <section
-        className="loan-hero"
-        style={{ backgroundImage: "url('/assets/webdevelopment.jpg')" }}
+        className="loan-hero web-dev-hero"
+        style={{ backgroundImage: "url('/assets/webnew.png')" }}
       >
-        <div className="loan-overlay"></div>
+        <div className="loan-overlay-app"></div>
         <Navbar />
 
         <div className="loan-container">
+
+          <div className="loan-left web-hero-content">
+
+            <div className="web-badge">
+              <span className="dot"></span>
+              WEB DEVELOPMENT SOLUTIONS
+            </div>
+    
+            <h1 className="web-title">
+              Build Modern <br />
+              Websites That <br />
+              <span>Grow Your Business</span>
+            </h1>
+
+            <p className="web-description">
+              We create fast, responsive, and visually stunning websites
+              designed to elevate your brand and drive business growth.
+            </p>
+
+            <div className="web-features">
+
+              <div className="feature-item">
+                <img src="/assets/responsive.png" alt="" />
+                <p>Responsive <br /> Design</p>
+              </div>
+
+              <div className="feature-item">
+                <img src="/assets/seoicon.png" alt="" />
+                <p>SEO <br /> Optimized</p>
+              </div>
+
+              <div className="feature-item">
+                <img src="/assets/speed2.png" alt="" />
+                <p>Fast <br /> Performance</p>
+              </div>
+
+              <div className="feature-item">
+                <img src="/assets/uiuxx.png" alt="" />
+                <p>Modern <br /> UI/UX</p>
+              </div>
+
+            </div>
+
+            <div className="web-tech">
+
+              <p>Technologies We Use</p>
+
+              <div className="web-tech-icons">
+
+                <div className="tech-item">
+                  <img src="/assets/html.webp" alt="HTML" />
+                  <span>HTML</span>
+                </div>
+
+                <div className="tech-item">
+                  <img src="/assets/css3.webp" alt="CSS" />
+                  <span>CSS</span>
+                </div>
+
+                <div className="tech-item">
+                  <img src="/assets/js.webp" alt="JavaScript" />
+                  <span>JavaScript</span>
+                </div>
+
+                <div className="tech-item">
+                  <img src="/assets/react.png" alt="React" />
+                  <span>React</span>
+                </div>
+
+                <div className="tech-item">
+                  <img src="/assets/nextwhite.png" alt="Next.js" />
+                  <span>Next.js</span>
+                </div>
+
+                <div className="tech-item">
+                  <img src="/assets/wordpress.png" alt="WordPress" />
+                  <span>WordPress</span>
+                </div>
+
+                <div className="tech-item php-item">
+                  <img src="/assets/php.png" alt="PHP" />
+                  <span>PHP</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+
+
           {/* LEFT CONTENT */}
-          <div className="loan-left">
+          {/*   <div className="loan-left">
             <h1>Web Development</h1>
             <ul>
               <li>✅ Professional & Responsive Website Design</li>
@@ -40,9 +132,9 @@ export default function WebDevelopment() {
               <button className="loan-btn">Get Started</button>
             </Link>
           </div>
-
+*/}
           {/* RIGHT FORM */}
-          <CommonSmallForm formType="web-development" />
+          {/*<CommonSmallForm formType="web-development" />*/}
         </div>
       </section>
 
@@ -61,83 +153,83 @@ export default function WebDevelopment() {
               <div className="pricing-text">
                 <h3 className="top-margin-only">CORE WEB DESIGN SERVICES</h3>
                 <ul>
-                  <li>Website UI/UX Design – ₹5,000 to ₹15,000</li>
-                  <li>Responsive Website Design – ₹8,000 to ₹20,000</li>
-                  <li>Landing Page Design – ₹3,000 to ₹10,000</li>
-                  <li>Website Redesign – ₹6,000 to ₹18,000</li>
-                  <li>Wireframing & Prototyping – ₹3,000 to ₹8,000</li>
+                  <li>Business Website Design – Starting From ₹5,000</li>
+                  <li>Responsive Website Design – Starting From ₹8,000</li>
+                  <li>Landing Page Design – Starting From ₹3,000</li>
+                  <li>Website Redesign Solutions – Starting From ₹6,000</li>
+                  <li>UI/UX Wireframing & Prototyping – Starting From ₹3,000</li>
                 </ul>
               </div>
               <div className="pricing-image extra-space" >
-                <img src="/assets/uiux.jpg" alt="UI/UX Design" />
+                <img src="/assets/uiux.png" alt="UI/UX Design" />
               </div>
             </div>
 
             {/* WEBSITE DEVELOPMENT SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3  className="top-margin-only">WEBSITE DEVELOPMENT SERVICES</h3>
+                <h3 className="top-margin-only">WEBSITE DEVELOPMENT SERVICES</h3>
                 <ul>
-                  <li>Static Website (5 Pages) – ₹7,000 to ₹15,000</li>
-                  <li>Dynamic Website – ₹15,000 to ₹35,000</li>
-                  <li>WordPress Website – ₹12,000 to ₹30,000</li>
-                  <li>Custom Website Development – ₹25,000 to ₹80,000</li>
-                  <li>E-commerce Website – ₹20,000 to ₹75,000</li>
+                  <li>Static Business Website – Starting From ₹7,000</li>
+                  <li>Dynamic Website Development – Starting From ₹15,000</li>
+                  <li>WordPress Website Development – Starting From ₹12,000</li>
+                  <li>Custom Web Application Development – Starting From ₹25,000</li>
+                  <li>E-Commerce Website Development – Starting From ₹20,000</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
-                <img src="/assets/web.jpg" alt="Website Development" />
+                <img src="/assets/web2.png" alt="Website Development" />
               </div>
             </div>
 
             {/* E-COMMERCE SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3  className="top-margin-only">E-COMMERCE SERVICES</h3>
+                <h3 className="top-margin-only">E-COMMERCE SERVICES</h3>
                 <ul>
-                  <li>Online Store Setup – ₹15,000 to ₹40,000</li>
-                  <li>Payment Gateway Setup – ₹2,000 to ₹5,000</li>
-                  <li>Shopping Cart Setup – ₹3,000 to ₹8,000</li>
-                  <li>Product Upload (50 Products) – ₹2,000 to ₹5,000</li>
-                  <li>Order Management Setup – ₹5,000 to ₹15,000</li>
+                  <li>Online Store Development – Starting From ₹15,000</li>
+                  <li>Secure Payment Gateway Integration – Starting From ₹2,000</li>
+                  <li>Shopping Cart Integration – Starting From ₹3,000</li>
+                  <li>Product Upload & Store Management – Starting From ₹2,000</li>
+                  <li>Order Management System Setup – Starting From ₹5,000</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
-                <img src="/assets/ecom.jpg" alt="E-Commerce Services" />
+                <img src="/assets/ecom2.png" alt="E-Commerce Services" />
               </div>
             </div>
 
             {/* TECHNICAL SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3  className="top-margin-only">TECHNICAL SERVICES</h3>
+                <h3 className="top-margin-only">TECHNICAL SERVICES</h3>
                 <ul>
-                  <li>Domain Registration Support – ₹500 to ₹1,000</li>
-                  <li>Web Hosting Setup – ₹1,000 to ₹3,000</li>
-                  <li>Website Migration – ₹3,000 to ₹8,000</li>
-                  <li>Website Speed Optimization – ₹3,000 to ₹10,000</li>
-                  <li>SSL Certificate Setup – ₹1,000 to ₹2,500</li>
+                  <li>Domain & Hosting Support – Starting From ₹500</li>
+                  <li>Web Hosting Configuration – Starting From ₹1,000</li>
+                  <li>Website Migration Services – Starting From ₹3,000</li>
+                  <li>Website Speed Optimization – Starting From ₹3,000</li>
+                  <li>SSL Security Integration – Starting From ₹1,000</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
-                <img src="/assets/technical.jpg" alt="Technical Services" />
+                <img src="/assets/technical2.png" alt="Technical Services" />
               </div>
             </div>
 
             {/* SEO SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3  className="top-margin-only">SEO SERVICES</h3>
+                <h3 className="top-margin-only">SEO SERVICES</h3>
                 <ul>
-                  <li>On-Page SEO – ₹5,000 to ₹15,000</li>
-                  <li>Technical SEO – ₹8,000 to ₹20,000</li>
-                  <li>Google Analytics Setup – ₹1,000 to ₹3,000</li>
-                  <li>Google Search Console Setup – ₹1,000 to ₹2,500</li>
-                  <li>Local SEO – ₹6,000 to ₹18,000</li>
+                  <li>On-Page SEO Optimization – Starting From ₹5,000</li>
+                  <li>Technical SEO Services – Starting From ₹8,000</li>
+                  <li>Google Analytics Integration – Starting From ₹1,000</li>
+                  <li>Google Search Console Setup – Starting From ₹1,000</li>
+                  <li>Local SEO Optimization – Starting From ₹6,000</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
-                <img src="/assets/seo.jpeg" alt="SEO Services" />
+                <img src="/assets/seo2.png" alt="SEO Services" />
               </div>
             </div>
           </div>
@@ -152,36 +244,16 @@ export default function WebDevelopment() {
               <li className="active">
                 <Link href="/web-development">Web Development</Link>
               </li>
+              <li><Link href="/app-development">App Development</Link></li>
               <li>
                 <Link href="/personal-loan">Personal Loan</Link>
               </li>
               <li>
                 <Link href="/business-loan">Business Loan</Link>
               </li>
-              <li>
-                <Link href="/education-loan">Education Loan</Link>
-              </li>
+
               <li>
                 <Link href="/home-loan">Home Loan</Link>
-              </li>
-              <li>
-                <Link href="/loan-against-property">Loan Against Property</Link>
-              </li>
-              <li>
-                <Link href="/loan-against-insurance">
-                  Loan Against Insurance Policies
-                </Link>
-              </li>
-              <li>
-                <Link href="/loan-against-mutual-funds">
-                  Loan Against Mutual Funds & Shares
-                </Link>
-              </li>
-              <li>
-                <Link href="/health-insurance">Health Insurance</Link>
-              </li>
-              <li>
-                <Link href="/life-insurance">Life Insurance</Link>
               </li>
               <li>
                 <Link href="/credit-cards">Credit Cards</Link>

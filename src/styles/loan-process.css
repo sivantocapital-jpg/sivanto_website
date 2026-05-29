@@ -1,11 +1,3 @@
-.hero-navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-
 
 /* Dark background after scroll */
 .navbar.scrolled {
@@ -13,6 +5,17 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  padding: 20px 40px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
 
 
 .loan-process-page {
@@ -23,8 +26,24 @@
 .loan-hero {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 510px;
   overflow: hidden;
+}
+
+.loan-hero .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.hero-navbar {
+  position: absolute;   /* 🔥 NOT fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 /* Background Image */
@@ -305,6 +324,9 @@
   margin-top: 0.6rem;
   text-align: center;
 }
+
+
+
 
 
 /* Responsive */

@@ -49,34 +49,28 @@ export default function About() {
             <div className="who-text">
               <h2>Who We Are</h2>
               <p>
-                Sivanto Capital Services Pvt. Ltd. is a professionally structured and
-                customer-focused financial services company dedicated to providing
-                comprehensive loan and insurance assistance solutions for individuals,
-                self-employed professionals, and business enterprises. We operate as a
-                trusted service bridge between customers and reputed banks, NBFCs, and
-                financial institutions, helping clients identify, apply for, and secure
-                the most suitable financial products based on their needs and eligibility.
+                Sivanto Capital Services Pvt. Ltd. is a professionally managed financial and digital solutions 
+                company committed to delivering reliable, transparent, and customer-focused services for individuals, 
+                startups, self-employed professionals, and business enterprises.
                 <br /><br />
-                Our organization is built on the foundation of transparency,
-                professionalism, and result-oriented service delivery. We understand that
-                every customer’s financial requirement is unique, and therefore we follow
-                a personalized approach in evaluating profiles, matching the right
-                lenders, and guiding applicants through every stage of the process.
+                We specialize in providing comprehensive loan assistance, insurance solutions, and modern technology 
+                services tailored to meet the evolving needs of our clients. Our company acts as a trusted bridge between 
+                customers and reputed banks, NBFCs, and financial institutions, helping clients identify and secure the most
+                 suitable financial products based on their eligibility and requirements.
                 <br /><br />
-                From initial consultation and eligibility assessment to documentation
-                support and final approval coordination, we provide structured end-to-end
-                assistance.
+                Along with financial services, we also provide professional website development and mobile application development
+                 services designed to help businesses establish a strong digital presence and grow in today’s competitive market.
+                  From business websites and e-commerce platforms to Android and iOS applications, we build modern, responsive, secure, 
+                  and user-friendly digital solutions that support business growth and customer engagement.
                 <br /><br />
-                We offer support across multiple financial products including personal
-                loans, business loans, home loans, education loans, loans against
-                property, loans against financial assets, insurance solutions, and credit
-                cards.
+                At Sivanto Capital Services Pvt. Ltd., we believe every customer requirement is unique. Our team follows a personalized 
+                and result-oriented approach, offering end-to-end support from consultation and eligibility assessment to documentation 
+                assistance, technical development, deployment, and ongoing support services.
                 <br /><br />
-                At Sivanto Capital Services Pvt. Ltd., we strongly believe in ethical
-                business practices, data confidentiality, and responsible financial
-                guidance. Our team works with dedication, speed, and accountability to
-                deliver dependable service and build long-term relationships with our
-                customers and partners.
+                Our organization is built on the core values of professionalism, innovation, transparency, ethical business 
+                practices, data confidentiality, and long-term customer relationships. With a strong commitment to quality, 
+                speed, and accountability, we strive to deliver dependable financial and digital solutions that create lasting
+                 value for our customers and partners.
               </p>
             </div>
 
@@ -96,35 +90,26 @@ export default function About() {
               <h2>What We Believe In</h2>
 
               <p>
-                <strong>1. Built on Trust and Transparency</strong><br />
-                At Sivanto Capital Services Pvt. Ltd., we place trust and transparency at the
-                center of every customer interaction. We believe financial services should
-                be delivered with clear communication, honest assessment, and complete
-                process visibility. Our team ensures that customers understand eligibility,
-                documentation, costs, and timelines before proceeding. By maintaining
-                openness and ethical practices, we build long-term confidence and
-                dependable relationships with every client we serve.
+                At Sivanto Capital Services Pvt. Ltd., we believe in building trust through transparency, 
+                professionalism, and customer-focused service.
               </p>
 
               <p>
-                <strong>2. Customer-First Financial Guidance</strong><br />
-                We believe every customer’s financial requirement is unique and deserves
-                personalized attention. Our approach focuses on understanding each
-                client’s needs, repayment capacity, and goals before suggesting any loan
-                or insurance solution. We are committed to responsible guidance, correct
-                lender matching, and structured support so that customers receive
-                solutions that are practical, suitable, and sustainable — not just quick
-                approvals.
+                We are committed to delivering reliable financial and digital solutions that help individuals 
+                and businesses grow with confidence. Our approach is centered on understanding customer needs, 
+                providing honest guidance, and ensuring smooth and hassle-free service experiences.
               </p>
 
               <p>
-                <strong>3. Professional Service with Result Focus</strong><br />
-                We believe that speed must be supported by accuracy and professionalism.
-                Our service model is designed to deliver fast turnaround while maintaining
-                proper verification, compliance, and documentation standards. From enquiry
-                to approval, we follow a process-driven method to improve success rates and
-                reduce delays. Our goal is to deliver measurable results through disciplined
-                execution and expert coordination.
+                We believe technology and finance together can create better opportunities for businesses 
+                and individuals. Through innovative web development, mobile application solutions, and dependable 
+                financial assistance, we aim to empower our clients in the digital and financial world.
+              </p>
+
+              <p>
+                Integrity, data confidentiality, quality service, and long-term relationships are the core values 
+                that drive our organization. We continuously strive to deliver excellence, innovation, and value in 
+                every service we provide.
               </p>
             </div>
           </div>
@@ -136,22 +121,24 @@ export default function About() {
             <div className="mission-box">
               <h3>Our Mission</h3>
               <p>
-                Our mission is to simplify access to financial products by delivering
-                transparent, reliable, and customer-focused loan and insurance solutions.
-                We aim to support individuals and businesses with responsible financial
-                guidance, efficient processing, and ethical service practices that help
-                customers make informed and confident financial decisions.
+                Our mission is to provide trusted financial and digital solutions that simplify growth for individuals, 
+                startups, and businesses. We are committed to delivering transparent loan and insurance assistance along 
+                with innovative website and mobile application development services that help our clients succeed in the 
+                modern digital world.
+                <br></br><br></br>
+                Through professionalism, technology, and customer-focused support, we aim to create long-term value and 
+                dependable service experiences for every client we serve.
               </p>
             </div>
 
             <div className="vision-box">
               <h3>Our Vision</h3>
               <p>
-                Our vision is to become a trusted and recognized financial services partner
-                known for professionalism, integrity, and consistent value delivery. We
-                aspire to build long-term relationships with customers and institutions by
-                setting high standards in service quality, innovation, and customer
-                satisfaction across the financial ecosystem.
+                Our vision is to become a leading and trusted financial and digital solutions company recognized for 
+                innovation, transparency, service excellence, and customer satisfaction.
+                <br></br><br></br>
+                We aspire to empower businesses and individuals by combining smart financial guidance with advanced 
+                digital technologies that drive growth, stability, and long-term success.
               </p>
             </div>
           </div>
@@ -160,12 +147,12 @@ export default function About() {
             <div className="core-values-box">
               <h3>Core Values</h3>
               <ul>
-                <li><strong>Integrity:</strong> We follow honest, ethical, and compliant practices in every financial service we provide.</li>
-                <li><strong>Customer Commitment:</strong> We prioritize customer needs and deliver personalized solution support.</li>
-                <li><strong>Transparency:</strong> We maintain clear communication and process visibility at every stage.</li>
-                <li><strong>Professionalism:</strong> We operate with discipline, accuracy, and service accountability.</li>
-                <li><strong>Speed with Responsibility:</strong> We focus on fast processing without compromising correctness.</li>
-                <li><strong>Confidentiality:</strong> We protect customer data and financial information with strict care.</li>
+                <li><strong>Transparency:</strong> We believe in honest communication and ethical business practices in every service we provide.</li>
+                <li><strong>Customer Commitment:</strong> Our customers are our priority, and we focus on delivering personalized and result-oriented solutions.</li>
+                <li><strong>Innovation:</strong> We continuously adopt modern technologies and creative strategies to provide effective financial and digital services.</li>
+                <li><strong>Professionalism:</strong> We maintain high standards of quality, accountability, and reliability in all our operations.</li>
+                <li><strong>Integrity & Confidentiality:</strong> We value trust, protect customer information, and ensure complete data privacy and security.</li>
+                <li><strong>Excellence:</strong> We are dedicated to delivering high-quality services with speed, efficiency, and long-term value.</li>
               </ul>
             </div>
           </div>

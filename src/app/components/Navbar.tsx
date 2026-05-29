@@ -9,30 +9,20 @@ import "../../styles/applyModal.css";
 // Display names for menu
 const services = [
   "Web Development",
+  "App Development",
   "Personal Loan",
   "Business Loan",
-  "Education Loan",
   "Home Loan",
-  "Loan Against Property",
-  "Loan Against Insurance Policies",
-  "Loan Against Mutual Funds & Shares",
-  "Health Insurance",
-  "Life Insurance",
   "Credit Cards"
 ];
 
 // Mapping to slugs/pages
 const serviceRoutes: Record<string, string> = {
   "Web Development": "/web-development",
+  "App Development": "/app-development",
   "Personal Loan": "/personal-loan",
   "Business Loan": "/business-loan",
-  "Education Loan": "/education-loan",
   "Home Loan": "/home-loan",
-  "Loan Against Property": "/loan-against-property",
-  "Loan Against Insurance Policies": "/loan-against-insurance",
-  "Loan Against Mutual Funds & Shares": "/loan-against-mutual-funds",
-  "Health Insurance": "/health-insurance",
-  "Life Insurance": "/life-insurance",
   "Credit Cards": "/credit-cards"
 };
 
@@ -136,9 +126,9 @@ const submitHandler = async () => {
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
-          <div className="logo">
+          <Link href="/" className="logo">
             <img src="/assets/logo.png" alt="Logo" />
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="menu">

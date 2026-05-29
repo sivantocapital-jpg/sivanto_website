@@ -31,15 +31,10 @@ export default function QuickLoanClient() {
 
   const services = [
     "Web Development",
+    "App Development",
     "Personal Loan",
     "Business Loan",
-    "Education Loan",
     "Home Loan",
-    "Loan Against Property",
-    "Loan Against Insurance Policies",
-    "Loan Against Mutual Funds & Shares",
-    "Health Insurance",
-    "Life Insurance",
     "Credit Cards",
   ];
 
@@ -85,8 +80,9 @@ export default function QuickLoanClient() {
       <Navbar isScrolled={isScrolled} />
 
       <div className="form-container">
-        <h1 className="title">QUICK LOAN APPLICATION FORM</h1>
-
+        <h1 className="title">
+          QUICK <span className="highlight-word">APPLICATION</span> FORM
+        </h1>
         <form className="loan-form" onSubmit={handleSubmit}>
           {/* Row 1 */}
           <div className="form-row">

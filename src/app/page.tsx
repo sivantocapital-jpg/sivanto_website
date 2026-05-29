@@ -31,38 +31,34 @@ export const metadata = {
 };
 
 const services = [
-  { img: "webdevelopment.jpg", title: "Web Development", slug: "web-development", desc: "Launch your website today and take your business or school global. Our experienced developers create modern, high-performance websites designed to help you stand out in the digital world."},
-
-  { img: "loanPersonal.jpg", title: "Personal Loan", slug: "personal-loan", desc: "Get instant personal loans up to ₹1 Cr at 10.25% p.a. Fast approval, minimal docs & 24-hr disbursal for weddings, medical, travel & more.", rate: "10.25% p.a." },
+  { img: "webdevelopment.jpg", title: "Web Development", slug: "web-development", desc: "Launch your website today and take your business or school global. Our experienced developers create modern, high-performance websites designed to help you stand out in the digital world." },
+  {
+    img: "appdevelopment.jpg", title: "App Development", slug: "app-development", desc: "Build powerful Android and iOS applications for your business with modern, scalable, and high-performance mobile app solutions tailored to your needs."
+  },
+  { img: "loanPersonal.jpeg", title: "Personal Loan", slug: "personal-loan", desc: "Get instant personal loans up to ₹1 Cr at 10.25% p.a. Fast approval, minimal docs & 24-hr disbursal for weddings, medical, travel & more.", rate: "10.25% p.a." },
   { img: "loanBusiness.jpg", title: "Business Loan", slug: "business-loan", desc: "Fuel your business growth with loans up to ₹1 Cr at 14% p.a. Quick approval, easy docs & flexible repayment for startups, MSMEs & entrepreneurs.", rate: "14% p.a." },
-  { img: "loanEducation.jpg", title: "Education Loan", slug: "education-loan", desc: "Achieve your study goals in India or abroad with loans up to ₹1 Cr at 9.25% p.a. Quick sanction & flexible repayment for higher education.", rate: "9.25% p.a." },
   { img: "loanHome.jpg", title: "Home Loan", slug: "home-loan", desc: "Buy, build, or renovate your dream home with loans up to ₹10 Cr at 8.65% p.a. Easy documentation, low fees & tenure up to 30 years.", rate: "8.65% p.a." },
-  { img: "loanAgainstProperty.jpg", title: "Loan Against Property", slug: "loan-against-property", desc: "Leverage your property's value for loans at 9% p.a. Flexible tenure up to 15 yrs & overdraft facility for business, education, or personal needs.", rate: "9% p.a." },
-  { img: "loanAgainstInsurancePolicy.jpg", title: "Loan Against Insurance Policy", slug: "loan-against-insurance", desc: "Raise instant funds using your insurance policies. unlock funds easily, no extra collateral needed, quick processing and flexible repayment options." },
-  { img: "loanAgainstMutualFunds.jpg", title: "Loan Against Mutual Funds", slug: "loan-against-mutual-funds", desc: "Get instant funds without redeeming your investments. Leverage your shares & mutual funds with quick approval, low rates & flexible repayment.", rate: "10.5% p.a." },
-  { img: "loanHealthInsurance.jpg", title: "Health Insurance", slug: "health-insurance", desc: "Stay protected from medical expenses. Cashless treatments, tax benefits & wide coverage for you & your family's healthcare needs." },
-  { img: "loanLifeInsurance.jpg", title: "Life Insurance", slug: "life-insurance", desc: "Secure your family's future with life insurance. Choose term, child, ULIPs & pension plans for protection & financial stability." },
   { img: "loanCreditCards.jpg", title: "Credit Card", slug: "credit-cards", desc: "Compare & apply from 50+ bank credit cards. Get cashback, rewards, travel perks and easy EMIs—all in one place with Sivanto Capital." }
 ];
 
 export default function HomePage() {
   return (
     <>
-   {/* JSON-LD for Google Organization logo */}
+      {/* JSON-LD for Google Organization logo */}
       <Head>
-    {/* Organization schema for Google */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Sivanto Capital Services Pvt. Ltd.",
-            url: "https://www.sivantocapital.in/",
-            logo: "https://www.sivantocapital.in/google-icon.png",
-          }),
-        }}
-      />
+        {/* Organization schema for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Sivanto Capital Services Pvt. Ltd.",
+              url: "https://www.sivantocapital.in/",
+              logo: "https://www.sivantocapital.in/google-icon.png",
+            }),
+          }}
+        />
       </Head>
       {/* HERO SECTION */}
       <div className="slider-container">
@@ -73,117 +69,337 @@ export default function HomePage() {
           {/* Hidden H1 for SEO (no design change) */}
           <h1 className="sr-only">Sivanto Capital Services Pvt. Ltd.</h1>
 
-          <h3>
-            SIVANTO CAPITAL SERVICES PRIVATE LIMITED is a professionally managed Private 
-            Limited company delivering comprehensive loan, financial, and digital business 
-            solutions. We offer personal loans, business loans, MSME funding, startup 
-            finance, and customized financial services with a strong focus on transparency, 
-            quick processing, and expert guidance.<br></br>
-            In addition, we provide professional web design and development services 
-            including responsive business websites, e-commerce solutions, WordPress 
-            development, SEO setup, and technical support — enabling businesses to grow 
-            with financial strength and digital excellence. Complete Business Solutions. Financial Growth. Digital Success.
-          </h3>
+          <div className="hero-left-content">
+
+            {/* Orange bordered company name */}
+            <div className="hero-company-box">
+              SIVANTO CAPITAL SERVICES PVT. LTD.
+            </div>
+
+            {/* Main heading */}
+            <h2 className="hero-main-heading">
+              Smart <span className="highlight-text">Financial &</span> <br />
+              <span className="highlight-text">Digital</span> Solutions
+            </h2>
+
+            {/* Sub heading */}
+            <p className="hero-subtext">
+              Empowering Business. Funding Dreams. <br />
+              Building Digital Futures.
+            </p>
+
+            {/* Bullet points */}
+            <div className="hero-points">
+              <span><span className="bullet">•</span> Business Loans</span>
+              <span><span className="bullet">•</span> MSME Funding</span>
+              <span><span className="bullet">•</span> Startup Finance</span>
+              <span><span className="bullet">•</span> Website Development</span>
+              <span><span className="bullet">•</span> Digital Marketing</span>
+            </div>
+
+            {/* Buttons */}
+            <div className="hero-buttons">
+              <Link href="/quick-loan-app-form" className="hero-btn apply-hero-btn">
+                Apply Now <span className="btn-arrow">→</span>
+              </Link>
+
+              <Link href="/contact" className="hero-btn contact-hero-btn">
+                Contact Us <span className="btn-arrow">→</span>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      {/* HERO STATS BAR */}
+      <div className="hero-stats-wrapper">
+        <div className="hero-stats">
+          <div className="stat-box">
+            <div className="stat-icon">
+              <img src="/assets/clients.png" alt="Clients" />
+            </div>
+            <div>
+              <h3>1000+</h3>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div className="stat-box">
+            <div className="stat-icon">
+              <img src="/assets/speed.png" alt="Speed" />
+            </div>
+            <div>
+              <h3>24–48 Hrs</h3>
+              <p>Fast Processing</p>
+            </div>
+          </div>
+
+          <div className="stat-box">
+            <div className="stat-icon">
+              <img src="/assets/secure.png" alt="Secure" />
+            </div>
+            <div>
+              <h3>100%</h3>
+              <p>Secure Process</p>
+            </div>
+          </div>
+
+          <div className="stat-box">
+            <div className="stat-icon">
+              <img src="/assets/support.png" alt="Support" />
+            </div>
+            <div>
+              <h3>Expert</h3>
+              <p>Support Team</p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Rest of your page content */}
       <div className="home-page">
         {/* Heading */}
-        <div className="bottom-text-section">
-          <h2 className="bottom-text">Discover the Services You Deserve</h2>
-          <div className="bottom-lines">
-            <div className="line black-line"></div>
-            <div className="line red-line"></div>
-          </div>
-        </div>
+        
 
         {/* Services Grid */}
-        <div className="services-section">
-          <div className="services-wrapper">
-          <div className="services-grid">
-            {services.map((service) => (
-              <div className="service-box" key={service.title}>
-                <div className="img-wrapper">
-                  <img
-                    src={`/assets/${service.img}`}
-                    alt={service.title}
-                    className="service-img"
-                  />
-                  {service.rate && <div className="rate-pill">{service.rate}</div>}
-                </div>
+        {/* ================= SOLUTIONS SECTION ================= */}
+        <div className="solutions-section">
 
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-desc">{service.desc}</p>
-                <div className="service-buttons">
-                  <Link href={`/${service.slug}`} className="pill-btn learn-btn">
-                    Learn More
-                  </Link>
-                  <Link href="/quick-loan-app-form" className="pill-btn apply-btn">
-                    Apply Now
-                  </Link>
-                </div>
+          <h2 className="solutions-heading">
+            Solutions That Drive Your Growth
+          </h2>
+
+          <div className="solutions-grid">
+
+            <Link href="/web-development" className="solution-card">
+              <div className="solution-icon">
+                <img src="/assets/webhomeicon.svg" alt="Web Development" />
               </div>
-            ))}
-          </div>
+
+              <h3>Web Development</h3>
+
+              <p>
+                Modern responsive websites for businesses and brands.
+              </p>
+            </Link>
+
+
+            <Link href="/app-development" className="solution-card">
+              <div className="solution-icon">
+                <img src="/assets/appdevelopmenthomeicon.svg" alt="App Development" />
+              </div>
+
+              <h3>App Development</h3>
+
+              <p>
+                Android & iOS applications with scalable architecture.
+              </p>
+            </Link>
+
+
+            <Link href="/personal-loan" className="solution-card">
+              <div className="solution-icon">
+                <img src="/assets/personalloanhomeicon.svg" alt="Personal Loan" />
+              </div>
+
+              <h3>Personal Loan</h3>
+
+              <p>
+                Quick personal loans with easy approval process.
+              </p>
+            </Link>
+
+
+            <Link href="/business-loan" className="solution-card">
+              <div className="solution-icon">
+                <img src="/assets/businessloanhomeicon.svg" alt="Business Loan" />
+              </div>
+
+              <h3>Business Loan</h3>
+
+              <p>
+                Business funding solutions for startups and MSMEs.
+              </p>
+            </Link>
+
+
+            <Link href="/home-loan" className="solution-card">
+              <div className="solution-icon">
+                <img src="/assets/homeloanshomeicon.svg" alt="Home Loan" />
+              </div>
+
+              <h3>Home Loan</h3>
+
+              <p>
+                Affordable home loans with flexible repayment plans.
+              </p>
+            </Link>
+
+
+            <Link href="/credit-cards" className="solution-card">
+              <div className="solution-icon">
+                <img src="/assets/creditcardhomeicon.svg" alt="Credit Card" />
+              </div>
+
+              <h3>Credit Card</h3>
+
+              <p>
+                Compare and apply for top cashback credit cards.
+              </p>
+            </Link>
+
           </div>
         </div>
 
-        {/* Why Choose Sivanto Section */}
-        <div className="why-sivanto-section">
-          <h2 className="why-heading">Why Choose Sivanto?</h2>
+        {/* ================= WHY + PROCESS SECTION ================= */}
 
-          <div className="why-grid">
-            <div className="why-box">
-              <img src="/assets/lowerInterestRates.png" alt="Lower Interest Rates" />
-              <h4>Lower Interest Rates</h4>
-              <p>
-                We ensure your loan gets sanctioned at the most competitive interest rates
-                in the market, helping you save more over time with manageable EMIs.
-              </p>
-            </div>
+        <div className="info-process-wrapper">
 
-            <div className="why-box">
-              <img src="/assets/fastProcessing.png" alt="Fast Processing" />
-              <h4>Fast Processing & Disbursal</h4>
-              <p>
-                Our loan process is quick and efficient—right from application to
-                disbursal—ensuring you get funds without unnecessary delays.
-              </p>
-            </div>
+          {/* LEFT IMAGE */}
+          <div className="info-image">
+            <img src="/assets/homehandshake.jpg" alt="Business Meeting" />
+          </div>
 
-            <div className="why-box">
-              <img src="/assets/easyReturn.png" alt="Easy Repayment" />
-              <h4>Easy Repayment Options</h4>
-              <p>
-                Enjoy flexible and simple repayment options that suit your financial comfort.
-              </p>
-            </div>
+          {/* WHY CHOOSE US */}
+          <div className="why-choose-box">
+            <h3>WHY CHOOSE US?</h3>
 
-            <div className="why-box">
-              <img src="/assets/paperLess.png" alt="Paperless" />
-              <h4>100% Paperless</h4>
-              <p>
-                Experience a seamless digital loan process with zero paperwork.
-              </p>
-            </div>
+            <ul>
+              <li>Fast Approval</li>
+              <li>Low Documentation</li>
+              <li>Competitive Interest Rates</li>
+              <li>Expert Financial Guidance</li>
+              <li>Transparent & Secure Process</li>
+              <li>End-to-End Digital Support</li>
+            </ul>
+          </div>
 
-            <div className="why-box">
-              <img src="/assets/safeSecure.png" alt="Safe & Secure" />
-              <h4>Safe, Secure & Transparent</h4>
-              <p>
-                We are ISO 27001:2017 certified with strict data security protocols.
-              </p>
-            </div>
+          {/* LOAN PROCESS */}
+          <div className="loan-process-box">
 
-            <div className="why-box">
-              <img src="/assets/collateral.png" alt="Collateral Free" />
-              <h4>Collateral Free</h4>
-              <p>
-                Access collateral-free loans without risking your assets.
-              </p>
+            <h3>OUR LOAN PROCESS</h3>
+
+            <div className="loan-steps">
+
+              {/* STEP 1 */}
+              <div className="loan-step">
+                <span className="step-number">1</span>
+
+                <div className="step-icon">
+                  <img src="/assets/documenthomeedit.svg" alt="Apply" />
+                </div>
+
+                <h4>Apply Online</h4>
+
+                <p>Fill simple application form</p>
+              </div>
+
+              {/* STEP 2 */}
+              <div className="loan-step">
+                <span className="step-number">2</span>
+
+                <div className="step-icon">
+                  <img src="/assets/documenthome.svg" alt="Verification" />
+                </div>
+
+                <h4>Document Verification</h4>
+
+                <p>We verify your documents</p>
+              </div>
+
+              {/* STEP 3 */}
+              <div className="loan-step">
+                <span className="step-number">3</span>
+
+                <div className="step-icon">
+                  <img src="/assets/approvalhome.svg" alt="Approval" />
+                </div>
+
+                <h4>Approval Process</h4>
+
+                <p>Quick approval by our experts</p>
+              </div>
+
+              {/* STEP 4 */}
+              <div className="loan-step">
+                <span className="step-number">4</span>
+
+                <div className="step-icon">
+                  <img src="/assets/disbursementhome.svg" alt="Disbursement" />
+                </div>
+
+                <h4>Amount Disbursement</h4>
+
+                <p>Funds transferred to your bank</p>
+              </div>
+
             </div>
           </div>
+
+        </div>
+
+      </div>
+
+      {/* ================= WEBSITE DEVELOPMENT ================= */}
+
+      <div className="website-showcase-section">
+
+        <span className="section-tag">
+          WEBSITE DEVELOPMENT
+        </span>
+
+        <h2 className="website-heading">
+          We Build Websites That Build Your Business
+        </h2>
+
+        <div className="website-grid">
+
+          {/* CARD 1 */}
+          <div className="website-card">
+            <img src="/assets/demobusiness.png" alt="Business Website" />
+
+            <h3>Business Website</h3>
+
+            <Link href="/demo-demo/business" className="demo-btn">
+              View Demo
+            </Link>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="website-card">
+            <img src="/assets/demoschool.png" alt="School Website" />
+
+            <h3>School Website</h3>
+
+            <Link href="/demo-demo/school" className="demo-btn">
+              View Demo
+            </Link>
+          </div>
+
+          {/* CARD 3 */}
+          <div className="website-card">
+            <img src="/assets/demoecom.png" alt="Ecommerce Website" />
+
+            <h3>E-Commerce Website</h3>
+
+            <Link href="/demo-demo/ecommerce" className="demo-btn">
+              View Demo
+            </Link>
+          </div>
+
+          {/* CARD 4 */}
+          <div className="website-card">
+            <img src="/assets/demoportfo.png" alt="Portfolio Website" />
+
+            <h3>Portfolio Website</h3>
+
+            <Link href="/demo-demo/portfolio" className="demo-btn">
+              View Demo
+            </Link>
+          </div>
+
         </div>
       </div>
     </>

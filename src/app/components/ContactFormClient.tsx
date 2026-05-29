@@ -77,7 +77,8 @@ export default function ContactFormClient() {
           <span className="icon"><FaPhoneAlt /></span>
           <div className="text-group">
             <span className="highlight"> Call us on: </span>
-            <span>+91 8639841133</span>
+            <span>+91 8143228758</span>
+            <span>+91 9052730754</span>
           </div>
         </div>
 
@@ -148,15 +149,11 @@ export default function ContactFormClient() {
             className={getInputClass("service")}
           >
             <option value="">Select Service</option>
+            <option>Web Development</option>
+            <option>App Development</option>
             <option>Personal Loan</option>
             <option>Business Loan</option>
-            <option>Education Loan</option>
             <option>Home Loan</option>
-            <option>Loan Against Property</option>
-            <option>Loan Against Insurance Policies</option>
-            <option>Loan Against Mutual Funds & Shares</option>
-            <option>Health Insurance</option>
-            <option>Life Insurance</option>
             <option>Credit Cards</option>
           </select>
           {errors.service && <p className="error-text">{errors.service}</p>}

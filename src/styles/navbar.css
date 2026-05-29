@@ -21,9 +21,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1440px;
-  padding-left: clamp(20px, 8vw, 150px);
-  padding-right: clamp(20px, 8vw, 150px);
+  max-width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
   box-sizing: border-box;
   overflow: visible;
 }
@@ -36,7 +36,7 @@
 }
 
 .logo img {
-  height: 48px;
+  height: 55px;
   width: auto;
   cursor: pointer;
   transition: height 0.3s ease, opacity 0.3s ease;
@@ -47,7 +47,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 70px;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
@@ -316,7 +316,7 @@
 }
 
 .mobile-dropdown-menu.active {
-  max-height: 500px;
+  max-height: 600px;
 }
 
 .mobile-dropdown-menu li {
