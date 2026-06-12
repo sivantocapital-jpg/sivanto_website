@@ -111,7 +111,7 @@ export default function AppDevelopment() {
             {/* CORE APP DESIGN SERVICES */}
             <div className="pricing-row extra-space">
               <div className="pricing-text">
-                <h3 className="top-margin-only">Android App Development — Starting From ₹15,000</h3>
+                <h3 className="top-margin-only">Android App Development</h3>
                 <ul>
                   <li>User-Friendly Mobile Applications</li>
                   <li>Fast & Smooth Performance</li>
@@ -131,7 +131,7 @@ export default function AppDevelopment() {
             {/* APP DEVELOPMENT SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3 className="top-margin-only">iOS App Development — Starting From ₹25,000</h3>
+                <h3 className="top-margin-only">iOS App Development</h3>
                 <ul>
                   <li>Premium iPhone & iPad Applications</li>
                   <li>Elegant & Professional UI Design</li>
@@ -152,7 +152,7 @@ export default function AppDevelopment() {
             {/* E-COMMERCE APP SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3 className="top-margin-only">Hybrid App Development — Starting From ₹20,000</h3>
+                <h3 className="top-margin-only">Hybrid App Development</h3>
                 <ul>
                   <li>Single App for Android & iOS</li>
                   <li>Cost-Effective Development</li>
@@ -173,7 +173,7 @@ export default function AppDevelopment() {
             {/* TECHNICAL SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3 className="top-margin-only">Business App Development — Starting From ₹30,000</h3>
+                <h3 className="top-margin-only">Business App Development</h3>
                 <ul>
                   <li>Custom Business Management Apps</li>
                   <li>CRM & Customer Handling Features</li>
@@ -193,7 +193,7 @@ export default function AppDevelopment() {
             {/* APP MARKETING SERVICES */}
             <div className="pricing-row">
               <div className="pricing-text">
-                <h3 className="top-margin-only">Custom Mobile App Solutions — Starting From ₹40,000</h3>
+                <h3 className="top-margin-only">Custom Mobile App Solutions</h3>
                 <ul>
                   <li>Fully Customized Application Development</li>
                   <li>Unique UI/UX Based on Brand Identity</li>

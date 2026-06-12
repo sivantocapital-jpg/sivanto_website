@@ -153,11 +153,11 @@ export default function WebDevelopment() {
               <div className="pricing-text">
                 <h3 className="top-margin-only">CORE WEB DESIGN SERVICES</h3>
                 <ul>
-                  <li>Business Website Design – Starting From ₹5,000</li>
-                  <li>Responsive Website Design – Starting From ₹8,000</li>
-                  <li>Landing Page Design – Starting From ₹3,000</li>
-                  <li>Website Redesign Solutions – Starting From ₹6,000</li>
-                  <li>UI/UX Wireframing & Prototyping – Starting From ₹3,000</li>
+                  <li>Business Website Design</li>
+                  <li>Responsive Website Design</li>
+                  <li>Landing Page Design</li>
+                  <li>Website Redesign Solutions</li>
+                  <li>UI/UX Wireframing & Prototyping</li>
                 </ul>
               </div>
               <div className="pricing-image extra-space" >
@@ -170,11 +170,11 @@ export default function WebDevelopment() {
               <div className="pricing-text">
                 <h3 className="top-margin-only">WEBSITE DEVELOPMENT SERVICES</h3>
                 <ul>
-                  <li>Static Business Website – Starting From ₹7,000</li>
-                  <li>Dynamic Website Development – Starting From ₹15,000</li>
-                  <li>WordPress Website Development – Starting From ₹12,000</li>
-                  <li>Custom Web Application Development – Starting From ₹25,000</li>
-                  <li>E-Commerce Website Development – Starting From ₹20,000</li>
+                  <li>Static Business Website</li>
+                  <li>Dynamic Website Development</li>
+                  <li>WordPress Website Development</li>
+                  <li>Custom Web Application Development</li>
+                  <li>E-Commerce Website Development</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
@@ -187,11 +187,11 @@ export default function WebDevelopment() {
               <div className="pricing-text">
                 <h3 className="top-margin-only">E-COMMERCE SERVICES</h3>
                 <ul>
-                  <li>Online Store Development – Starting From ₹15,000</li>
-                  <li>Secure Payment Gateway Integration – Starting From ₹2,000</li>
-                  <li>Shopping Cart Integration – Starting From ₹3,000</li>
-                  <li>Product Upload & Store Management – Starting From ₹2,000</li>
-                  <li>Order Management System Setup – Starting From ₹5,000</li>
+                  <li>Online Store Development</li>
+                  <li>Secure Payment Gateway Integration</li>
+                  <li>Shopping Cart Integration</li>
+                  <li>Product Upload & Store Management</li>
+                  <li>Order Management System Setup</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
@@ -204,11 +204,11 @@ export default function WebDevelopment() {
               <div className="pricing-text">
                 <h3 className="top-margin-only">TECHNICAL SERVICES</h3>
                 <ul>
-                  <li>Domain & Hosting Support – Starting From ₹500</li>
-                  <li>Web Hosting Configuration – Starting From ₹1,000</li>
-                  <li>Website Migration Services – Starting From ₹3,000</li>
-                  <li>Website Speed Optimization – Starting From ₹3,000</li>
-                  <li>SSL Security Integration – Starting From ₹1,000</li>
+                  <li>Domain & Hosting Support</li>
+                  <li>Web Hosting Configuration</li>
+                  <li>Website Migration Services</li>
+                  <li>Website Speed Optimization</li>
+                  <li>SSL Security Integration</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
@@ -221,11 +221,11 @@ export default function WebDevelopment() {
               <div className="pricing-text">
                 <h3 className="top-margin-only">SEO SERVICES</h3>
                 <ul>
-                  <li>On-Page SEO Optimization – Starting From ₹5,000</li>
-                  <li>Technical SEO Services – Starting From ₹8,000</li>
-                  <li>Google Analytics Integration – Starting From ₹1,000</li>
-                  <li>Google Search Console Setup – Starting From ₹1,000</li>
-                  <li>Local SEO Optimization – Starting From ₹6,000</li>
+                  <li>On-Page SEO Optimization</li>
+                  <li>Technical SEO Services</li>
+                  <li>Google Analytics Integration</li>
+                  <li>Google Search Console Setup</li>
+                  <li>Local SEO Optimization</li>
                 </ul>
               </div>
               <div className="pricing-image  extra-space">
