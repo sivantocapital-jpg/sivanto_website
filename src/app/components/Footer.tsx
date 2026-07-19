@@ -155,7 +155,7 @@ export default function Footer() {
         <div className="footer-col footer-contact">
           <h4>GET IN TOUCH</h4>
           <p><strong>Phone:</strong> +91 8143228758<br />&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91 9052730754</p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91 7828175711</p>
           <p><strong>E-Mail:</strong> info@sivantocapital.in</p>
           <p>
             <strong>Location:</strong><br />

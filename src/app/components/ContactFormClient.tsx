@@ -78,7 +78,7 @@ export default function ContactFormClient() {
           <div className="text-group">
             <span className="highlight"> Call us on: </span>
             <span>+91 8143228758</span>
-            <span>+91 9052730754</span>
+            <span>+91 7828175711</span>
           </div>
         </div>
 

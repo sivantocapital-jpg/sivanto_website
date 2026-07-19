@@ -55,7 +55,7 @@ export default function ContactPage() {
 
   <h3>Contact Details</h3>
   <ul>
-    <li><strong>Phone:</strong> +91 8143228758 +91 9052730754</li>
+    <li><strong>Phone:</strong> +91 8143228758 +91 7828175711</li>
     <li><strong>Email:</strong> info@sivantocapital.in</li>
     <li><strong>Address:</strong> Vijaywada, Andhra Pradesh 520008, India</li>
   </ul>
@@ -89,7 +89,7 @@ export default function ContactPage() {
             contactPoint: [
               {
                 "@type": "ContactPoint",
-                telephone: "+91-8143228758 +91-9052730754",
+                telephone: "+91-8143228758 +91-7828175711",
                 contactType: "customer support",
                 areaServed: "IN",
                 availableLanguage: ["Telugu","English", "Hindi"],
